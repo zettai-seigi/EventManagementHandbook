@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# Jekyll
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/.sass-cache/
+docs/Gemfile.lock
+
+# Ruby
+*.gem
+*.rbc
+.bundle/
+vendor/
+
+# Logs
+*.log
+
+# Temporary files
+*~
+*.swp
+*.swo
+.*.sw?
+
+# Ebook generation files (generated locally, not needed in repo)
+*.pdf
+*.epub
+generate-ebooks.sh
+docs/metadata.yaml
+
+# Development/build files not used by GitHub Pages
+book/
+images/
+BOOK_RESTRUCTURING_STRATEGY.md
+GITHUB_PAGES_DEPLOYMENT.md
+Event Management Handbook.md

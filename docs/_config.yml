@@ -1,0 +1,64 @@
+# Event Management Handbook - GitHub Pages Configuration
+
+title: Event Management Handbook
+description: A Comprehensive Guide to ITIL/ITSM Event Management Best Practices
+baseurl: "/EventManagementHandbook"
+url: "https://zettai-seigi.github.io"
+
+# Theme
+remote_theme: pmarsceill/just-the-docs
+
+# Navigation
+aux_links:
+  "View on GitHub":
+    - "https://github.com/zettai-seigi/EventManagementHandbook"
+
+# Navigation
+nav_fold: false
+
+# Search
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# Footer
+footer_content: "Copyright &copy; 2025 Event Management Handbook. Distributed under the MIT License."
+
+# Color scheme
+color_scheme: light
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Heading anchors
+heading_anchors: true
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+
+# Collections - removed chapters collection as they're now regular pages
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - README.md
