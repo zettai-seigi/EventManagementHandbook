@@ -802,21 +802,6 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 ---
 
-**Figure 14.1: Maturity Ladder**
-
-*Visual placeholder for Figure 14.1*
-
-**Figure 14.1:** Event Management Maturity Ladder
-*Caption:* This full-page diagram illustrates the five-level maturity progression as a ladder or staircase, with each step representing a distinct maturity level. Each level shows key characteristics, typical automation rates, and primary focus areas. Arrows indicate progression paths, and callout boxes highlight critical capabilities required to advance to the next level. The visual emphasizes that each level builds on the previous one, and organizations must establish solid footing at each level before climbing to the next. This staged progression approach ensures sustainable advancement and prevents implementation failures from attempting capabilities before foundational practices are established.
-*Position:* Near the beginning of the chapter, immediately following the introduction to the five maturity levels
-
----
-**Chapter 14 References**
-
-Content derived from extracted sections covering maturity levels, KPI targets, continuous improvement practices, and implementation roadmap guidance from the Event Management Handbook source material.
-
----
-
 ## Chapter Navigation
 
 [← Previous: Chapter 13 - Reporting and Dashboards](/EventManagementHandbook/chapters/13-reporting-dashboards/)
