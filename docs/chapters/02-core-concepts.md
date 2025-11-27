@@ -311,7 +311,7 @@ Regular review and update of event specifications is a success indicator for CSF
 
 The **Critical Success Factors (CSFs)** define the essential conditions and activities that must be in place for Event Management to achieve its goals and deliver business value. These eight factors establish the strategic prerequisites that enable effective implementation, operation, and continuous improvement of the Event Management process.
 
-The CSFs are interconnected and mutually reinforcing. Organizations cannot simply implement tooling (CSF 3) without clearly defined events (CSF 2) or skilled personnel (CSF 4) to configure and operate those tools. Similarly, automation (CSF 8) cannot be balanced without accurate CMDB data (CSF 6) for correlation or process integration (CSF 5) for appropriate escalation.
+The CSFs are interconnected and mutually reinforcing. Organizations cannot simply implement tooling (CSF 3) without clearly defined events (CSF 2) or skilled personnel (CSF 5) to configure and operate those tools. Similarly, automation (CSF 8) cannot be balanced without accurate CMDB data (CSF 4) for correlation or process integration (CSF 6) for appropriate escalation.
 
 ### The Eight Critical Success Factors
 
@@ -330,20 +330,20 @@ Event Management fundamentally depends on reliable monitoring, correlation, and 
 
 The tooling acts as the specialized nervous system of IT operations, enabling detection (monitoring), filtering irrelevant signals (false positive management), grouping related events (correlation), and initiating automatic responses (automation).
 
-**CSF 4: Skilled and Trained Personnel**
+**CSF 4: Accurate Configuration Management Database**
+The CMDB provides the relational data structure that allows Event Management to move beyond treating every alert as a single, isolated incident. Accurate CI relationships enable topology-based correlation and inform impact assessment. Success indicators include CMDB accuracy above 95%, properly documented CI relationships, regular CMDB audits, and automated discovery and updates.
+
+If CMDB data is poor, correlation rules will be inefficient, leading to alert fatigue and redundant incident creation. Conversely, accurate CMDB data enables intelligent noise reduction and accurate business impact assessment.
+
+**CSF 5: Skilled and Trained Personnel**
 The effectiveness of Event Management relies directly on the capability, knowledge, and structure of the team responsible for its operation and design. Key roles include the Event Management Process Owner (strategic leadership), Event Manager (daily execution), Event Management Architect (strategic architecture design), Event Designer (technical configuration), and Event Analyst (frontline monitoring and investigation).
 
 Training is formalized into new hire training and ongoing mentorship with role-based tracks. All roles are required to complete 40 hours of continuing education per year, and knowledge transfer is supported through maintained runbooks, troubleshooting guides, and process procedures.
 
-**CSF 5: Process Integration**
+**CSF 6: Process Integration**
 Event Management must integrate seamlessly with other ITSM processes, particularly Incident, Problem, and Change Management. Integration ensures that events are not merely logged but actively trigger formal resolution workflows. Success indicators include defined handoffs to other processes, integrated workflows and tools, consistent data across processes, and regular process coordination meetings.
 
 Events are escalated to Incident Management when service disruption occurs, to Problem Management for recurring or systemic issues, and to Change Management when proactive modifications are needed. The use of appropriate closure codes (`Incident`, `Problem`, `Change`) formalizes these handoffs.
-
-**CSF 6: Accurate Configuration Management Database**
-The CMDB provides the relational data structure that allows Event Management to move beyond treating every alert as a single, isolated incident. Accurate CI relationships enable topology-based correlation and inform impact assessment. Success indicators include CMDB accuracy above 95%, properly documented CI relationships, regular CMDB audits, and automated discovery and updates.
-
-If CMDB data is poor, correlation rules will be inefficient, leading to alert fatigue and redundant incident creation. Conversely, accurate CMDB data enables intelligent noise reduction and accurate business impact assessment.
 
 **CSF 7: Continuous Improvement Culture**
 This factor ensures Event Management remains relevant, effective, and efficient over time, actively driving the process toward higher maturity levels. Event patterns and infrastructure change over time, requiring process adaptation. Success indicators include regular process reviews, metrics analysis for improvement opportunities, established feedback mechanisms, and implemented process changes based on lessons learned.
@@ -374,7 +374,7 @@ Event priority calculation is a central element of Event Management specificatio
 - **Level 2 (Medium):** Moderate business impact, department affected, or minor process degradation
 - **Level 1 (Low):** Minimal or no business impact, usually affecting a single user
 
-Impact assessment requires consultation with the CMDB to understand dependencies and determine the scope of services affected. **CSF 6: Accurate Configuration Management Database** is essential for reliable impact assessment.
+Impact assessment requires consultation with the CMDB to understand dependencies and determine the scope of services affected. **CSF 4: Accurate Configuration Management Database** is essential for reliable impact assessment.
 
 ### Urgency Levels
 
@@ -438,7 +438,7 @@ Organizations should establish data quality controls to ensure closure codes are
 - **Event types include Informational, Warning, and Exception** with increasing severity and response urgency, enabling prioritization and appropriate resource allocation
 - **Event Management and Incident Management are distinct but integrated processes**, with Event Management focusing on detection and prevention while Incident Management focuses on service restoration
 - **The event lifecycle progresses through five primary activities** from detection through closure, with clear states (New, Open, Pending, Resolved, Closed) marking progression
-- **Eight Critical Success Factors establish prerequisites for Event Management success**, spanning management support, clear definitions, appropriate tooling, skilled personnel, process integration, accurate CMDB, continuous improvement, and balanced automation
+- **Eight Critical Success Factors establish prerequisites for Event Management success**, spanning management support, clear definitions, appropriate tooling, accurate CMDB, skilled personnel, process integration, continuous improvement, and balanced automation
 - **Event specifications define technical parameters** including detection rules, thresholds, response procedures, categorization criteria, and correlation rules necessary for implementation
 - **Priority calculation combines impact and urgency** to determine response time targets and handling procedures, ensuring business alignment
 - **Closure codes document resolution outcomes** and feed key performance indicators, enabling measurement and continuous improvement
@@ -473,7 +473,7 @@ Chapter 3: Organizational Structure and Roles builds upon these concepts by defi
 
 5. **Describe the relationship between the eight Critical Success Factors and provide an example of how two CSFs are interdependent.**
 
-   The CSFs are interconnected and mutually reinforcing. For example, CSF 3 (Appropriate Tooling) cannot be effective without CSF 2 (Clearly Defined Events) providing the specifications for what to monitor and how to respond. Similarly, CSF 8 (Balanced Automation) depends on CSF 6 (Accurate CMDB) for topology-based correlation that determines which automated responses to trigger.
+   The CSFs are interconnected and mutually reinforcing. For example, CSF 3 (Appropriate Tooling) cannot be effective without CSF 2 (Clearly Defined Events) providing the specifications for what to monitor and how to respond. Similarly, CSF 8 (Balanced Automation) depends on CSF 4 (Accurate CMDB) for topology-based correlation that determines which automated responses to trigger.
 
 ---
 **Chapter 2 References**

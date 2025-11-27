@@ -151,11 +151,11 @@ The successful implementation and operation of Event Management depend on eight 
 
 **CSF 3: Appropriate Tooling and Technology** provides the technical foundation upon which all Event Management activities depend. Reliable monitoring, correlation, and integration tools enable the process to function effectively and avoid the pitfalls of alert fatigue and undetected service disruptions. Success requires a centralized event management system, standardized monitoring agents, a configured correlation engine, and seamless integration with other ITSM tools.
 
-**CSF 4: Skilled and Trained Personnel** recognizes that process effectiveness relies directly on the capability, knowledge, and structure of the team responsible for its operation. This factor emphasizes clearly defined and staffed roles, established training programs, maintained knowledge bases, and regular skill assessments.
+**CSF 4: Accurate Configuration Management Database (CMDB)** enables effective event correlation and impact assessment. A CMDB with accuracy above 95%, properly documented CI relationships, regular audits, and automated discovery and updates is essential for moving beyond treating every alert as an isolated incident.
 
-**CSF 5: Process Integration** ensures that Event Management connects seamlessly with other ITSM processes, particularly Incident, Problem, and Change Management. Success is confirmed through defined handoffs to other processes, integrated workflows and tools, consistent data across processes, and regular process coordination meetings.
+**CSF 5: Skilled and Trained Personnel** recognizes that process effectiveness relies directly on the capability, knowledge, and structure of the team responsible for its operation. This factor emphasizes clearly defined and staffed roles, established training programs, maintained knowledge bases, and regular skill assessments.
 
-**CSF 6: Accurate Configuration Management Database (CMDB)** enables effective event correlation and impact assessment. A CMDB with accuracy above 95%, properly documented CI relationships, regular audits, and automated discovery and updates is essential for moving beyond treating every alert as an isolated incident.
+**CSF 6: Process Integration** ensures that Event Management connects seamlessly with other ITSM processes, particularly Incident, Problem, and Change Management. Success is confirmed through defined handoffs to other processes, integrated workflows and tools, consistent data across processes, and regular process coordination meetings.
 
 **CSF 7: Continuous Improvement Culture** provides the mandatory feedback loop to adjust monitoring, automation, and procedures based on measured performance. This culture is characterized by regular process reviews, analysis of metrics for improvement opportunities, established feedback mechanisms, and implementation of process changes based on lessons learned.
 
@@ -263,7 +263,7 @@ This introductory chapter has established the foundation for understanding Event
 
 - **Event Management integrates with and enables other ITSM processes**, particularly Incident Management, Problem Management, Change Management, and Configuration Management, serving as a critical integration point within the broader ITSM ecosystem.
 
-- **Eight Critical Success Factors define the essential conditions for Event Management success**: Management Support and Sponsorship, Clearly Defined Events and Responses, Appropriate Tooling and Technology, Skilled and Trained Personnel, Process Integration, Accurate CMDB, Continuous Improvement Culture, and Balanced Automation.
+- **Eight Critical Success Factors define the essential conditions for Event Management success**: Management Support and Sponsorship, Clearly Defined Events and Responses, Appropriate Tooling and Technology, Accurate CMDB, Skilled and Trained Personnel, Process Integration, Continuous Improvement Culture, and Balanced Automation.
 
 - **Organizations typically progress through five maturity levels**, evolving from reactive, ad-hoc operations to optimized, self-healing capabilities, with each level building upon the foundations established by previous levels.
 

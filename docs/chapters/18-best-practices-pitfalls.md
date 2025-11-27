@@ -1410,7 +1410,42 @@ Chapter 3 introduced Eight Critical Success Factors (CSFs) essential for Event M
 - Integration success rate ≥95% for automated incident creation
 - User satisfaction ≥80% measured through operational staff surveys
 
-### CSF 4: Skilled and Trained Personnel
+### CSF 4: Accurate Configuration Management Database
+
+**CSF Definition:** Maintain Configuration Management Database accuracy at ≥95% ensuring reliable topology-based correlation and accurate impact assessment for Event Management operations.
+
+**Implementation Guidance:**
+
+**Best Practice Linkage:** This CSF is the focus of Best Practice 7: CMDB Accuracy Maintenance, providing detailed implementation approach for achieving and sustaining accuracy targets.
+
+**Pitfall Prevention:** Accurate CMDB prevents multiple pitfalls by enabling effective topology-based correlation (preventing Alert Fatigue), supporting accurate impact assessment (enabling proactive operations), and ensuring correct routing (supporting process integration).
+
+**Implementation Steps:**
+
+1. **Accuracy Baseline:** Conduct comprehensive CMDB accuracy audit establishing current baseline. Sample representative Configuration Items (CIs) across all infrastructure types (servers, network devices, applications, cloud resources) comparing CMDB data to actual infrastructure discovered through scanning and verification. Calculate accuracy percentage identifying gap to ≥95% target.
+
+2. **Data Cleansing:** Based on audit findings, execute systematic data cleansing campaign correcting known inaccuracies, removing obsolete CIs, and completing missing attributes. Prioritize production CIs and those supporting business-critical services. Use phased approach starting with highest-impact systems ensuring quick wins while working toward comprehensive accuracy.
+
+3. **Discovery Automation:** Deploy automated discovery tools scanning infrastructure regularly (weekly for dynamic environments such as cloud and virtualized infrastructure, monthly for static infrastructure) updating CMDB automatically. Configure discovery to identify new CIs, update existing CI attributes, flag obsolete CIs, and discover relationships between CIs.
+
+4. **Change Process Integration:** Integrate CMDB updates into Change Management process making CMDB update mandatory step in change closure workflow. Every infrastructure change must update CMDB reflecting new state. Implement change workflow validation preventing change closure without CMDB update confirmation.
+
+5. **Ownership Assignment:** Assign clear CI ownership establishing accountability for data accuracy. CI Owners (typically infrastructure team leads or application owners) responsible for regular reviews of their assigned CIs, timely processing of update requests, and participation in accuracy audits.
+
+6. **Relationship Management:** Focus on relationship accuracy beyond CI attribute accuracy. Accurate relationships essential for topology-based correlation enabling root cause identification. Use automated discovery for technical relationships (network connectivity, application dependencies) while documenting business relationships (services supported, business processes impacted) through service mapping exercises.
+
+7. **Continuous Monitoring:** Implement CMDB accuracy monitoring tracking trends over time. Monitor discovery exceptions (CIs found in infrastructure but not in CMDB), aging CIs (no updates in 90+ days suggesting obsolescence), and relationship gaps. Use monitoring to identify degradation early enabling corrective action.
+
+8. **Governance and Audit:** Establish CMDB governance including accuracy targets (≥95%), quarterly audit schedules, improvement initiatives for accuracy gaps, and executive reporting on CMDB health. Conduct regular audits using sampling methodology ensuring ongoing compliance with accuracy targets.
+
+**Success Criteria:**
+- CMDB accuracy ≥95% measured through quarterly audits using representative sampling
+- Discovery coverage 100% for production CIs ensuring all infrastructure monitored
+- Change integration rate ≥95% (percentage of changes resulting in appropriate CMDB updates)
+- Relationship completeness ≥90% for critical dependencies enabling effective correlation
+- Aging CI percentage <5% (CIs not updated in 90+ days) indicating active maintenance
+
+### CSF 5: Skilled and Trained Personnel
 
 **CSF Definition:** Ensure Event Management personnel possess comprehensive process knowledge, technical skills, and tool proficiency required for effective event monitoring, correlation analysis, and escalation decision-making.
 
@@ -1450,7 +1485,7 @@ Chapter 3 introduced Eight Critical Success Factors (CSFs) essential for Event M
 - Operations metrics (categorization accuracy ≥95%, routing accuracy ≥95%) demonstrating practical skill application
 - Staff retention ≥85% indicating satisfaction and engagement
 
-### CSF 5: Process Integration
+### CSF 6: Process Integration
 
 **CSF Definition:** Establish strong integration between Event Management and Incident Management, Problem Management, Change Management, and Availability Management ensuring seamless escalation and information flow.
 
@@ -1495,41 +1530,6 @@ Chapter 3 introduced Eight Critical Success Factors (CSFs) essential for Event M
 - Escalation accuracy ≥95%
 - Escalation timeliness ≥95% within target response times
 - Receiving process satisfaction ≥80% with event escalation quality
-
-### CSF 6: Accurate Configuration Management Database
-
-**CSF Definition:** Maintain Configuration Management Database accuracy at ≥95% ensuring reliable topology-based correlation and accurate impact assessment for Event Management operations.
-
-**Implementation Guidance:**
-
-**Best Practice Linkage:** This CSF is the focus of Best Practice 7: CMDB Accuracy Maintenance, providing detailed implementation approach for achieving and sustaining accuracy targets.
-
-**Pitfall Prevention:** Accurate CMDB prevents multiple pitfalls by enabling effective topology-based correlation (preventing Alert Fatigue), supporting accurate impact assessment (enabling proactive operations), and ensuring correct routing (supporting process integration).
-
-**Implementation Steps:**
-
-1. **Accuracy Baseline:** Conduct comprehensive CMDB accuracy audit establishing current baseline. Sample representative Configuration Items (CIs) across all infrastructure types (servers, network devices, applications, cloud resources) comparing CMDB data to actual infrastructure discovered through scanning and verification. Calculate accuracy percentage identifying gap to ≥95% target.
-
-2. **Data Cleansing:** Based on audit findings, execute systematic data cleansing campaign correcting known inaccuracies, removing obsolete CIs, and completing missing attributes. Prioritize production CIs and those supporting business-critical services. Use phased approach starting with highest-impact systems ensuring quick wins while working toward comprehensive accuracy.
-
-3. **Discovery Automation:** Deploy automated discovery tools scanning infrastructure regularly (weekly for dynamic environments such as cloud and virtualized infrastructure, monthly for static infrastructure) updating CMDB automatically. Configure discovery to identify new CIs, update existing CI attributes, flag obsolete CIs, and discover relationships between CIs.
-
-4. **Change Process Integration:** Integrate CMDB updates into Change Management process making CMDB update mandatory step in change closure workflow. Every infrastructure change must update CMDB reflecting new state. Implement change workflow validation preventing change closure without CMDB update confirmation.
-
-5. **Ownership Assignment:** Assign clear CI ownership establishing accountability for data accuracy. CI Owners (typically infrastructure team leads or application owners) responsible for regular reviews of their assigned CIs, timely processing of update requests, and participation in accuracy audits.
-
-6. **Relationship Management:** Focus on relationship accuracy beyond CI attribute accuracy. Accurate relationships essential for topology-based correlation enabling root cause identification. Use automated discovery for technical relationships (network connectivity, application dependencies) while documenting business relationships (services supported, business processes impacted) through service mapping exercises.
-
-7. **Continuous Monitoring:** Implement CMDB accuracy monitoring tracking trends over time. Monitor discovery exceptions (CIs found in infrastructure but not in CMDB), aging CIs (no updates in 90+ days suggesting obsolescence), and relationship gaps. Use monitoring to identify degradation early enabling corrective action.
-
-8. **Governance and Audit:** Establish CMDB governance including accuracy targets (≥95%), quarterly audit schedules, improvement initiatives for accuracy gaps, and executive reporting on CMDB health. Conduct regular audits using sampling methodology ensuring ongoing compliance with accuracy targets.
-
-**Success Criteria:**
-- CMDB accuracy ≥95% measured through quarterly audits using representative sampling
-- Discovery coverage 100% for production CIs ensuring all infrastructure monitored
-- Change integration rate ≥95% (percentage of changes resulting in appropriate CMDB updates)
-- Relationship completeness ≥90% for critical dependencies enabling effective correlation
-- Aging CI percentage <5% (CIs not updated in 90+ days) indicating active maintenance
 
 ### CSF 7: Continuous Improvement Culture
 

@@ -35,9 +35,9 @@ The primary ITSM processes that integrate with Event Management include:
 
 Each integration point has specific triggers, handoff requirements, and data transfer needs. The following sections detail these integration workflows.
 
-### Critical Success Factor 5: Process Integration
+### Critical Success Factor 6: Process Integration
 
-CSF 5 explicitly requires that Event Management integrate effectively with other ITSM processes. The implementation of this success factor includes:
+CSF 6 explicitly requires that Event Management integrate effectively with other ITSM processes. The implementation of this success factor includes:
 
 **Integration Requirements:**
 - Defined escalation criteria for each downstream process
@@ -54,7 +54,7 @@ CSF 5 explicitly requires that Event Management integrate effectively with other
 - Integration testing procedures to validate handoffs
 - Metrics tracking integration effectiveness
 
-The successful implementation of CSF 5 transforms Event Management from an isolated monitoring function into the central nervous system of IT operations.
+The successful implementation of CSF 6 transforms Event Management from an isolated monitoring function into the central nervous system of IT operations.
 
 ### Escalation Decision Framework
 
