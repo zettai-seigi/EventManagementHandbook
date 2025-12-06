@@ -27,9 +27,9 @@ This chapter defines four essential classification dimensions: **Event Types** (
 Event Types represent the fundamental classification that determines the action required when an event occurs. Each event detected by monitoring tools must be assigned to one of four standardized types: **Informational**, **Warning**, **Exception**, or **Related**. This type assignment directly impacts how the event is handled, whether it requires investigation, and how urgently it must be addressed.
 
 
-![Figure 4.2: Event Types Comparison Matrix](../assets/images/Event Types Comparison Matrix.jpeg)
+![Table 4.1: Event Types Comparison Matrix](../assets/images/Event Types Comparison Matrix.jpeg)
 
-*Figure 4.2: Event Types Comparison Matrix - This comprehensive matrix compares the four primary event types (Informational, Warning, Exception, Related) across key operational dimensions. For each event type, the table specifies the definition, required action, response time expectations, escalation frequency, typical closure codes, and percentage of total event volume. This reference enables consistent event classification and helps teams understand appropriate response protocols for each event type.*
+*Table 4.1: Event Types Comparison Matrix - This comprehensive matrix compares the four primary event types (Informational, Warning, Exception, Related) across key operational dimensions. For each event type, the table specifies the definition, required action, response time expectations, escalation frequency, typical closure codes, and percentage of total event volume. This reference enables consistent event classification and helps teams understand appropriate response protocols for each event type.*
 
 ### Informational Events
 
@@ -107,7 +107,7 @@ Event correlation is essential for managing "alert storms"—situations where a 
 
 > **Note:** The ability to identify related events depends on the Configuration Management Database (CMDB) containing accurate CI dependency relationships and the Event Designer configuring appropriate correlation rules.
 
-**Table 4.1: Event Types Comparison Matrix**
+**Table 4.2: Event Types Comparison Matrix**
 
 | Event Type | Definition | Action Required | Response Time | Escalation | Typical Closure Code | % of Total Volume (Typical) |
 |---|---|---|---|---|---|---|
@@ -119,9 +119,9 @@ Event correlation is essential for managing "alert storms"—situations where a 
 ## Event Categories
 
 
-![Figure 4.3: Event Categories with Monitoring Examples](../assets/images/Event Categories with Monitoring Examples.jpeg)
+![Table 4.3: Event Categories with Monitoring Examples](../assets/images/Event Categories with Monitoring Examples.jpeg)
 
-*Figure 4.3: Event Categories with Monitoring Examples - This visual defines the four primary event categories used to organize and route events based on infrastructure type. For each category (Hardware-Network, Hardware-Server, Software-Commercial, Software-Custom), it describes the infrastructure type, typical Configuration Items (CIs), primary monitoring focus areas, and common event examples. Understanding these categories enables proper event routing to specialized support teams and supports accurate reporting and trending.*
+*Table 4.3: Event Categories with Monitoring Examples - This table defines the four primary event categories used to organize and route events based on infrastructure type. For each category (Hardware-Network, Hardware-Server, Software-Commercial, Software-Custom), it describes the infrastructure type, typical Configuration Items (CIs), primary monitoring focus areas, and common event examples. Understanding these categories enables proper event routing to specialized support teams and supports accurate reporting and trending.*
 
 **Event Categories** serve as the primary mechanism for organizing events based on the type of Configuration Item (CI) or infrastructure component that generates them. Categories enable effective event routing, support reporting and trending analysis, and help identify which infrastructure areas require the most attention or tuning. The categorization taxonomy must align with CI types found in the Configuration Management Database (CMDB) to enable correlation and impact analysis.
 
@@ -262,7 +262,7 @@ The **Software – Custom** category includes internally developed applications,
 
 > **Important:** Application development teams must follow standards defined by Event Management (per **Policy 8: Application Event Triggers**) when implementing event triggers in custom applications. This ensures consistency in event formats, severity assignments, and actionable information.
 
-**Table 4.2: Event Categories with Monitoring Examples**
+**Table 4.4: Event Categories with Monitoring Examples**
 
 | Category | Infrastructure Type | Typical CIs | Primary Monitoring Focus | Common Event Examples |
 |---|---|---|---|---|
@@ -289,9 +289,9 @@ Significant deviations from expected distribution warrant investigation. For exa
 ## Event Attributes and Metadata
 
 
-![Figure 4.4: Event Attributes Mind Map](../assets/images/Event Attributes Mind Map.jpeg)
+![Figure 4.2: Event Attributes Mind Map](../assets/images/Event Attributes Mind Map.jpeg)
 
-*Figure 4.4: Event Attributes Mind Map - This mind map visualizes the complete set of event attributes organized by category (Identification, Classification, Temporal, Descriptive, Correlation, and Handling). Each attribute provides information needed for event processing, correlation, routing, or reporting. Standardizing these attributes across all monitoring tools enables consistent event handling and meaningful analytics.*
+*Figure 4.2: Event Attributes Mind Map - This mind map visualizes the complete set of event attributes organized by category (Identification, Classification, Temporal, Descriptive, Correlation, and Handling). Each attribute provides information needed for event processing, correlation, routing, or reporting. Standardizing these attributes across all monitoring tools enables consistent event handling and meaningful analytics.*
 
 Beyond type and category, events carry structured attributes that provide the information needed for correlation, routing, impact analysis, and resolution. These attributes function as metadata that enables both automated processing and analyst investigation. Standardized attributes ensure consistency across diverse monitoring tools and enable meaningful reporting.
 
@@ -449,7 +449,7 @@ Before closing an event, the Event Analyst must:
 
 > **Important:** Premature closure of events—closing an event before confirming resolution—introduces inaccuracies in KPI metrics and may allow recurring issues to go unaddressed. Event Managers should monitor patterns of recurring events with the same signature as indicators of premature closure.
 
-**Table 4.3: Event Status Lifecycle**
+**Table 4.5: Event Status Lifecycle**
 
 | Status | Definition | Typical Duration | Next Status | Key Performance Metric |
 |---|---|---|---|---|
@@ -684,7 +684,7 @@ Ideally, approved changes in the change calendar should automatically suppress m
 
 > **Best Practice:** Implement automated monitoring suppression for scheduled maintenance windows. This prevents false alarms during planned downtime and allows analysts to focus on unplanned issues. The Event Designer configures suppression rules based on change calendar data.
 
-**Table 4.4: Event Closure Codes with KPI Impact**
+**Table 4.6: Event Closure Codes with KPI Impact**
 
 | Closure Code | Definition | Usage Scenario | Primary KPI Impact | Target/Typical Range |
 |---|---|---|---|---|

@@ -9,9 +9,9 @@ permalink: /chapters/12-key-performance-indicators/
 # Chapter 12: Key Performance Indicators
 
 
-![Figure 12.1: Event Closure Codes with KPI Impact](../assets/images/Event Closure Codes with KPI Impact.jpeg)
+![Table 12.1: Event Closure Codes with KPI Impact](../assets/images/Event Closure Codes with KPI Impact.jpeg)
 
-*Figure 12.1: Event Closure Codes with KPI Impact - This visual shows how different event closure codes (Auto Action, Incident, Problem, Change, Duplicate, and Related) impact various Key Performance Indicators. Understanding these relationships helps Event Analysts select appropriate closure codes and enables accurate KPI calculation and reporting.*
+*Table 12.1: Event Closure Codes with KPI Impact - This table shows how different event closure codes (Auto Action, Incident, Problem, Change, Duplicate, and Related) impact various Key Performance Indicators. Understanding these relationships helps Event Analysts select appropriate closure codes and enables accurate KPI calculation and reporting.*
 
 
 ## Introduction
@@ -110,7 +110,7 @@ A false positive event is defined as any event that:
 
 Organizations track false positives through several mechanisms. Events closed with notes indicating "false alarm" or similar language are flagged. Filter rules are tested and refined based on false positive feedback. Regular reviews (Activity 5: Review and Close Event) specifically analyze false positive rates to identify improvement opportunities.
 
-**Figure 12.2:** False Positive Rate Trends
+**Figure 12.1:** False Positive Rate Trends
 *Caption:* This line graph shows False Positive Rate trends over a 12-month period with the target threshold marked at 5%. The chart displays monthly false positive percentages as a solid line, a 3-month moving average as a dashed line, and the target threshold as a horizontal reference line. Organizations should investigate any month where the false positive rate exceeds the 5% target and analyze trend direction to identify improving or deteriorating conditions.
 *Position:* After the Calculation Details paragraph
 
@@ -272,7 +272,7 @@ Auto-resolved events are identified by the closure code `Auto Action` assigned i
 
 Events that trigger automation but subsequently require escalation due to automation failure are not counted as auto-resolved. This distinction ensures the metric accurately reflects successful self-healing rather than merely attempted automation.
 
-**Figure 12.3:** Auto-operations Success Rate
+**Figure 12.2:** Auto-operations Success Rate
 *Caption:* This gauge chart displays the current Auto-operations Success Rate with color-coded zones indicating maturity levels. The red zone (0-30%) represents initial maturity, yellow (30-50%) indicates developing capabilities, light green (50-70%) shows advancing automation, and dark green (70-100%) represents optimized self-healing infrastructure. The current value is prominently displayed, with the target threshold marked at 70%.
 *Position:* After the Calculation Details paragraph, half-page width
 
@@ -393,7 +393,7 @@ This KPI requires integration between Event Management and Incident Management s
 
 The Efficiency of Detection metric measures the ratio of event-triggered incidents to total incidents, quantifying Event Management's success at identifying issues before they impact users or require manual discovery.
 
-**Figure 12.4:** Efficiency of Detection
+**Figure 12.3:** Efficiency of Detection
 *Caption:* This horizontal progress bar chart shows Efficiency of Detection as a percentage from 0-100%, with the current value displayed prominently and the target threshold marked at 60%. The bar is color-coded with red (0-40%) indicating insufficient monitoring coverage, yellow (40-60%) showing developing proactive capabilities, and green (60-100%) representing effective proactive detection. A secondary metric shows the breakdown of event-triggered vs. user-reported vs. staff-discovered incidents for the measurement period.
 *Position:* After the Calculation Details paragraph
 
@@ -659,7 +659,7 @@ While this chapter provides target thresholds for each KPI, organizations should
 
 Effective KPI visualization transforms data into actionable insights. Organizations should implement multi-level dashboards serving different audiences and purposes:
 
-**Table 12.1:** KPI Dashboard Summary
+**Table 12.2:** KPI Dashboard Summary
 
 | KPI Category | Metric | Formula | Target | Frequency | Primary Audience |
 |--------------|--------|---------|--------|-----------|------------------|

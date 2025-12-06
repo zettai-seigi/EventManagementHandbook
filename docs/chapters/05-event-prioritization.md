@@ -55,9 +55,9 @@ Impact assessment is not solely determined by the nature of the failure itself, 
 | **Staging/UAT Environment** | 2 - Medium | 2 - Medium | 3 - High | 3 - High |
 | **Production Environment** | 3 - High | **4 - Critical** | **4 - Critical** | **4 - Critical** |
 
-![Figure 5.1: Impact Assessment Matrix](../assets/images/Impact Assessment Matrix.jpeg)
+![Table 5.3: Impact Assessment Matrix](../assets/images/Impact Assessment Matrix.jpeg)
 
-*Figure 5.1: Impact Assessment Matrix - This visual representation of the Impact Determination Matrix shows how environment type (Test, Development, Staging, Production) intersects with organizational scope (Office, Building, Site, Organization) to determine impact levels. The color-coded matrix makes it easy for Event Analysts to quickly identify the appropriate impact level during event triage.*
+*Table 5.3: Impact Assessment Matrix - This visual representation of the Impact Determination Matrix shows how environment type (Test, Development, Staging, Production) intersects with organizational scope (Office, Building, Site, Organization) to determine impact levels. The color-coded matrix makes it easy for Event Analysts to quickly identify the appropriate impact level during event triage.*
 
 This matrix demonstrates that environment type heavily influences impact assessment. Test environment failures consistently receive Low impact ratings regardless of organizational scope, reflecting their isolation from business operations. Development environment issues receive Low to Medium impact depending on scope, as they affect developer productivity but not end users. Staging and User Acceptance Testing (UAT) environments receive Medium to High impact ratings because failures can block production releases or quality assurance activities. Production environments receive the highest impact ratings, with any production failure affecting multiple users automatically classified as Critical.
 
@@ -85,9 +85,9 @@ While impact measures the business consequence of an event, **urgency** measures
 ### Urgency Level Definitions
 
 
-![Figure 5.2: Urgency Level with Service Restoration Goal](../assets/images/Urgency Level with Service Restoration Goal.jpeg)
+![Table 5.4: Urgency Level with Service Restoration Goal](../assets/images/Urgency Level with Service Restoration Goal.jpeg)
 
-*Figure 5.2: Urgency Level with Service Restoration Goal - This visual displays the four urgency levels with their associated service restoration goals and business drivers, helping Event Analysts quickly determine the appropriate urgency classification.*
+*Table 5.4: Urgency Level with Service Restoration Goal - This table displays the four urgency levels with their associated service restoration goals and business drivers, helping Event Analysts quickly determine the appropriate urgency classification.*
 
 The Event Management framework defines four urgency levels, each associated with a service restoration goal and business driver.
 
@@ -129,9 +129,9 @@ This example illustrates how the Event Analyst must assess urgency based not mer
 ## Priority Calculation Matrix
 
 
-![Figure 5.3: Urgency × Impact Priority Matrix](../assets/images/Urgency x Impact Priority Matrix.jpeg)
+![Table 5.5: Urgency × Impact Priority Matrix](../assets/images/Urgency x Impact Priority Matrix.jpeg)
 
-*Figure 5.3: Urgency × Impact Priority Matrix - This matrix shows how priority levels (1-5) are derived from the intersection of impact (1-4) and urgency (1-4) dimensions, enabling consistent priority calculation across all events.*
+*Table 5.5: Urgency × Impact Priority Matrix - This matrix shows how priority levels (1-5) are derived from the intersection of impact (1-4) and urgency (1-4) dimensions, enabling consistent priority calculation across all events.*
 
 Priority is the **combination of Impact and Urgency** calculated using a defined matrix. This two-dimensional approach ensures that both the business consequence and time sensitivity are considered when determining how quickly and with what resources an event should be addressed.
 
@@ -153,7 +153,7 @@ The Event Management framework defines five priority levels resulting from the I
 
 The Priority Matrix calculates priority by mapping Impact (vertical axis) against Urgency (horizontal axis). The result determines both the priority level and the expected response time.
 
-**Table 5.3: Priority Calculation Matrix (Impact × Urgency)**
+**Table 5.6: Priority Calculation Matrix (Impact × Urgency)**
 
 |  | **Urgency 1 (Low)** | **Urgency 2 (Medium)** | **Urgency 3 (High)** | **Urgency 4 (Critical)** |
 |---|---|---|---|---|
@@ -235,13 +235,13 @@ However, Event Analysts retain the authority to adjust priority when automated a
 ## Response Time Targets by Priority Level
 
 
-![Figure 5.4: Response Time Targets by Priority Level](../assets/images/Response Time Target By Priority Levels.jpeg)
+![Table 5.7: Response Time Targets by Priority Level](../assets/images/Response Time Target By Priority Levels.jpeg)
 
-*Figure 5.4: Response Time Targets by Priority Level - This visual displays the response time targets, handling approaches, and escalation triggers for each of the five priority levels, providing a quick reference for Event Analysts.*
+*Table 5.7: Response Time Targets by Priority Level - This table displays the response time targets, handling approaches, and escalation triggers for each of the five priority levels, providing a quick reference for Event Analysts.*
 
 Each priority level has an associated **response time target** that defines how quickly the Event Analyst must acknowledge and begin working on the event. These targets are critical for meeting SLAs and ensuring that business-impacting events receive appropriate attention.
 
-**Table 5.4: Response Time Targets by Priority**
+**Table 5.8: Response Time Targets by Priority**
 
 | Priority Level | Priority Name | Response Time Target | Handling Approach | Escalation Trigger |
 |---|---|---|---|---|
@@ -282,9 +282,9 @@ Consistent failure to meet response time targets indicates the need for process 
 
 The priority determination process follows a logical sequence that ensures consistency while allowing for contextual adjustments. The flowchart below illustrates this decision flow:
 
-![Figure 5.5: Event Management Priority Flowchart](../assets/images/Event Management Priority Flowchart.jpeg)
+![Figure 5.1: Event Management Priority Flowchart](../assets/images/Event Management Priority Flowchart.jpeg)
 
-*Figure 5.5: Event Management Priority Flowchart - This flowchart demonstrates the systematic approach to determining event priority. The process begins with impact assessment based on environment and organizational scope, continues with urgency determination considering time modifiers, applies the Priority Matrix to calculate initial priority, and includes a validation step where Event Analysts can adjust priority based on business knowledge. All priority adjustments must be documented.*
+*Figure 5.1: Event Management Priority Flowchart - This flowchart demonstrates the systematic approach to determining event priority. The process begins with impact assessment based on environment and organizational scope, continues with urgency determination considering time modifiers, applies the Priority Matrix to calculate initial priority, and includes a validation step where Event Analysts can adjust priority based on business knowledge. All priority adjustments must be documented.*
 
 ```
 [Start]
