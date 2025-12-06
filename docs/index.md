@@ -116,4 +116,4 @@ This handbook is distributed under the [MIT License](https://opensource.org/lice
 
 ---
 
-*Last Updated: November 2025 | Version 1.0*
+*Last Updated: December 2025 | Version 1.0*
