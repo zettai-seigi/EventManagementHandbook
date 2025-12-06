@@ -537,9 +537,9 @@ Events signaling the need for configuration adjustments, capacity expansions, or
 
 **Closure Code:** Events resulting in proactive changes are closed with closure code `Change`, linking to the created RFC.
 
-**Figure 3.2:** Process Integration Map
-*Caption:* This diagram illustrates the primary integration points between Event Management and other ITSM processes. Event Management serves as the central detection mechanism, feeding Incident Management (for service disruptions), Problem Management (for recurring issues requiring root cause analysis), and Change Management (for proactive infrastructure improvements). Bi-directional arrows indicate feedback loops where insights from downstream processes inform updates to event definitions and monitoring rules.
-*Position:* Following the Integration with Change Management subsection, full-page width
+![Figure 3.2: Process Integration Map](../assets/images/Process Integration Map.jpeg)
+
+*Figure 3.2: Process Integration Map - This diagram illustrates the primary integration points between Event Management and other ITSM processes. Event Management serves as the central detection mechanism, feeding Incident Management (for service disruptions), Problem Management (for recurring issues requiring root cause analysis), and Change Management (for proactive infrastructure improvements). Bi-directional arrows indicate feedback loops where insights from downstream processes inform updates to event definitions and monitoring rules.*
 
 #### Enabling Effective Integration
 

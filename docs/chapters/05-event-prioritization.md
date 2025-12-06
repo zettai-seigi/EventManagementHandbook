@@ -55,6 +55,10 @@ Impact assessment is not solely determined by the nature of the failure itself, 
 | **Staging/UAT Environment** | 2 - Medium | 2 - Medium | 3 - High | 3 - High |
 | **Production Environment** | 3 - High | **4 - Critical** | **4 - Critical** | **4 - Critical** |
 
+![Figure 5.0: Impact Assessment Matrix](../assets/images/Impact Assessment Matrix.jpeg)
+
+*Figure 5.0: Impact Assessment Matrix - This visual representation of the Impact Determination Matrix shows how environment type (Test, Development, Staging, Production) intersects with organizational scope (Office, Building, Site, Organization) to determine impact levels. The color-coded matrix makes it easy for Event Analysts to quickly identify the appropriate impact level during event triage.*
+
 This matrix demonstrates that environment type heavily influences impact assessment. Test environment failures consistently receive Low impact ratings regardless of organizational scope, reflecting their isolation from business operations. Development environment issues receive Low to Medium impact depending on scope, as they affect developer productivity but not end users. Staging and User Acceptance Testing (UAT) environments receive Medium to High impact ratings because failures can block production releases or quality assurance activities. Production environments receive the highest impact ratings, with any production failure affecting multiple users automatically classified as Critical.
 
 The organizational scope dimension recognizes that the same failure has different business consequences depending on how many users or departments it affects. A production database server failure affecting a single office (perhaps a branch-specific application) receives High impact (Level 3), while the same technical failure affecting an entire building, site, or organization receives Critical impact (Level 4).

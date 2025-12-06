@@ -17,6 +17,10 @@ This chapter details the comprehensive role framework for Event Management, defi
 
 The role framework presented in this chapter directly supports Critical Success Factor 4 (CSF-4): Skilled and Trained Personnel. Organizations that invest in proper role definition, staffing, and development create a foundation for mature Event Management capabilities. The chapter provides practical guidance on team sizing, competency requirements, and development paths to help organizations build effective EM teams regardless of their current maturity level.
 
+![Figure 6.0: Event Management Roles and Competency Requirements](../assets/images/Event Management Roles and Competency Requirements.jpeg)
+
+*Figure 6.0: Event Management Roles and Competency Requirements - This overview diagram summarizes the five core Event Management roles and their associated competency requirements. It provides a quick reference for understanding the relationship between organizational roles, their primary responsibilities, and the key skills required for success in each position.*
+
 ## Event Management Team Structure
 
 
