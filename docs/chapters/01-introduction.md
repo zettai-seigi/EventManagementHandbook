@@ -303,8 +303,6 @@ Test your understanding of the concepts presented in this chapter:
 
 **Chapter 1 Complete**
 
-*Word Count: Approximately 6,000 words*
-
 This chapter establishes the foundational understanding necessary for the detailed process specifications, implementation guidance, and optimization strategies presented in subsequent chapters. Proceed to Chapter 2 to explore Event Management fundamentals including event types, process activities, roles and responsibilities, and key definitions.
 
 ---
