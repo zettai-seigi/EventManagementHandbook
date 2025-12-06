@@ -102,9 +102,9 @@ Equally important is recognizing scenarios where automation is inappropriate or 
 
 Successful automation follows a structured development lifecycle ensuring quality, safety, and maintainability. This lifecycle mirrors software development best practices while incorporating Event Management-specific considerations.
 
-**Figure 10.1:** Automation Development Lifecycle
-*Caption:* This circular diagram illustrates the six phases of automation development: Identify, Design, Develop, Test, Deploy, and Monitor. Each phase feeds into the next, with the Monitor phase connecting back to Identify to support continuous improvement. The cycle emphasizes that automation is not a one-time project but an ongoing process requiring regular refinement.
-*Position:* After introduction to Automation Development Lifecycle section
+![Figure 10.1: Automation Development Lifecycle](../assets/images/Automation Development Lifecycle.jpeg)
+
+*Figure 10.1: Automation Development Lifecycle - This circular diagram illustrates the six phases of automation development: Identify, Design, Develop, Test, Deploy, and Monitor. Each phase feeds into the next, with the Monitor phase connecting back to Identify to support continuous improvement. The cycle emphasizes that automation is not a one-time project but an ongoing process requiring regular refinement.*
 
 ### Phase 1: Identify Candidates
 
@@ -237,9 +237,9 @@ Example test scenarios for a service restart automation:
 
 Automation without safety controls is dangerous. Well-designed safety mechanisms ensure automation resolves issues without creating new problems, maintains stability during failures, and provides operators with appropriate oversight and control.
 
-**Figure 10.2:** Automation Safety Controls
-*Caption:* This layered diagram illustrates the five categories of automation safety controls stacked vertically: Throttling and Rate Limiting (base layer), Blackout Periods (second layer), Execution Validation (third layer), Rollback Capabilities (fourth layer), and Emergency Shutdown (top layer). Each layer builds upon the previous, creating defense-in-depth protection against automation failures or unexpected consequences.
-*Position:* At beginning of Safety Controls section
+![Figure 10.2: Automation Safety Controls](../assets/images/Automation Safety Controls.jpeg)
+
+*Figure 10.2: Automation Safety Controls - This layered diagram illustrates the defense-in-depth approach to automation safety, with multiple control layers protecting against automation failures or unexpected consequences.*
 
 ### Throttling and Rate Limiting
 

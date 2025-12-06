@@ -439,9 +439,9 @@ Early detection and response to these indicators prevents minor issues from beco
 
 The three-phase implementation model includes numerous dependencies that govern the sequence of activities. Understanding these dependencies is essential for developing realistic schedules and identifying the critical path—the sequence of activities that determines the minimum implementation duration.
 
-**Figure 17.2:** Phase Dependencies
-*Caption:* This network diagram illustrates the dependencies between major implementation activities. Solid arrows represent mandatory dependencies where one activity must complete before another begins. Dashed arrows represent preferred dependencies where overlap is possible but not ideal. The critical path (highlighted in red) shows that tool deployment, 24x7 staffing, correlation implementation, and automation expansion are the activities that determine minimum project duration.
-*Position:* Full-page network diagram following this section
+![Figure 17.2: Implementation Phase Dependencies](../assets/images/Implementation Phase Dependencies.jpeg)
+
+*Figure 17.2: Implementation Phase Dependencies - This network diagram illustrates the dependencies between major implementation activities across three phases: Foundation (Months 1-4), Expansion (Months 5-8), and Optimization (Months 9-12). The critical path (highlighted in red) shows the sequence of activities that determines minimum project duration, with clear dependencies between phases ensuring proper sequencing of capabilities.*
 
 ### Critical Path Activities
 

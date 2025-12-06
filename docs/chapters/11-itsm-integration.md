@@ -82,9 +82,9 @@ Activity 4: Correlate and Escalate Event contains the core logic for process int
 
 The Event Analyst role is responsible for executing this decision framework, applying the Escalation Decision Matrix to route events correctly. Routing Accuracy is a key performance indicator (KPI) with a target of ≥95%, measuring the percentage of events routed to the correct team, process, or individual on the first attempt.
 
-**Figure 11.1:** ITSM Process Integration Map
-*Caption:* This diagram illustrates the central position of Event Management within the ITSM ecosystem, showing escalation pathways to Incident, Problem, and Change Management, as well as data exchange with Service Level, Configuration, Capacity, and Availability Management. Event Management receives detected state changes, correlates and prioritizes them, then routes to the appropriate downstream process based on defined criteria. Bidirectional arrows indicate two-way communication, where downstream processes can create events and send resolution confirmations back to Event Management.
-*Position:* Place after the Escalation Decision Framework section
+![Figure 11.1: ITSM Process Integration Map](../assets/images/ITSM Process Integration Map.jpeg)
+
+*Figure 11.1: ITSM Process Integration Map - This diagram illustrates the central position of Event Management within the ITSM ecosystem, showing escalation pathways to Incident, Problem, and Change Management, as well as data exchange with Service Level, Configuration, Capacity, and Availability Management. Event Management receives detected state changes, correlates and prioritizes them, then routes to the appropriate downstream process based on defined criteria. Bidirectional arrows indicate two-way communication.*
 
 ## Incident Management Integration
 
@@ -147,9 +147,9 @@ The following event data must be included in the incident record to provide comp
 - Event record remains open pending incident resolution
 - Coordination occurs if additional events related to same incident
 
-**Figure 11.2:** Event-to-Incident Workflow (Sequence Diagram)
-*Caption:* This sequence diagram shows the chronological steps in escalating an event to Incident Management. The workflow begins with event detection, proceeds through correlation and significance determination, then transfers control to Incident Management while maintaining linkage for tracking and closure. Key actors include the Event Management System, Event Analyst, Incident Management System, and Incident Resolver. The diagram highlights the data handoff points and the bidirectional communication that occurs throughout the incident lifecycle.
-*Position:* Place after the Event-to-Incident Workflow section
+![Figure 11.2: Event-to-Incident Workflow](../assets/images/Event-to-Incident Workflow.jpeg)
+
+*Figure 11.2: Event-to-Incident Workflow - This sequence diagram shows the chronological steps in escalating an event to Incident Management. The workflow begins with event detection, proceeds through correlation and significance determination, then transfers control to Incident Management while maintaining linkage for tracking and closure.*
 
 ### Data Handoff Requirements
 

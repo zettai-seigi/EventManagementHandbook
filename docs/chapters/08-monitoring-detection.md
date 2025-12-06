@@ -308,7 +308,7 @@ Practical threshold examples demonstrate how principles translate to specific co
 - Clear: Growth rate indicates more than 14 days to reach 10% free
 - Rationale: Predictive threshold enables proactive capacity management; Exception catches unexpected rapid growth
 
-![Event Management Tooling Landscape](../assets/images/Event Management Tooling.jpeg)
+![Figure 8.1: Threshold Configuration Example](../assets/images/Threshold Configuration Example.jpeg)
 
 *Figure 8.1: Threshold Configuration Example - This line chart illustrates Warning and Exception thresholds for CPU utilization, showing hysteresis bands that prevent alert flapping. The blue line represents actual CPU utilization over time, the yellow band shows the Warning threshold zone (70-80%), and the red band shows the Exception threshold zone (90-100%). Notice how the clearing thresholds (green dotted lines) are lower than the triggering thresholds to prevent repeated alerts as metrics oscillate.*
 

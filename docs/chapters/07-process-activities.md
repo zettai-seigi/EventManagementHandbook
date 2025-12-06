@@ -318,9 +318,9 @@ The Event Analyst reviews the event type and category, checks the escalation mat
 
 Governance is provided by Control Objective EM-C06, which mandates that Event Management procedures include escalation criteria and communication procedures for events requiring human intervention. The success metric Routing Accuracy measures the percentage of events routed to the correct team, process, or individual, with a target of greater than or equal to 95 percent.
 
-**Figure 7.3:** Escalation Path Decision Tree
-*Caption:* This decision tree illustrates the logic used in Sub-Activity 4.4 to determine the appropriate escalation path for events requiring human intervention. The tree shows decision points for service disruption, recurring patterns, change requirements, and operational actions, directing events to Incident Management, Problem Management, Change Management, or Operations Teams respectively.
-*Position:* After Sub-Activity 4.4, half-page width
+![Figure 7.3: Escalation Path Decision Tree](../assets/images/Escalation Path Decision Tree.jpeg)
+
+*Figure 7.3: Escalation Path Decision Tree - This decision tree illustrates the logic used in Sub-Activity 4.4 to determine the appropriate escalation path for events requiring human intervention. The tree shows decision points for service disruption, recurring patterns, change requirements, and operational actions, directing events to Incident Management, Problem Management, Change Management, or Operations Teams respectively.*
 
 ### Sub-Activity 4.5: Escalate to Incident Management
 

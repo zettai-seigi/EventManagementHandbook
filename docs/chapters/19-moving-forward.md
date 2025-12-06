@@ -179,29 +179,9 @@ Securing initial approval is only the beginning. Sustained executive support req
 
 Figure 19.1 visualizes the Event Management journey and key milestones for building stakeholder support.
 
-**Figure 19.1:** Event Management Journey Map
-```
-[VISUAL PLACEHOLDER]
+![Figure 19.1: Event Management Journey Map](../assets/images/Event Management Journey Map.jpeg)
 
-Type: Journey Map/Timeline
-Description: A visual roadmap showing the Event Management maturity journey from initial state through quick wins, stabilization, optimization, and innovation phases. Each phase shows key milestones, stakeholder engagement points, and value delivered to executive sponsors.
-
-Key Elements:
-- Phase 1: Initial State (Current challenges, pain points)
-- Phase 2: Foundation (0-90 days): First monitoring, basic correlation, initial automation
-  - Executive Touchpoint: Charter approval, resource commitment
-- Phase 3: Expansion (91-180 days): Broader scope, advanced correlation, increased automation
-  - Executive Touchpoint: Quick wins report, ROI demonstration
-- Phase 4: Optimization (181-365 days): Full coverage, mature correlation, self-healing
-  - Executive Touchpoint: Annual review, strategic alignment
-- Phase 5: Innovation (365+ days): AIOps integration, predictive analytics, autonomous operations
-  - Executive Touchpoint: Continuous strategic updates
-
-Value delivered increases progressively: incident reduction, cost savings, operational efficiency, competitive advantage.
-```
-
-*Caption:* This journey map illustrates the progression from initial Event Management implementation through maturity phases, highlighting key stakeholder engagement points and cumulative value delivery that sustains executive support over time.
-*Position:* Following the Building Executive Support section
+*Figure 19.1: Event Management Journey Map - This journey map illustrates the progression through five maturity levels: Level 1 Reactive (ad-hoc monitoring, manual handling), Level 2 Managed (standard monitoring, documented procedures, basic automation), Level 3 Defined (comprehensive monitoring, effective correlation, significant automation), Level 4 Measured (high automation, predictive analytics, business-aligned monitoring), and Level 5 Optimized (self-healing infrastructure, AI-driven operations, autonomous decision-making). Key enablers at each transition point include Executive Sponsorship, Skilled Team, Quality Data, and Continuous Improvement.*
 
 ## Quick Wins and Demonstrating Value
 

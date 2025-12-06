@@ -727,9 +727,9 @@ Operations consoles should clearly visualize correlation relationships:
 
 **Impact Summary:** Show aggregate statistics on parent events: "Parent Event: DB-PROD-01 Failure (1 parent + 23 children affecting 45 users)."
 
-**Figure 9.3: Topology-Based Correlation**
-*Caption:* This network diagram illustrates parent-child event relationships in a topology-based correlation scenario. The parent event (network switch failure) is shown in red at the top, with child events from dependent servers shown in gray below. Dependency relationships from the CMDB are indicated by dashed lines. This visualization demonstrates how a single infrastructure failure creates multiple sympathy alerts that are correctly correlated.
-*Position:* In the Parent-Child Event Relationships section, after the visualization discussion
+![Figure 9.3: Topology-Based Correlation](../assets/images/Topology-Based Correlation.jpeg)
+
+*Figure 9.3: Topology-Based Correlation - This network diagram illustrates parent-child event relationships in a topology-based correlation scenario. The parent event (network switch failure) is shown in red at the top, with child events from dependent servers shown in gray below. Dependency relationships from the CMDB are indicated by dashed lines. This visualization demonstrates how a single infrastructure failure creates multiple sympathy alerts that are correctly correlated.*
 
 ### Correlation Feedback and Tuning
 
@@ -793,9 +793,9 @@ Higher ratios indicate more effective consolidation. For example, a ratio of 10:
 
 **Before/After Alert Volume Comparison:** Measure event volume before and after correlation implementation to quantify business impact:
 
-**Figure 9.4: Before/After Correlation**
-*Caption:* This bar chart compares daily alert volume before and after correlation implementation. The left bar shows baseline alert volume of 1,500 events per day. The right bar shows post-correlation volume of 550 events per day, representing 63.3% reduction and demonstrating effective noise reduction that enables operations teams to focus on genuine issues.
-*Position:* In the Correlation Effectiveness Metrics section, after the alert reduction discussion
+![Figure 9.4: Event Correlation Before and After](../assets/images/Event Correlation Before and After.jpeg)
+
+*Figure 9.4: Event Correlation Before and After Impact - This comparison chart shows the dramatic improvement in key metrics after implementing correlation: 70% reduction in daily alert volume (5,000 to 1,500 alerts), false positive rate reduced from 45% to 5%, mean time to resolve improved by 73% (45 to 12 minutes), analyst fatigue reduced from high to low, and missed critical events dropped from 15% to 2%.*
 
 **Analyst Productivity Improvement:** Measure changes in analyst efficiency:
 - **Events Reviewed Per Analyst Per Day:** Track how many events analysts can effectively review and triage before and after correlation implementation
@@ -1173,13 +1173,13 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 ---
 
-**Figure 9.1: Correlation Techniques Comparison**
-*Caption:* This infographic compares the five major correlation techniques: time-based, topology-based, pattern-based, rule-based, and service-based correlation. Each technique is shown with its primary use case, required data sources (time stamps, CMDB relationships, event patterns, organizational rules, or service mappings), typical effectiveness contribution, and implementation complexity. The visual helps Event Designers select appropriate techniques for their environment and understand how techniques complement each other in a comprehensive correlation framework.
-*Position:* Near the end of the Introduction section or at the beginning of the first correlation technique section
+![Figure 9.1: Event Correlation Techniques Comparison](../assets/images/Event Correlation Techniques Comparison.jpeg)
 
-**Figure 9.2: Time-Based Correlation Example**
-*Caption:* This timeline diagram illustrates time-based correlation in action. A parent event (database connection timeout) occurs at 14:32:15, initiating a 5-minute correlation window. Subsequent events matching correlation criteria (connection timeout events from multiple application servers) arrive at 14:32:45, 14:33:30, 14:34:10, and 14:36:00. All events within the time window are automatically grouped as child events. An event arriving at 14:38:00, after the window expires, would create a new parent-child group if the condition persists.
-*Position:* In the Time-Based Correlation section, after explaining how time windows work
+*Figure 9.1: Event Correlation Techniques Comparison - This infographic compares the four major correlation techniques: time-based (groups events within defined time windows, low complexity), topology-based (uses CMDB relationships for parent-child identification, medium complexity), rule-based (applies predefined rules for known patterns, medium-high complexity), and pattern-based (uses ML/algorithms to discover unknown correlations, high complexity). Each technique shows its primary use case and implementation complexity.*
+
+![Figure 9.2: Time-Based Correlation Example](../assets/images/Time-Based Correlation Example.jpeg)
+
+*Figure 9.2: Time-Based Correlation Example - This timeline diagram illustrates time-based correlation in action. Multiple events occurring within a 5-minute correlation window (10:00-10:02) are automatically grouped into a single correlated event, reducing 6 individual alerts to 1 actionable alert (83% noise reduction).*
 
 **Table 9.1: Correlation Technique Selection Guide**
 

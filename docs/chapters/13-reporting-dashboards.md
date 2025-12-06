@@ -83,9 +83,9 @@ Dashboard effectiveness depends heavily on visual design choices that enhance re
 
 **Actionable Information** ensures every dashboard element serves a purpose. Avoid including metrics that are interesting but not actionable. Every visualization should answer a specific operational question or enable a specific decision. If an analyst cannot describe what action they would take based on a metric, that metric probably does not belong on an operational dashboard.
 
-**Figure 13.1: Daily Operations Dashboard**
-*Caption:* This mockup illustrates the layout and components of an effective daily operational dashboard. The top section displays critical real-time metrics (event volume, automation success rate, critical events count). The middle section shows trend charts for volume patterns and automation performance over the past 24 hours. The bottom section provides detailed views of critical events queue and recent automation failures requiring attention. Color coding indicates status: green for normal, yellow for warning, red for critical conditions.
-*Position:* After Dashboard Design Best Practices subsection
+![Figure 13.1: Daily Operations Dashboard](../assets/images/Daily Operations Dashboard.jpeg)
+
+*Figure 13.1: Daily Operations Dashboard - This mockup illustrates the layout and components of an effective daily operational dashboard. The top section displays critical real-time metrics (event rate, auto-ops success rate, critical events count, false positive rate). The middle section shows trend charts for volume patterns and automation performance over the past 24 hours. The bottom section provides detailed views of critical events queue and recent automation failures requiring attention.*
 
 ## Weekly Operational Reports
 
@@ -129,9 +129,9 @@ The **Top Event Types by Manual Intervention Required** table identifies events 
 
 The **Top Event Types by False Positives** table identifies event types frequently classified as false positives during review. These events require threshold adjustments, enhanced filtering, or correlation rule refinements to reduce noise. For example, if CPU utilization warning events are frequently classified as false positives during batch processing windows, time-based filtering or context-aware thresholds can eliminate unnecessary alerts.
 
-**Figure 13.2: Weekly Report Template**
-*Caption:* This document layout shows the standard structure for weekly operational reports. Section 1 provides executive summary with key metrics and status indicators. Section 2 presents volume trend charts and tables. Section 3 displays accuracy and quality metrics with trend indicators. Section 4 analyzes top event types across multiple dimensions. Section 5 identifies action items and recommendations. The template uses consistent formatting, clear headings, and effective use of tables and charts to present information efficiently.
-*Position:* After Top Event Types Analysis subsection
+![Figure 13.2: Weekly Operational Report Template](../assets/images/Weekly Operational Report Template.jpeg)
+
+*Figure 13.2: Weekly Operational Report Template - This document layout shows the standard structure for weekly operational reports, including executive summary, volume trends, quality metrics, top event types analysis, and action items. The template uses consistent formatting and effective visualization of metrics with trend indicators.*
 
 ## Monthly Executive Reports
 
@@ -179,9 +179,9 @@ Maturity assessment evaluates Event Management against the maturity model presen
 
 For example, an organization demonstrating 72% automation success rate, proactive event handling, established metrics and dashboards, and a continuous improvement culture would be assessed at Level 4: Measured. The report would identify that advancement to Level 5: Optimized requires implementing advanced analytics and AI/ML capabilities, enhancing predictive event management, and further integration with business service mapping.
 
-**Figure 13.3: Executive Dashboard**
-*Caption:* This mockup shows a strategic executive dashboard designed for IT leadership. The top section displays KPI gauges showing current performance against targets with color-coded status indicators. The middle section presents trend charts for key metrics over the past 12 months. The bottom section highlights business value delivered through cost savings, incident reduction, and efficiency gains. The dashboard emphasizes high-level insights and trends rather than operational details, optimized for strategic decision-making.
-*Position:* After Trend Analysis and Maturity Assessment subsection
+![Figure 13.3: Executive Dashboard](../assets/images/Executive Dashboard.jpeg)
+
+*Figure 13.3: Executive Dashboard - This strategic dashboard is designed for IT leadership, displaying KPI performance gauges with color-coded status indicators, 12-month trend charts, year-over-year comparisons, business value delivered (cost savings, incidents prevented), and current maturity assessment level. The dashboard emphasizes high-level insights optimized for strategic decision-making.*
 
 ## Trend Analysis and Activity 5.6
 

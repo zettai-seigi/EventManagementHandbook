@@ -913,20 +913,9 @@ Organizations should target Level 4 (Measured) as the minimum acceptable maturit
 
 ## Control Framework Architecture
 
-**Figure 15.1: Control Framework Architecture**
+![Figure 15.1: Control Framework Architecture](../assets/images/Control Framework Architecture.jpeg)
 
-*Visual Placeholder Description:*
-- **Type:** Architectural diagram showing the relationship between control objectives, implementation components, and measurement mechanisms
-- **Content:**
-  - Top layer: Eight control objectives (EM-C01 through EM-C08) shown as interconnected boxes
-  - Middle layer: Implementation components including Procedures, System Configuration, Training, and Automation
-  - Bottom layer: Evidence sources including Event Records, Reports, Configuration Files, and Documentation
-  - Arrows showing flow from controls to implementation to evidence
-  - Feedback loop showing measurement results informing continuous improvement
-- **Purpose:** Illustrate how control objectives are implemented through specific components and validated through evidence collection
-- **Position:** After Control Effectiveness Measurement section, before Key Takeaways
-
-*Caption:* This architectural diagram illustrates the Event Management Control Framework, showing how the eight control objectives (top layer) are implemented through procedures, configuration, training, and automation (middle layer), and validated through evidence collection and measurement (bottom layer). The feedback loop demonstrates how measurement results drive continuous improvement of controls.
+*Figure 15.1: Control Framework Architecture - This architectural diagram illustrates the Event Management Control Framework, showing how the eight control objectives (EM-C01 through EM-C08) at the top layer are implemented through procedures, system configuration, training, and automation (middle layer), and validated through evidence sources including event records, reports, configuration files, and documentation (bottom layer). The continuous improvement feedback loop demonstrates how measurement results drive ongoing control refinement.*
 
 ## Integration with Policy Framework
 

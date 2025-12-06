@@ -463,13 +463,9 @@ A comprehensive maturity assessment evaluates multiple dimensions of Event Manag
 
 Several tools and techniques support effective maturity assessment.
 
-**Figure 14.2: Maturity Assessment Radar Chart**
+![Figure 14.2: Maturity Assessment Radar Chart](../assets/images/Maturity Assessment Radar Chart.jpeg)
 
-*Visual placeholder for Figure 14.2*
-
-**Figure 14.2:** Maturity Assessment Radar Chart
-*Caption:* This radar chart visualizes organizational maturity across eight assessment dimensions: Process Documentation, Process Execution, Roles and Staffing, Skills and Competencies, Monitoring Coverage, Automation, Integration, and Metrics. Each axis represents one dimension, with maturity levels 1-5 marked from center to edge. The shaded area shows current state assessment, making strengths and gaps immediately visible. Balanced maturity is indicated by a roughly circular shape, while irregular shapes reveal specific areas requiring focus.
-*Position:* In Maturity Assessment Methodology section
+*Figure 14.2: Maturity Assessment Radar Chart - This radar chart visualizes organizational maturity across eight assessment dimensions: Process Documentation, Process Execution, Roles and Staffing, Skills and Competencies, Monitoring Coverage, Automation, Integration, and Metrics. Each axis represents one dimension, with maturity levels 1-5 marked from center to edge. The shaded area shows current state assessment (blue) versus target state (dashed line), making strengths and gaps immediately visible.*
 
 **Assessment Questionnaire:** Develop a structured questionnaire covering all capability areas and maturity levels. Include questions that can be objectively verified through evidence rather than relying solely on self-assessment. Use consistent scales (e.g., Not Implemented, Partially Implemented, Fully Implemented) for scoring. Provide clear definitions and examples for each rating to ensure consistency.
 
