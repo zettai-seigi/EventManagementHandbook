@@ -27,9 +27,9 @@ This chapter defines four essential classification dimensions: **Event Types** (
 Event Types represent the fundamental classification that determines the action required when an event occurs. Each event detected by monitoring tools must be assigned to one of four standardized types: **Informational**, **Warning**, **Exception**, or **Related**. This type assignment directly impacts how the event is handled, whether it requires investigation, and how urgently it must be addressed.
 
 
-![Event Types Comparison Matrix - Event types, actions, and examples](../assets/images/Event Types Comparison Matrix.jpeg)
+![Figure 4.2: Event Types Comparison Matrix](../assets/images/Event Types Comparison Matrix.jpeg)
 
-*Table 4.1: Event Types Comparison Matrix - This comprehensive matrix compares the four primary event types (Informational, Warning, Exception, Related) across key operational dimensions. For each event type, the table specifies the definition, required action, response time expectations, escalation frequency, typical closure codes, and percentage of total event volume. This reference enables consistent event classification and helps teams understand appropriate response protocols for each event type.*
+*Figure 4.2: Event Types Comparison Matrix - This comprehensive matrix compares the four primary event types (Informational, Warning, Exception, Related) across key operational dimensions. For each event type, the table specifies the definition, required action, response time expectations, escalation frequency, typical closure codes, and percentage of total event volume. This reference enables consistent event classification and helps teams understand appropriate response protocols for each event type.*
 
 ### Informational Events
 
@@ -119,9 +119,9 @@ Event correlation is essential for managing "alert storms"—situations where a 
 ## Event Categories
 
 
-![Table 4.2: Event Categories with Monitoring Examples](../assets/images/Event Categories with Monitoring Examples.jpeg)
+![Figure 4.3: Event Categories with Monitoring Examples](../assets/images/Event Categories with Monitoring Examples.jpeg)
 
-*Table 4.2: Event Categories with Monitoring Examples - This table defines the four primary event categories used to organize and route events based on infrastructure type. For each category (Hardware-Network, Hardware-Server, Software-Commercial, Software-Custom), the table describes the infrastructure type, typical Configuration Items (CIs), primary monitoring focus areas, and common event examples. Understanding these categories enables proper event routing to specialized support teams and supports accurate reporting and trending.*
+*Figure 4.3: Event Categories with Monitoring Examples - This visual defines the four primary event categories used to organize and route events based on infrastructure type. For each category (Hardware-Network, Hardware-Server, Software-Commercial, Software-Custom), it describes the infrastructure type, typical Configuration Items (CIs), primary monitoring focus areas, and common event examples. Understanding these categories enables proper event routing to specialized support teams and supports accurate reporting and trending.*
 
 **Event Categories** serve as the primary mechanism for organizing events based on the type of Configuration Item (CI) or infrastructure component that generates them. Categories enable effective event routing, support reporting and trending analysis, and help identify which infrastructure areas require the most attention or tuning. The categorization taxonomy must align with CI types found in the Configuration Management Database (CMDB) to enable correlation and impact analysis.
 
@@ -286,16 +286,12 @@ The **KPI: Volume per Category** tracks the distribution of events across catego
 
 Significant deviations from expected distribution warrant investigation. For example, if Software – Custom represents 45% of events, this suggests custom applications may need better coding practices, improved error handling, or threshold tuning.
 
-**Figure 4.1: Event Classification Taxonomy**
-*Caption:* This hierarchy diagram illustrates the complete event classification structure, showing how events are organized by Type (Informational, Warning, Exception, Related) and Category (Hardware – Network, Hardware – Server, Software – Commercial, Software – Custom). The taxonomy provides the foundation for consistent event handling, routing, and reporting across the enterprise.
-*Position:* After Event Categories section
-
 ## Event Attributes and Metadata
 
 
-![Figure 4.2: Event Attributes Mind Map](../assets/images/Event Attributes Mind Map.jpeg)
+![Figure 4.4: Event Attributes Mind Map](../assets/images/Event Attributes Mind Map.jpeg)
 
-*Figure 4.2: Event Attributes Mind Map - This mind map visualizes the complete set of event attributes organized by category (Identification, Classification, Temporal, Descriptive, Correlation, and Handling). Each attribute provides information needed for event processing, correlation, routing, or reporting. Standardizing these attributes across all monitoring tools enables consistent event handling and meaningful analytics.*
+*Figure 4.4: Event Attributes Mind Map - This mind map visualizes the complete set of event attributes organized by category (Identification, Classification, Temporal, Descriptive, Correlation, and Handling). Each attribute provides information needed for event processing, correlation, routing, or reporting. Standardizing these attributes across all monitoring tools enables consistent event handling and meaningful analytics.*
 
 Beyond type and category, events carry structured attributes that provide the information needed for correlation, routing, impact analysis, and resolution. These attributes function as metadata that enables both automated processing and analyst investigation. Standardized attributes ensure consistency across diverse monitoring tools and enable meaningful reporting.
 
@@ -369,10 +365,6 @@ Consistency in attribute population enables automation and correlation. The Even
 - Time lag between detection and alert should be minimal (<1 minute)
 
 > **Best Practice:** Configure monitoring tools to populate as many attributes as possible automatically. Manual attribute population introduces errors and delays. The Event Designer should work with tool administrators to map tool-specific fields to Event Management standard attributes.
-
-**Figure 4.2: Event Attributes Mind Map**
-*Caption:* This mind map visualizes the complete set of event attributes organized by category (Identification, Classification, Temporal, Descriptive, Correlation, and Handling). Each attribute provides information needed for event processing, correlation, routing, or reporting. Standardizing these attributes across all monitoring tools enables consistent event handling and meaningful analytics.
-*Position:* After Event Attributes and Metadata section
 
 ## Event Status Codes
 

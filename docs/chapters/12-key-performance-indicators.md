@@ -9,9 +9,9 @@ permalink: /chapters/12-key-performance-indicators/
 # Chapter 12: Key Performance Indicators
 
 
-![Table 12.1: Event Closure Codes with KPI Impact](../assets/images/Event Closure Codes with KPI Impact.jpeg)
+![Figure 12.1: Event Closure Codes with KPI Impact](../assets/images/Event Closure Codes with KPI Impact.jpeg)
 
-*Figure 12.1: KPI Category Hierarchy - This pyramid diagram illustrates the hierarchical relationship between KPI categories. Volume metrics form the foundation, measuring operational scale. Quality metrics ensure accuracy and reliability. Efficiency metrics track automation and resource optimization. Effectiveness metrics at the apex demonstrate business impact through proactive incident detection. Each level builds upon the foundation below it.*
+*Figure 12.1: Event Closure Codes with KPI Impact - This visual shows how different event closure codes (Auto Action, Incident, Problem, Change, Duplicate, and Related) impact various Key Performance Indicators. Understanding these relationships helps Event Analysts select appropriate closure codes and enables accurate KPI calculation and reporting.*
 
 
 ## Introduction
@@ -25,10 +25,6 @@ The KPIs presented in this chapter align with the Control Objectives introduced 
 ## The KPI Framework Overview
 
 A comprehensive Event Management KPI framework must balance multiple dimensions of performance. Organizations that focus exclusively on volume metrics may achieve scale without quality. Those that emphasize quality alone may miss efficiency opportunities. An effective framework addresses all critical performance dimensions while recognizing the relationships between them.
-
-**Figure 12.1:** KPI Category Hierarchy
-*Caption:* This pyramid diagram illustrates the hierarchical relationship between KPI categories. Volume metrics form the foundation, measuring operational scale. Quality metrics ensure accuracy and reliability. Efficiency metrics track automation and resource optimization. Effectiveness metrics at the apex demonstrate business impact through proactive incident detection. Each level builds upon the foundation below it.
-*Position:* After this paragraph, full-page width
 
 The KPI framework consists of four primary categories, each addressing a distinct performance dimension:
 
