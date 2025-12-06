@@ -750,8 +750,8 @@ Visible Ops Handbook: Implementing ITIL in 4 Practical and Auditable Steps. Info
 
 ## Chapter Navigation
 
-[← Previous: Chapter 11 - Integration with ITSM Processes](/EventManagementHandbook/chapters/11-itsm-integration/)
+| Previous | Next |
+|----------|------|
+| [Chapter 11: ITSM Integration](/EventManagementHandbook/chapters/11-itsm-integration/) | [Chapter 13: Reporting and Dashboards](/EventManagementHandbook/chapters/13-reporting-dashboards/) |
 
-[Next: Chapter 13 - Reporting and Dashboards →](/EventManagementHandbook/chapters/13-reporting-dashboards/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

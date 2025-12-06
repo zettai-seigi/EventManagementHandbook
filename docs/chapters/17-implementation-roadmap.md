@@ -564,8 +564,8 @@ Chapter 18 will detail the specific activities, deliverables, and techniques req
 
 ## Chapter Navigation
 
-[← Previous: Chapter 16 - Policies and Standards](/EventManagementHandbook/chapters/16-policies-standards/)
+| Previous | Next |
+|----------|------|
+| [Chapter 16: Policies and Standards](/EventManagementHandbook/chapters/16-policies-standards/) | [Chapter 18: Best Practices and Pitfalls](/EventManagementHandbook/chapters/18-best-practices-pitfalls/) |
 
-[Next: Chapter 18 - Best Practices and Common Pitfalls →](/EventManagementHandbook/chapters/18-best-practices-pitfalls/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

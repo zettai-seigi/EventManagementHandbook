@@ -556,6 +556,8 @@ Thank you for investing your time in mastering Event Management. May your implem
 
 ## Chapter Navigation
 
-[← Previous: Chapter 18 - Best Practices and Common Pitfalls](/EventManagementHandbook/chapters/18-best-practices-pitfalls/)
+| Previous | Next |
+|----------|------|
+| [Chapter 18: Best Practices and Pitfalls](/EventManagementHandbook/chapters/18-best-practices-pitfalls/) | [Home](/EventManagementHandbook/) |
 
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

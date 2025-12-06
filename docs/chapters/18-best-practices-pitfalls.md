@@ -1748,8 +1748,8 @@ The DevOps Handbook. (2016). Gene Kim, Jez Humble, Patrick Debois, John Willis.
 
 ## Chapter Navigation
 
-[← Previous: Chapter 17 - Implementation Roadmap](/EventManagementHandbook/chapters/17-implementation-roadmap/)
+| Previous | Next |
+|----------|------|
+| [Chapter 17: Implementation Roadmap](/EventManagementHandbook/chapters/17-implementation-roadmap/) | [Chapter 19: Moving Forward](/EventManagementHandbook/chapters/19-moving-forward/) |
 
-[Next: Chapter 19 - Moving Forward →](/EventManagementHandbook/chapters/19-moving-forward/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

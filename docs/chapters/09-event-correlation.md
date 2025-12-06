@@ -1206,8 +1206,8 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 ## Chapter Navigation
 
-[← Previous: Chapter 08 - Monitoring and Detection](/EventManagementHandbook/chapters/08-monitoring-detection/)
+| Previous | Next |
+|----------|------|
+| [Chapter 8: Monitoring and Detection](/EventManagementHandbook/chapters/08-monitoring-detection/) | [Chapter 10: Automation and Self-Healing](/EventManagementHandbook/chapters/10-automation-self-healing/) |
 
-[Next: Chapter 10 - Automation and Self-Healing →](/EventManagementHandbook/chapters/10-automation-self-healing/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

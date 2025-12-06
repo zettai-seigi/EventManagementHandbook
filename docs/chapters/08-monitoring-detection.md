@@ -786,8 +786,8 @@ Event Management Governance Framework - Policy Documentation
 
 ## Chapter Navigation
 
-[← Previous: Chapter 07 - Process Activities and Workflows](/EventManagementHandbook/chapters/07-process-activities/)
+| Previous | Next |
+|----------|------|
+| [Chapter 7: Process Activities](/EventManagementHandbook/chapters/07-process-activities/) | [Chapter 9: Event Correlation](/EventManagementHandbook/chapters/09-event-correlation/) |
 
-[Next: Chapter 09 - Event Correlation →](/EventManagementHandbook/chapters/09-event-correlation/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

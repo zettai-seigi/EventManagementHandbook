@@ -311,6 +311,8 @@ This chapter establishes the foundational understanding necessary for the detail
 
 ## Chapter Navigation
 
-[Next: Chapter 02 - Core Concepts and Definitions →](/EventManagementHandbook/chapters/02-core-concepts/)
+| Previous | Next |
+|----------|------|
+| [Home](/EventManagementHandbook/) | [Chapter 2: Core Concepts and Definitions](/EventManagementHandbook/chapters/02-core-concepts/) |
 
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

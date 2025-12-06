@@ -681,8 +681,8 @@ Content sourced from Event Management Handbook source material, Part II (Framewo
 
 ## Chapter Navigation
 
-[← Previous: Chapter 06 - Roles and Responsibilities](/EventManagementHandbook/chapters/06-roles-responsibilities/)
+| Previous | Next |
+|----------|------|
+| [Chapter 6: Roles and Responsibilities](/EventManagementHandbook/chapters/06-roles-responsibilities/) | [Chapter 8: Monitoring and Detection](/EventManagementHandbook/chapters/08-monitoring-detection/) |
 
-[Next: Chapter 08 - Monitoring and Detection →](/EventManagementHandbook/chapters/08-monitoring-detection/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

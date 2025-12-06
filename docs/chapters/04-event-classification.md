@@ -827,8 +827,8 @@ Chapter 5 builds on these classifications by introducing the Priority Matrix and
 
 ## Chapter Navigation
 
-[← Previous: Chapter 03 - Strategic Framework](/EventManagementHandbook/chapters/03-strategic-framework/)
+| Previous | Next |
+|----------|------|
+| [Chapter 3: Strategic Framework](/EventManagementHandbook/chapters/03-strategic-framework/) | [Chapter 5: Event Prioritization](/EventManagementHandbook/chapters/05-event-prioritization/) |
 
-[Next: Chapter 05 - Event Prioritization →](/EventManagementHandbook/chapters/05-event-prioritization/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

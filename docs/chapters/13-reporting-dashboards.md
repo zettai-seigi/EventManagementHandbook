@@ -393,8 +393,8 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 ## Chapter Navigation
 
-[← Previous: Chapter 12 - Key Performance Indicators](/EventManagementHandbook/chapters/12-key-performance-indicators/)
+| Previous | Next |
+|----------|------|
+| [Chapter 12: Key Performance Indicators](/EventManagementHandbook/chapters/12-key-performance-indicators/) | [Chapter 14: Maturity Model](/EventManagementHandbook/chapters/14-maturity-model/) |
 
-[Next: Chapter 14 - Maturity Model →](/EventManagementHandbook/chapters/14-maturity-model/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

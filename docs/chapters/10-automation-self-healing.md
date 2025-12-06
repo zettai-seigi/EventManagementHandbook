@@ -642,8 +642,8 @@ Event Management Handbook Source Material: Part III Technical Implementation, Ev
 
 ## Chapter Navigation
 
-[← Previous: Chapter 09 - Event Correlation](/EventManagementHandbook/chapters/09-event-correlation/)
+| Previous | Next |
+|----------|------|
+| [Chapter 9: Event Correlation](/EventManagementHandbook/chapters/09-event-correlation/) | [Chapter 11: ITSM Integration](/EventManagementHandbook/chapters/11-itsm-integration/) |
 
-[Next: Chapter 11 - Integration with ITSM Processes →](/EventManagementHandbook/chapters/11-itsm-integration/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

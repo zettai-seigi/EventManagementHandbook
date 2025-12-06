@@ -486,8 +486,8 @@ IT Service Management Forum, Event Management Process Guide, 2023.
 
 ## Chapter Navigation
 
-[← Previous: Chapter 01 - Introduction to Event Management](/EventManagementHandbook/chapters/01-introduction/)
+| Previous | Next |
+|----------|------|
+| [Chapter 1: Introduction to Event Management](/EventManagementHandbook/chapters/01-introduction/) | [Chapter 3: Strategic Framework](/EventManagementHandbook/chapters/03-strategic-framework/) |
 
-[Next: Chapter 03 - Strategic Framework →](/EventManagementHandbook/chapters/03-strategic-framework/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

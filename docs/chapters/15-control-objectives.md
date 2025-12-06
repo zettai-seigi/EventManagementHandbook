@@ -999,8 +999,8 @@ This chapter synthesizes control objective requirements from Event Management be
 
 ## Chapter Navigation
 
-[← Previous: Chapter 14 - Maturity Model](/EventManagementHandbook/chapters/14-maturity-model/)
+| Previous | Next |
+|----------|------|
+| [Chapter 14: Maturity Model](/EventManagementHandbook/chapters/14-maturity-model/) | [Chapter 16: Policies and Standards](/EventManagementHandbook/chapters/16-policies-standards/) |
 
-[Next: Chapter 16 - Policies and Standards →](/EventManagementHandbook/chapters/16-policies-standards/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

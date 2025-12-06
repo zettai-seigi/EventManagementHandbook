@@ -800,8 +800,8 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 ## Chapter Navigation
 
-[← Previous: Chapter 13 - Reporting and Dashboards](/EventManagementHandbook/chapters/13-reporting-dashboards/)
+| Previous | Next |
+|----------|------|
+| [Chapter 13: Reporting and Dashboards](/EventManagementHandbook/chapters/13-reporting-dashboards/) | [Chapter 15: Control Objectives](/EventManagementHandbook/chapters/15-control-objectives/) |
 
-[Next: Chapter 15 - Control Objectives and Compliance →](/EventManagementHandbook/chapters/15-control-objectives/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

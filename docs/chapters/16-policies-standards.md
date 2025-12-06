@@ -1338,8 +1338,8 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 ## Chapter Navigation
 
-[← Previous: Chapter 15 - Control Objectives and Compliance](/EventManagementHandbook/chapters/15-control-objectives/)
+| Previous | Next |
+|----------|------|
+| [Chapter 15: Control Objectives](/EventManagementHandbook/chapters/15-control-objectives/) | [Chapter 17: Implementation Roadmap](/EventManagementHandbook/chapters/17-implementation-roadmap/) |
 
-[Next: Chapter 17 - Implementation Roadmap →](/EventManagementHandbook/chapters/17-implementation-roadmap/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

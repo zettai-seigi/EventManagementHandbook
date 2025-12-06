@@ -1076,8 +1076,8 @@ With the strategic framework established, the next chapter examines the detailed
 
 ## Chapter Navigation
 
-[← Previous: Chapter 02 - Core Concepts and Definitions](/EventManagementHandbook/chapters/02-core-concepts/)
+| Previous | Next |
+|----------|------|
+| [Chapter 2: Core Concepts and Definitions](/EventManagementHandbook/chapters/02-core-concepts/) | [Chapter 4: Event Classification](/EventManagementHandbook/chapters/04-event-classification/) |
 
-[Next: Chapter 04 - Event Classification and Specifications →](/EventManagementHandbook/chapters/04-event-classification/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

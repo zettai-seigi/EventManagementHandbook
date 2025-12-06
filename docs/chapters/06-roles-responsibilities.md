@@ -708,8 +708,8 @@ Word Count: 9,847 words
 
 ## Chapter Navigation
 
-[← Previous: Chapter 05 - Event Prioritization](/EventManagementHandbook/chapters/05-event-prioritization/)
+| Previous | Next |
+|----------|------|
+| [Chapter 5: Event Prioritization](/EventManagementHandbook/chapters/05-event-prioritization/) | [Chapter 7: Process Activities](/EventManagementHandbook/chapters/07-process-activities/) |
 
-[Next: Chapter 07 - Process Activities and Workflows →](/EventManagementHandbook/chapters/07-process-activities/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

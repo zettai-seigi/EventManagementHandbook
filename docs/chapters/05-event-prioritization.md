@@ -472,8 +472,8 @@ Content based on Event Management Framework Implementation Guide, Event Manageme
 
 ## Chapter Navigation
 
-[← Previous: Chapter 04 - Event Classification and Specifications](/EventManagementHandbook/chapters/04-event-classification/)
+| Previous | Next |
+|----------|------|
+| [Chapter 4: Event Classification](/EventManagementHandbook/chapters/04-event-classification/) | [Chapter 6: Roles and Responsibilities](/EventManagementHandbook/chapters/06-roles-responsibilities/) |
 
-[Next: Chapter 06 - Roles and Responsibilities →](/EventManagementHandbook/chapters/06-roles-responsibilities/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---

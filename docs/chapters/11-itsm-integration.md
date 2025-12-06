@@ -868,8 +868,8 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 ## Chapter Navigation
 
-[← Previous: Chapter 10 - Automation and Self-Healing](/EventManagementHandbook/chapters/10-automation-self-healing/)
+| Previous | Next |
+|----------|------|
+| [Chapter 10: Automation and Self-Healing](/EventManagementHandbook/chapters/10-automation-self-healing/) | [Chapter 12: Key Performance Indicators](/EventManagementHandbook/chapters/12-key-performance-indicators/) |
 
-[Next: Chapter 12 - Key Performance Indicators →](/EventManagementHandbook/chapters/12-key-performance-indicators/)
-
-[↑ Back to Table of Contents](/EventManagementHandbook/contents/)
+---
