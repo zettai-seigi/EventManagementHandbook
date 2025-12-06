@@ -17,18 +17,18 @@ This chapter details the comprehensive role framework for Event Management, defi
 
 The role framework presented in this chapter directly supports Critical Success Factor 4 (CSF-4): Skilled and Trained Personnel. Organizations that invest in proper role definition, staffing, and development create a foundation for mature Event Management capabilities. The chapter provides practical guidance on team sizing, competency requirements, and development paths to help organizations build effective EM teams regardless of their current maturity level.
 
-![Figure 6.0: Event Management Roles and Competency Requirements](../assets/images/Event Management Roles and Competency Requirements.jpeg)
+![Figure 6.1: Event Management Roles and Competency Requirements](../assets/images/Event Management Roles and Competency Requirements.jpeg)
 
-*Figure 6.0: Event Management Roles and Competency Requirements - This overview diagram summarizes the five core Event Management roles and their associated competency requirements. It provides a quick reference for understanding the relationship between organizational roles, their primary responsibilities, and the key skills required for success in each position.*
+*Figure 6.1: Event Management Roles and Competency Requirements - This overview diagram summarizes the five core Event Management roles and their associated competency requirements. It provides a quick reference for understanding the relationship between organizational roles, their primary responsibilities, and the key skills required for success in each position.*
 
 ## Event Management Team Structure
 
 
 The Event Management organizational structure comprises five core roles, each with distinct responsibilities and required competencies. These roles work together to ensure comprehensive process coverage from strategic planning through operational execution.
 
-![Figure 6.1: Event Management Process Team Structure](../assets/images/Event Management Process Team Structure.png)
+![Figure 6.2: Event Management Process Team Structure](../assets/images/Event Management Process Team Structure.png)
 
-*Figure 6.1: Event Management Process Team Structure - This organizational chart illustrates the hierarchical structure and reporting relationships within the Event Management team. The Process Owner provides strategic oversight and reports to executive leadership (CIO or VP of IT Operations). The Event Manager handles day-to-day operational management with direct reports including the Event Management Architect (strategy and architecture) and Event Designer (technical implementation). Event Analysts operate in 24x7 shifts reporting to the Event Designer, providing frontline monitoring and event triage.*
+*Figure 6.2: Event Management Process Team Structure - This organizational chart illustrates the hierarchical structure and reporting relationships within the Event Management team. The Process Owner provides strategic oversight and reports to executive leadership (CIO or VP of IT Operations). The Event Manager handles day-to-day operational management with direct reports including the Event Management Architect (strategy and architecture) and Event Designer (technical implementation). Event Analysts operate in 24x7 shifts reporting to the Event Designer, providing frontline monitoring and event triage.*
 
 ### Organizational Hierarchy
 
@@ -490,9 +490,9 @@ This RACI matrix ensures clear accountability while promoting appropriate collab
 
 Successful Event Management requires diverse competencies spanning technical, process, leadership, and behavioral domains. Different roles require different competency levels, from Fundamental awareness through Intermediate working knowledge and Advanced proficiency to Expert mastery.
 
-![Figure 6.2: Event Management Competency Matrix by Role](../assets/images/Event Management Competency Matrix by Role.png)
+![Figure 6.3: Event Management Competency Matrix by Role](../assets/images/Event Management Competency Matrix by Role.png)
 
-*Figure 6.2: Event Management Competency Matrix by Role - This comprehensive matrix defines required competency levels across four dimensions (Technical, Process, Behavioral, and Leadership) for each of the five Event Management roles. Proficiency levels range from Awareness (basic understanding) through Basic, Intermediate, and Advanced, to Expert (deep mastery). Process Owners require Expert-level leadership competencies, while Event Managers need Advanced process knowledge. Event Architects require Expert technical skills, while Analysts focus on Intermediate operational competencies. This matrix guides recruitment, role assignment, and professional development planning.*
+*Figure 6.3: Event Management Competency Matrix by Role - This comprehensive matrix defines required competency levels across four dimensions (Technical, Process, Behavioral, and Leadership) for each of the five Event Management roles. Proficiency levels range from Awareness (basic understanding) through Basic, Intermediate, and Advanced, to Expert (deep mastery). Process Owners require Expert-level leadership competencies, while Event Managers need Advanced process knowledge. Event Architects require Expert technical skills, while Analysts focus on Intermediate operational competencies. This matrix guides recruitment, role assignment, and professional development planning.*
 
 **Table 6.3:** Competency Requirements by Role
 
@@ -695,9 +695,9 @@ Chapter 7 will examine the Event Management Process Activities in detail, walkin
 
 ---
 
-![Figure 6.3: Event Management Training and Development Program Structure](../assets/images/Event Management Training and Development Program Structure.png)
+![Figure 6.4: Event Management Training and Development Program Structure](../assets/images/Event Management Training and Development Program Structure.png)
 
-*Figure 6.3: Event Management Training and Development Program Structure - This diagram illustrates the comprehensive training and development framework supporting Event Management personnel. New hires complete a 4-week onboarding program followed by role-specific tracks: Event Analysts focus on operational skills (ITSM foundations, tools, troubleshooting), Event Designers on technical implementation (correlation, scripting, monitoring), Event Architects on strategic design (enterprise architecture, best practices), and Event Managers on leadership (people management, performance). All roles participate in continuing education requiring 40 hours annually plus recommended certifications (ITIL, PMP, vendor certifications). This structured approach ensures personnel maintain and advance competencies aligned with role requirements.*
+*Figure 6.4: Event Management Training and Development Program Structure - This diagram illustrates the comprehensive training and development framework supporting Event Management personnel. New hires complete a 4-week onboarding program followed by role-specific tracks: Event Analysts focus on operational skills (ITSM foundations, tools, troubleshooting), Event Designers on technical implementation (correlation, scripting, monitoring), Event Architects on strategic design (enterprise architecture, best practices), and Event Managers on leadership (people management, performance). All roles participate in continuing education requiring 40 hours annually plus recommended certifications (ITIL, PMP, vendor certifications). This structured approach ensures personnel maintain and advance competencies aligned with role requirements.*
 
 ---
 
