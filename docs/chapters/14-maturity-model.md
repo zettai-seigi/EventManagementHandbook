@@ -790,7 +790,7 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 1. Describe the five levels of the Event Management maturity model and the key characteristics that distinguish each level from the others.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -816,7 +816,7 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 2. An organization has achieved 45% auto-operations success rate, 55% efficiency of detection, 12% false positive rate, and 92% categorization accuracy. What maturity level is this organization most likely operating at, and what should be the focus areas for advancement to the next level?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -845,7 +845,7 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 3. Why is it important that organizations cannot skip maturity levels? Provide a specific example of how attempting Level 4 capabilities without Level 3 foundations would lead to failure.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -882,7 +882,7 @@ Organization implements ML-based predictive analytics to forecast disk failures.
 
 4. Describe the four dimensions that should be assessed during a comprehensive maturity assessment. For each dimension, provide two specific examples of what would be evaluated.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -907,7 +907,7 @@ Organization implements ML-based predictive analytics to forecast disk failures.
 
 5. Explain how KPI targets are linked to maturity levels. How do targets for auto-operations success rate and efficiency of detection progress as organizations advance from Level 1 to Level 5?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

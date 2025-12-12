@@ -981,7 +981,7 @@ The next chapter examines the policy framework that provides strategic direction
 
 1. **Control Scope and Coverage:** Explain why Control Objective EM-C01 requires organizations to specify the percentage of IT infrastructure under monitoring rather than simply stating "all infrastructure will be monitored." What governance benefits does this specificity provide?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1006,7 +1006,7 @@ The next chapter examines the policy framework that provides strategic direction
 
 2. **Prioritization Implementation:** Describe how Control Objective EM-C05 ensures that event prioritization is based on business impact and urgency rather than subjective judgment. What are the key implementation components required to achieve this control?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1032,7 +1032,7 @@ The next chapter examines the policy framework that provides strategic direction
 
 3. **Evidence Requirements:** For Control Objective EM-C04 (Formal Event Data Review Sessions), what specific audit evidence would you collect to demonstrate compliance? How would this evidence prove that reviews are occurring, management is participating, and improvement actions result?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1058,7 +1058,7 @@ The next chapter examines the policy framework that provides strategic direction
 
 4. **Control Integration:** Explain how Control Objectives EM-C07 (Root Cause Analysis) and EM-C08 (Trend Analysis Reports) work together to drive continuous improvement. How do these controls complement each other?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1080,7 +1080,7 @@ The next chapter examines the policy framework that provides strategic direction
 
 5. **Measurement and Accountability:** Control Objective EM-C06 defines routing accuracy as a measurement criterion for escalation effectiveness. How would you calculate this metric, what target would you set, and what actions would you take if routing accuracy fell below the target threshold?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

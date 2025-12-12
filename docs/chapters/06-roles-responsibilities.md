@@ -675,7 +675,7 @@ Chapter 7 will examine the Event Management Process Activities in detail, walkin
 
 1. What are the five core roles in the Event Management team structure, and what is the primary focus area for each role?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -694,7 +694,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 2. Explain the difference in responsibilities between the Event Management Process Owner and the Event Manager. Why is this separation important?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -719,7 +719,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 3. Describe the key responsibilities of the Event Management Architect. How does this role differ from the Event Designer?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -752,7 +752,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 4. What is the purpose of the RACI matrix in Event Management? Explain the difference between Responsible, Accountable, Consulted, and Informed.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -783,7 +783,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 5. An organization processes 8,000 events per day. Based on the team sizing guidelines, how many Event Analysts would be recommended for 24x7 coverage, and why?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -819,7 +819,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 6. Describe the typical activities in a day-in-the-life for an Event Analyst. What skills and competencies are most critical for success in this role?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -853,7 +853,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 7. Why does the Event Manager need Expert proficiency in Team Leadership but only Intermediate proficiency in technical tools? What does this tell you about the nature of the role?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -886,7 +886,7 @@ The structure provides separation between strategic (Process Owner), tactical (M
 
 8. Explain how the competency framework uses four proficiency levels (Fundamental, Intermediate, Advanced, Expert) to define role requirements. Give an example of why different roles require different proficiency levels for the same competency.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -921,7 +921,7 @@ Same competency, different depth requirements based on role scope.
 
 9. What types of ongoing development activities support Event Management team capability? Why is initial training alone insufficient?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -957,7 +957,7 @@ Same competency, different depth requirements based on role scope.
 
 10. How does the Event Management team structure support Critical Success Factor 4 (Skilled and Trained Personnel)?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

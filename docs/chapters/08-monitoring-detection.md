@@ -766,7 +766,7 @@ The next chapter examines the operational execution of Event Management, explori
 
 1. **What are the three layers of monitoring coverage, and what is the purpose of each layer?** Describe how these layers complement each other to provide comprehensive visibility.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -802,7 +802,7 @@ Infrastructure Layer (Foundation)
 
 2. **Explain the single agent per CI rule (Policy 6) and describe three problems that occur when multiple monitoring agents are deployed on the same CI.** How does this policy support automation and data reliability?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -833,7 +833,7 @@ Infrastructure Layer (Foundation)
 
 3. **What are the five types of thresholds used in event detection?** For each type, provide an example scenario where that threshold type would be most appropriate.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -860,7 +860,7 @@ Infrastructure Layer (Foundation)
 
 4. **Policy 2 mandates comprehensive alert logging. What are the mandatory event attributes that must be logged, and what are the three data retention tiers with their retention periods?** Explain the purpose of each tier.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -895,7 +895,7 @@ Infrastructure Layer (Foundation)
 
 5. **How does Policy 1 (24×7 console monitoring) support Event Management objectives?** Describe the staffing guidelines for moderate event volumes and explain why backup coverage is required.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

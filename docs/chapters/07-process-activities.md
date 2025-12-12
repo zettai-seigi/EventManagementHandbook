@@ -664,7 +664,7 @@ Chapter 8 will build on this foundation by examining the technical implementatio
 
 1. What are the five major activities of Event Management, and how do they interconnect to form a complete event lifecycle?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -702,7 +702,7 @@ Activity 2 (Threshold adjustments, rule updates)
 
 2. Explain the four correlation techniques used in Activity 4.2 and how they reduce alert noise. Provide an example of when each technique would be most effective.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -723,7 +723,7 @@ Activity 2 (Threshold adjustments, rule updates)
 
 3. What is the difference between Impact and Urgency in Activity 4.3, and how are they combined to calculate event Priority? What is the purpose of Urgency Modifiers?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -753,7 +753,7 @@ Priority = f(Impact, Urgency) using a matrix:
 
 4. Describe the four potential escalation paths from Activity 4.4 (Incident Management, Problem Management, Change Management, Operations Team) and explain the criteria that determine which path an event follows.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -786,7 +786,7 @@ Can operations team resolve directly?
 
 5. How does Activity 5 serve a dual purpose of completing individual event lifecycles while also driving continuous improvement? Provide specific examples of feedback loops from Activity 5 to Activity 2.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

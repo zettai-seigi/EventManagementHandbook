@@ -364,7 +364,7 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 1. What are the two types of formal review sessions required by Control Objective EM-C04, and what are the key differences in their focus and audience?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -382,7 +382,7 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 2. Describe the three-tier reporting hierarchy in Event Management and explain how each tier serves different decision-making needs.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -402,7 +402,7 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 3. What are the five core components that should be included in an effective daily operational dashboard? Explain the purpose of each component.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -424,7 +424,7 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 4. Explain the relationship between Control Objectives EM-C04 and EM-C08. How do these controls work together to ensure continuous improvement?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -454,7 +454,7 @@ Without EM-C08, there's nothing to review. Without EM-C04, trends aren't acted u
 
 5. What is Activity 5.6 in the Event Management process, and what are its key tasks related to trend analysis?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -477,7 +477,7 @@ Without EM-C08, there's nothing to review. Without EM-C04, trends aren't acted u
 
 6. How should monthly executive reports translate operational metrics into business value indicators? Provide three specific examples of value metrics that should be included.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -502,7 +502,7 @@ Without EM-C08, there's nothing to review. Without EM-C04, trends aren't acted u
 
 7. What is the target for correlation effectiveness, and how is this metric calculated? What does poor correlation effectiveness indicate?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -534,7 +534,7 @@ Correlation Effectiveness = (Correlated Events / Total Events) × 100%
 
 8. Describe the concept of "progressive disclosure" in dashboard design and explain why this principle improves dashboard effectiveness.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -559,7 +559,7 @@ Correlation Effectiveness = (Correlated Events / Total Events) × 100%
 
 9. What is the feedback loop between trend analysis reporting and Activity 5.8 (Update EM Solutions)? How does this loop drive continuous improvement?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -591,7 +591,7 @@ Activity 5.6 (Analyze Trends)
 
 10. Why is role-based filtering important for report distribution? Provide an example of how different teams might require customized views of the same underlying event data.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

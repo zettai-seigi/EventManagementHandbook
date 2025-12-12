@@ -629,7 +629,7 @@ As we move to Chapter 11, we will explore how Event Management integrates with o
 
 1. **Identify three benefits of automation and explain how each contributes to Event Management effectiveness.** Consider operational efficiency, consistency, speed, cost reduction, and scalability. How do these benefits support the goal to Maximize Automation?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -659,7 +659,7 @@ As we move to Chapter 11, we will explore how Event Management integrates with o
 
 2. **What criteria should be used to evaluate whether an event is a good automation candidate?** Apply the evaluation framework from Table 10.1 to a specific example such as service restarts, disk space management, or connection pool resets. Which criteria are most important and why?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -697,7 +697,7 @@ As we move to Chapter 11, we will explore how Event Management integrates with o
 
 3. **Describe the six phases of the Automation Development Lifecycle and explain why each phase is essential.** What risks might arise from skipping phases or rushing through the lifecycle? How does the lifecycle ensure automation quality and safety?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -733,7 +733,7 @@ As we move to Chapter 11, we will explore how Event Management integrates with o
 
 4. **Explain three different types of safety controls and provide examples of each.** How do throttling, blackout periods, pre-execution validation, rollback capabilities, and emergency shutdown work together to create defense-in-depth protection?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -782,7 +782,7 @@ Layer 4: Corrective
 
 5. **How is the Auto-operations Success Rate KPI calculated, and what does it measure?** What success rate is typical for organizations at different maturity levels? How should organizations interpret changes in this KPI over time?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

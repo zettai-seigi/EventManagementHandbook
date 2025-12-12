@@ -1253,7 +1253,7 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 1. **Policy Justification:** Explain why Policy 3 (Centralized Event Management Platform) is mandatory rather than optional. What specific problems does centralization solve that decentralized approaches cannot address?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1274,7 +1274,7 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 2. **Policy Integration:** Describe how Policy 6 (Single Monitoring Agent per CI) relates to Policy 4 (Enterprise Standard Monitoring Agents). How do these two policies work together to achieve standardization?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1295,7 +1295,7 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 3. **Governance Structure:** Your organization has identified 15 CIs currently monitored by non-standard agents. Describe the process for requesting exceptions vs. planning migration to standard agents. When is an exception justified vs. when should immediate remediation be required?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1320,7 +1320,7 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 4. **Policy Compliance Measurement:** Calculate the Integration Coverage metric for Policy 3 if your organization has 50 monitoring tools, 47 of which are integrated to the central platform, and 2 are scheduled for decommissioning. Does this meet the ≥95% target? What actions should be taken?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1344,7 +1344,7 @@ Integration Coverage = 47 / 48 × 100% = 97.9%
 
 5. **Standards Development:** You are tasked with creating an Event Correlation Standard (EM-STD-006). Describe the five most critical elements this standard must specify and explain why each is necessary for consistent correlation implementation.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1363,7 +1363,7 @@ Each element ensures consistent implementation across teams and enables meaningf
 
 6. **Exception Management:** An application team requests a 12-month exception to Policy 4 (Enterprise Standard Agents) to use a vendor-specific monitoring tool for a new mission-critical application. The vendor claims their tool is required for support, but your organization's standard APM tool claims it can monitor this application type. As Policy Owner, how would you evaluate this request? What information would you require? What alternatives might you propose?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1388,7 +1388,7 @@ Each element ensures consistent implementation across teams and enables meaningf
 
 7. **Policy Lifecycle:** Policy 7 (Trend Monitoring) was implemented 18 months ago. Compliance data shows only 60% of months had completed trend analysis, and only 2 CSI initiatives have been launched from findings. As Event Management Process Owner, what steps would you take to improve compliance and effectiveness? Should the policy be updated, or is this an implementation problem?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1409,7 +1409,7 @@ Each element ensures consistent implementation across teams and enables meaningf
 
 8. **Control Objective Linkage:** Explain the relationship between Policy 2 (Alert Logging Requirements) and Control Objectives EM-C07 (Root Cause Analysis) and EM-C08 (Trend Analysis). How does this policy enable compliance with these control objectives?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

@@ -1165,7 +1165,7 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 1. What is the primary purpose of event correlation, and why is it essential for preventing alert fatigue in modern IT operations?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1198,7 +1198,7 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 2. Describe the five major correlation techniques (time-based, topology-based, pattern-based, rule-based, and service-based) and provide an example scenario where each technique would be most effective.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1227,7 +1227,7 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 3. What is the target threshold for the Correlation Effectiveness KPI, and how is this metric calculated? Why is this KPI important for measuring Event Management maturity?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1271,7 +1271,7 @@ Where:
 
 4. Explain the difference between parent events and child events in correlated groups. What happens to child events when the parent event is resolved?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1312,7 +1312,7 @@ Where:
 
 5. Why is CMDB quality critical for topology-based and service-based correlation? What are the consequences of implementing correlation with an inaccurate or incomplete CMDB?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

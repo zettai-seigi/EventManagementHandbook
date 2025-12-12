@@ -537,7 +537,7 @@ Your Event Management journey begins now. Take the first step today.
 
 1. **Describe the three core capabilities that define Event Management and explain why each is essential for operational excellence.**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -559,7 +559,7 @@ Together they form the Event Management value chain: See → Understand → Act.
 
 2. **Explain the First 90 Days Action Plan. What are the three phases, what are the primary objectives of each phase, and what deliverables should be completed in each phase?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -579,7 +579,7 @@ Together they form the Event Management value chain: See → Understand → Act.
 
 3. **What are the five essential KPIs for Event Management, and what does each measure? Identify the target benchmark for each.**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -596,7 +596,7 @@ Together they form the Event Management value chain: See → Understand → Act.
 
 4. **Describe three high-impact quick win opportunities that deliver value rapidly in early Event Management implementation. Explain why each delivers significant value.**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -618,7 +618,7 @@ All three can be implemented within 30-60 days with moderate effort.
 
 5. **What is AIOps, and how does it transform Event Management capabilities? Describe three specific AIOps capabilities and their benefits over traditional rule-based approaches.**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

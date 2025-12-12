@@ -454,7 +454,7 @@ In the next chapter, we will explore Event Correlation and Automation, examining
 
 1. **What are the two dimensions that combine to determine event priority, and why is each dimension important?** Consider how Impact and Urgency contribute different perspectives to prioritization decisions.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** The two dimensions are **Impact** and **Urgency**.
@@ -484,7 +484,7 @@ Without both dimensions, prioritization would be one-dimensional and miss critic
 
 2. **A production database server supporting a building-wide application experiences a disk space warning (75% used). Walk through the priority determination process:** What is the Impact level and why? What factors determine the Urgency level? How do urgency modifiers affect the assessment? What is the final Priority and response time target?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -517,7 +517,7 @@ Without both dimensions, prioritization would be one-dimensional and miss critic
 
 3. **Explain why a test environment failure consistently receives Impact Level 1 (Low) regardless of organizational scope, while a production environment failure affecting multiple departments receives Impact Level 4 (Critical).** What principle does this illustrate about the impact assessment framework?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -553,7 +553,7 @@ The framework prioritizes **actual business consequence** over technical charact
 
 4. **Describe three urgency modifiers and provide a specific example of how each modifier would change the urgency assessment for a particular event type.** How do these modifiers ensure that priority reflects current business context rather than just static event attributes?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -591,7 +591,7 @@ Modifiers ensure priority reflects **current business reality**, not just techni
 
 5. **Control Objective EM-C05 mandates automated priority assignment, yet also requires that Event Analysts have the authority to adjust priority. Explain why both automated calculation and human override capability are essential.** When should an analyst adjust priority, and what must they document?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

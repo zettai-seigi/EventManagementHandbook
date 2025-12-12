@@ -732,7 +732,7 @@ As organizations implement the KPI framework presented in this chapter, they cre
 
 1. **KPI Framework Understanding:** Explain the hierarchical relationship between the four KPI categories (Volume, Quality, Efficiency, Effectiveness). Why must organizations establish Volume metrics before implementing higher-level KPIs?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -764,7 +764,7 @@ Without volume baseline, quality percentages are meaningless (5% of what?).
 
 2. **Quality Metrics Interpretation:** Your organization's False Positive Rate has increased from 3% to 8% over the past month, while Categorization Accuracy remains at 96% and Routing Accuracy at 94%. What are the likely root causes of the False Positive Rate increase? What specific actions would you take to investigate and remediate this quality issue?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -805,7 +805,7 @@ Without volume baseline, quality percentages are meaningless (5% of what?).
 
 3. **Auto-operations Success Rate Analysis:** Calculate the Auto-operations Success Rate for the following scenario: During a week, your Event Management system processed 10,000 total events. 6,500 events were resolved through automated responses without escalation. 2,000 events triggered automation that failed and required escalation. 1,500 events were escalated to incidents without automation attempts. What is the Auto-operations Success Rate? What maturity level does this performance indicate?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -840,7 +840,7 @@ Auto-operations Success Rate = 6,500 / 8,500 × 100% = 76.5%
 
 4. **Efficiency of Detection Application:** Your Incident Management process recorded 400 total incidents last month. 220 were triggered by Event Management escalation, 150 were reported by users, and 30 were discovered by IT staff during routine checks. Calculate the Efficiency of Detection. Does this meet the target threshold? What actions would you recommend based on this result?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -880,7 +880,7 @@ Efficiency of Detection = Event-detected Incidents / Total Incidents × 100%
 
 5. **KPI-Driven Continuous Improvement:** Describe how you would structure a monthly strategic KPI review session. What KPIs would you present to IT leadership? How would you translate KPI results into actionable improvement initiatives? Provide a specific example of how a KPI deviation should drive process optimization.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

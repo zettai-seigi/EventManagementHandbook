@@ -291,7 +291,7 @@ Test your understanding of the concepts presented in this chapter:
 
 1. **Explain the primary purpose of Event Management and how it differs from Incident Management.** What specific activities and objectives distinguish Event Management from the reactive approach of responding to user-reported incidents?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** Event Management's primary purpose is to ensure that Configuration Items (CIs) and services are constantly monitored, and that events are appropriately filtered, categorized, and routed for action when necessary. It serves as the "eyes and ears" of IT operations.
@@ -312,7 +312,7 @@ Event Management enables early detection of incidents before they impact users, 
 
 2. **Describe the eight Critical Success Factors for Event Management and explain why management support and sponsorship is considered the most critical factor.** How do these factors relate to each other and support the overall success of the Event Management process?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** The eight Critical Success Factors (CSFs) are:
@@ -339,7 +339,7 @@ The CSFs are interdependent—for example, CSF 3 (Tooling) cannot be effective w
 
 3. **Outline the five maturity levels for Event Management and explain the key characteristics that distinguish a Level 3 (Defined) organization from a Level 4 (Measured) organization.** What capabilities must be developed to progress from one level to the next?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** The five maturity levels are:
@@ -368,7 +368,7 @@ The CSFs are interdependent—for example, CSF 3 (Tooling) cannot be effective w
 
 4. **Analyze the business value proposition of Event Management from both operational and strategic perspectives.** Provide specific examples of how Event Management creates value in terms of efficiency, service quality, cost reduction, and strategic insight.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -400,7 +400,7 @@ The CSFs are interdependent—for example, CSF 3 (Tooling) cannot be effective w
 
 5. **Explain how Event Management integrates with at least three other ITSM processes.** For each integration point, describe the specific handoffs, data exchanges, and value created by the integration.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

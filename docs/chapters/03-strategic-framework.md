@@ -1063,7 +1063,7 @@ With the strategic framework established, the next chapter examines the detailed
 
 1. **Explain the relationship between Critical Success Factors and Key Performance Indicators.** How do CSFs provide the strategic context for measuring Event Management effectiveness through KPIs?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** Critical Success Factors (CSFs) define **what** must be achieved for Event Management success, while Key Performance Indicators (KPIs) measure **how well** those factors are being achieved.
@@ -1085,7 +1085,7 @@ CSFs establish the strategic goals; KPIs provide quantitative evidence of progre
 
 2. **Why is Management Support and Sponsorship considered the most critical success factor?** What specific outcomes cannot be achieved without strong management support?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** Management Support and Sponsorship is the foundation upon which all other CSFs depend. It enables:
@@ -1112,7 +1112,7 @@ Without management support:
 
 3. **Describe the three event types (Informational, Warning, Exception) and provide examples of appropriate thresholds for each.** How do these definitions enable consistent event handling?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1135,7 +1135,7 @@ Without management support:
 
 4. **How does CMDB accuracy enable event correlation?** Provide a specific example of topology-based correlation that would fail without accurate CI relationship data.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** The CMDB provides CI relationship data essential for understanding event context and dependencies.
@@ -1169,7 +1169,7 @@ Without management support:
 
 5. **Explain the principle of "Balanced Automation."** What are the risks of too much automation without proper controls, and what safety mechanisms mitigate these risks?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** Balanced Automation means maximizing operational efficiency through automation while implementing appropriate controls to prevent automation-caused incidents.
@@ -1203,7 +1203,7 @@ Without management support:
 
 6. **Describe the integration points between Event Management and Incident Management, Problem Management, and Change Management.** What are the escalation criteria for each, and what closure codes are used?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1241,7 +1241,7 @@ Without management support:
 
 7. **What are the key roles in Event Management and their primary responsibilities?** How do these roles work together to ensure process effectiveness?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1278,7 +1278,7 @@ Feedback Loop → All Levels
 
 8. **How does Continuous Improvement Culture prevent process stagnation?** What specific activities and mechanisms institutionalize continuous improvement?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:** Continuous Improvement Culture creates a systematic feedback loop that ensures Event Management adapts to changing infrastructure, business needs, and lessons learned.

@@ -815,7 +815,7 @@ Chapter 5 builds on these classifications by introducing the Priority Matrix and
 
 1. **What is the primary difference between a Warning event and an Exception event, and how does this difference impact handling approach?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -840,7 +840,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 2. **Describe a scenario where an event might be initially classified as Exception but later closed with a `Related` closure code. What process would identify this correlation?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -869,7 +869,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 3. **Why is the Hardware – Server category typically the largest category by event volume in most organizations? What does it indicate if Software – Custom becomes the largest category?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -901,7 +901,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 4. **Explain why accurate CMDB data is essential for effective event categorization and correlation. What specific CMDB information is required?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -939,7 +939,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 5. **A production database server failure is detected at 3 AM. Walk through the determination of Impact level, Urgency level, and expected Priority. How would the assessment change if the same failure occurred at 2 PM on the last day of the fiscal quarter?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -974,7 +974,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 6. **What is the purpose of the False Positive closure code, and what action should the Event Manager take when false positive rates exceed the 5% target threshold?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1008,7 +1008,7 @@ The distinction enables appropriate resource allocation and prevents over-reacti
 
 7. **Describe three scenarios where an event would appropriately be closed with the `Change` closure code rather than the `Incident` closure code. What process integration is required to handle these scenarios effectively?**
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

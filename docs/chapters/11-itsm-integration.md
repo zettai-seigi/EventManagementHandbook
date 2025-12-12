@@ -846,7 +846,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 1. What are the four primary escalation paths from Event Management, and what criteria determine which path an event should follow?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -868,7 +868,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 2. Explain the difference between Events-to-Incidents Ratio and Efficiency of Detection metrics. What does each metric measure, and why are both important?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -891,7 +891,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 3. Describe the data elements that must be transferred when escalating an event to Incident Management. Why is complete context transfer critical?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -918,7 +918,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 4. When should an event be escalated to Problem Management rather than Incident Management? Provide specific examples of triggers for problem escalation.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -944,7 +944,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 5. How does the CMDB support event correlation and impact assessment? What would be the consequences of inaccurate or incomplete CMDB data?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -978,7 +978,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 6. Explain the bidirectional nature of Event Management integration. Why is resolution confirmation from downstream processes important, and what happens if this communication breaks down?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1011,7 +1011,7 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 7. What role does Event Management play in Service Level Management, and how does SLA data influence event prioritization?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

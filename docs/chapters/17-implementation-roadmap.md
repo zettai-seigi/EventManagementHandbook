@@ -554,7 +554,7 @@ Chapter 18 will detail the specific activities, deliverables, and techniques req
 
 1. **Phase Progression:** What are the primary objectives of each implementation phase, and why is it important to achieve success criteria before proceeding to the next phase?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -575,7 +575,7 @@ Chapter 18 will detail the specific activities, deliverables, and techniques req
 
 2. **Critical Path Analysis:** Identify the critical path activities in the 12-month implementation roadmap. Why do these activities determine the minimum project duration?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -597,7 +597,7 @@ Minimum duration is sum of critical path activities, regardless of parallel work
 
 3. **Correlation Value:** In Phase 2, correlation is introduced with a target of >50% reduction in alert volume. Explain how correlation achieves this reduction and why it is essential before expanding monitoring coverage.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -619,7 +619,7 @@ Expanding coverage without correlation multiplies noise, not value.
 
 4. **Automation Safety:** What safety controls should be included in automated responses, and why are these controls essential to prevent automation-induced failures?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -639,7 +639,7 @@ Expanding coverage without correlation multiplies noise, not value.
 
 5. **Resource Planning:** An organization with 5,000 Configuration Items is planning Event Management implementation. Estimate the staffing requirements for each phase and explain how automation in Phase 3 prevents Event Analyst staffing from increasing despite expanded coverage.
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**

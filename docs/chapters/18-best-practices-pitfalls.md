@@ -1730,7 +1730,7 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 1. **Best Practice Application:** Your organization generates 25,000 events per day across production infrastructure. Event Analysts report spending most of their time acknowledging duplicate alerts. Which best practice should be your highest priority, and what specific implementation steps would you take in the first 30 days?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1752,7 +1752,7 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 2. **Pitfall Recognition:** Monitoring data shows Warning Events were generated 18 hours before a critical capacity failure caused production outage, but no preventive action was taken. The Warning Events were acknowledged by operations team but not investigated. Which common pitfall does this scenario represent? What are the root causes, and what mitigation strategies would you implement?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1778,7 +1778,7 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 3. **CSF Implementation:** Your Event Management implementation plan assumes current CMDB accuracy of 68%. The implementation includes advanced topology-based correlation as a Month 2 deliverable. Based on Critical Success Factor guidance in this chapter, what concerns would you raise about this plan, and how would you revise the implementation sequence?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1806,7 +1806,7 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 4. **Safety Controls Design:** You are designing automation to restart failed application services. The automation will trigger when health check monitoring detects service stopped. What specific safety controls would you implement, and how would each control prevent potential automation-caused issues?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
@@ -1825,7 +1825,7 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 5. **Threshold Configuration:** A database server supporting business-critical transactions has these configured thresholds: CPU warning at 80%, CPU critical at 85%. Post-incident analysis shows recent outage occurred when CPU reached 90% for sustained period causing transaction timeouts, but no alerts were generated until critical threshold breached leaving insufficient time to prevent impact. What threshold configuration changes would you recommend, and what is your rationale considering SLA requirements and preventive action windows?
 
-<details>
+<details markdown="1">
 <summary>Click to reveal answer</summary>
 
 **Answer:**
