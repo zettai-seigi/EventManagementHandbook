@@ -364,23 +364,262 @@ Chapter 14 examines Continuous Improvement and Process Maturity, building on the
 
 1. What are the two types of formal review sessions required by Control Objective EM-C04, and what are the key differences in their focus and audience?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Review Type | Weekly Operational | Monthly Strategic |
+|-------------|-------------------|-------------------|
+| **Focus** | Tactical, immediate issues | Strategic, long-term trends |
+| **Timeframe** | Previous week | Previous month/quarter |
+| **Audience** | Event Manager, Analysts, Designers | IT Leadership, Process Owner |
+| **Key Topics** | KPI targets, backlog, immediate issues | Trends, initiatives, investments |
+| **Decisions** | Threshold adjustments, staffing | Budget, strategic direction |
+| **Duration** | 30-60 minutes | 60-90 minutes |
+
+</details>
+
 2. Describe the three-tier reporting hierarchy in Event Management and explain how each tier serves different decision-making needs.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Tier | Audience | Frequency | Content | Decision Type |
+|------|----------|-----------|---------|---------------|
+| **Operational** | Analysts, Shift Leads | Real-time/Daily | Current status, backlog, alerts | Immediate response |
+| **Tactical** | Event Manager, Team Leads | Weekly | KPI trends, quality metrics | Process adjustments |
+| **Strategic** | IT Leadership, Executives | Monthly | Business value, ROI, initiatives | Investment, direction |
+
+**How each tier serves decisions:**
+- **Operational:** "Which events need attention now?"
+- **Tactical:** "Are we meeting targets? What needs tuning?"
+- **Strategic:** "Is Event Management delivering value? Where should we invest?"
+
+</details>
 
 3. What are the five core components that should be included in an effective daily operational dashboard? Explain the purpose of each component.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Component | Purpose |
+|-----------|---------|
+| **Event Queue** | Show current open events requiring attention |
+| **Status Summary** | At-a-glance counts by type/priority/status |
+| **Trending Indicators** | Direction arrows showing improvement/decline |
+| **KPI Gauges** | Visual representation of key metrics vs. targets |
+| **Alert Panel** | Highlight critical/urgent items needing immediate action |
+
+**Design principles:**
+- Visual hierarchy—most important data prominent
+- Color coding—red/amber/green for quick status assessment
+- Refresh rate—real-time or near-real-time for operational use
+
+</details>
+
 4. Explain the relationship between Control Objectives EM-C04 and EM-C08. How do these controls work together to ensure continuous improvement?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Control | Focus | Purpose |
+|---------|-------|---------|
+| **EM-C04** | Formal Event Data Review Sessions | Ensure regular review of performance data |
+| **EM-C08** | Trend Analysis Reports | Ensure trend data is produced for analysis |
+
+**How they work together:**
+1. EM-C08 requires trend reports to be produced
+2. EM-C04 requires those reports to be reviewed in formal sessions
+3. Reviews identify improvement opportunities
+4. Improvements implemented and measured
+5. Next trend report shows impact
+
+**Continuous improvement cycle:**
+```
+EM-C08 (Produce Trends) → EM-C04 (Review Data) →
+Identify Improvements → Implement Changes →
+EM-C08 (Measure Impact) → ...
+```
+
+Without EM-C08, there's nothing to review. Without EM-C04, trends aren't acted upon.
+
+</details>
 
 5. What is Activity 5.6 in the Event Management process, and what are its key tasks related to trend analysis?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Activity 5.6: Analyze Event Trends**
+
+| Task | Description |
+|------|-------------|
+| **Volume trending** | Analyze event volume over time; identify patterns |
+| **Category distribution** | Track shifts in event types and categories |
+| **Quality analysis** | Monitor false positive rates, categorization accuracy |
+| **Efficiency tracking** | Measure auto-operations success rate trends |
+| **Pattern identification** | Discover recurring events, timing patterns |
+| **Correlation analysis** | Identify relationships between event types |
+| **Recommendation development** | Propose threshold/rule adjustments |
+
+**Output:** Trend analysis report feeding EM-C04 review sessions and EM-C08 compliance.
+
+</details>
+
 6. How should monthly executive reports translate operational metrics into business value indicators? Provide three specific examples of value metrics that should be included.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Translation approach:**
+- Convert technical metrics to business outcomes
+- Quantify value in terms leadership understands (time, money, risk)
+- Show trend and comparison to targets
+
+**Three value metrics:**
+
+| Metric | Calculation | Business Value |
+|--------|-------------|----------------|
+| **Prevented Downtime Cost** | Prevented incidents × avg downtime × hourly cost | "Saved $X in potential outage costs" |
+| **Operational Efficiency Savings** | Hours saved through automation × labor cost | "Reduced operational cost by $X" |
+| **Proactive Detection Rate** | Event-detected incidents / total incidents | "Caught X% of issues before users noticed" |
+
+**Example executive statement:**
+"This month, Event Management detected 65% of incidents before user impact, automated resolution of 7,200 events (saving 120 analyst hours), and prevented an estimated $180,000 in potential downtime costs."
+
+</details>
 
 7. What is the target for correlation effectiveness, and how is this metric calculated? What does poor correlation effectiveness indicate?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Target:** ≥50% correlation effectiveness
+
+**Calculation:**
+```
+Correlation Effectiveness = (Correlated Events / Total Events) × 100%
+```
+
+**Poor correlation effectiveness indicates:**
+
+| Indicator | Implication |
+|-----------|-------------|
+| <30% | Minimal correlation; high noise level |
+| CMDB issues | Relationship data missing or inaccurate |
+| Rule gaps | Correlation rules not covering common patterns |
+| Time windows wrong | Windows too narrow or too wide |
+| Missing patterns | Known correlation patterns not implemented |
+
+**Improvement actions:**
+- Audit CMDB accuracy
+- Implement time-based correlation as foundation
+- Add topology rules for known dependencies
+- Review and tune correlation windows
+
+</details>
+
 8. Describe the concept of "progressive disclosure" in dashboard design and explain why this principle improves dashboard effectiveness.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Progressive disclosure:** Show summary information first, with ability to drill down to details on demand.
+
+**Implementation:**
+
+| Level | Content | Example |
+|-------|---------|---------|
+| **Summary** | High-level status, key metrics | "95% automation rate" |
+| **Category** | Breakdown by dimension | "By type: 98% informational, 92% warning, 88% exception" |
+| **Detail** | Specific records, raw data | Individual event records |
+
+**Why it improves effectiveness:**
+- **Reduces cognitive overload** — Users see what they need, not everything
+- **Supports different users** — Executives see summary; analysts drill down
+- **Speeds decision-making** — Key information prominent; details available
+- **Improves focus** — Critical items not lost in noise
+
+</details>
 
 9. What is the feedback loop between trend analysis reporting and Activity 5.8 (Update EM Solutions)? How does this loop drive continuous improvement?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Feedback loop:**
+
+```
+Activity 5.6 (Analyze Trends)
+         ↓ Identifies improvement opportunities
+Activity 5.8 (Update EM Solutions)
+         ↓ Implements changes (thresholds, rules, automation)
+Activity 5.6 (Analyze Trends)
+         ↓ Measures impact of changes
+```
+
+**How it drives improvement:**
+
+| Step | Action | Example |
+|------|--------|---------|
+| 1 | Trend analysis identifies issue | False positives increased 15% |
+| 2 | Root cause determined | Threshold too sensitive for new app |
+| 3 | Solution implemented (5.8) | Threshold adjusted |
+| 4 | Next trend analysis measures | False positives returned to baseline |
+| 5 | Improvement confirmed | Document and share best practice |
+
+**Without the loop:** Changes made but never validated; improvements not sustained.
+
+</details>
+
 10. Why is role-based filtering important for report distribution? Provide an example of how different teams might require customized views of the same underlying event data.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why role-based filtering matters:**
+- Different roles need different information
+- Prevents information overload
+- Focuses attention on relevant data
+- Supports accountability by team
+
+**Example: Same event data, different views:**
+
+| Role | Filtered View | What They See |
+|------|---------------|---------------|
+| **Network Team** | Hardware-Network category only | Only network events |
+| **Application Team** | Software-Custom category | Only custom app events |
+| **Database Team** | Database-related CIs | Only database events |
+| **Event Manager** | All categories, summary level | Volume and trend across all |
+| **Executive** | Business service impact | Aggregated by service, not CI |
+
+**Same event (database timeout):**
+- Database team sees: "DB-PROD-01 connection timeout at 14:32"
+- Application team sees: "Order Processing service degraded"
+- Executive sees: "Customer-facing services impacted"
+
+Each role gets the view they need to take appropriate action.
+
+</details>
 
 ---
 
