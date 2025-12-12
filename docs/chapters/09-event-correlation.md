@@ -1165,13 +1165,192 @@ Mastering event correlation enables organizations to move from reactive alert ma
 
 1. What is the primary purpose of event correlation, and why is it essential for preventing alert fatigue in modern IT operations?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Primary purpose:** Correlation groups related events into single actionable items, reducing noise and identifying root causes rather than symptoms.
+
+**Why essential for preventing alert fatigue:**
+
+| Challenge Without Correlation | How Correlation Addresses It |
+|------------------------------|------------------------------|
+| Thousands of individual alerts | Groups into dozens of actionable events |
+| Each alert requires investigation | Only parent events need investigation |
+| Symptoms obscure root cause | Root cause identified through grouping |
+| Analysts overwhelmed | Manageable workload |
+| Important alerts missed in noise | Critical events stand out |
+
+**Example:**
+- **Without correlation:** Network switch failure → 500 individual alerts (50 servers × 10 metrics each)
+- **With correlation:** Same failure → 1 parent event (switch) + 499 related events (auto-suppressed)
+- **Result:** 99.8% noise reduction; analyst focuses on root cause
+
+**Alert fatigue consequences if unaddressed:**
+- Analysts ignore alerts (normalization of deviance)
+- Critical events missed
+- Increased MTTD and MTTR
+- Analyst burnout and turnover
+- Loss of trust in monitoring
+
+</details>
+
 2. Describe the five major correlation techniques (time-based, topology-based, pattern-based, rule-based, and service-based) and provide an example scenario where each technique would be most effective.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Technique | How It Works | Best Scenario |
+|-----------|--------------|---------------|
+| **Time-based** | Groups events occurring within a time window | Server restart generates 20 alerts in 2 minutes → correlate to single restart event |
+| **Topology-based** | Uses CMDB relationships to link events | Router failure causes 100 downstream server alerts → group as router children |
+| **Pattern-based** | Matches known event signatures/patterns | Application deployment always generates same 5 log messages → recognize as deployment |
+| **Rule-based** | Custom business logic for specific scenarios | "Ignore backup server alerts during 2 AM backup window" |
+| **Service-based** | Groups by business service mapping | Order processing service has DB, app, web tiers → group all tier events to service |
+
+**Effectiveness and prerequisites:**
+
+| Technique | Typical Effectiveness | Key Prerequisite |
+|-----------|----------------------|------------------|
+| **Time-based** | 30-40% | None (works with raw data) |
+| **Topology-based** | 40-60% | Accurate CMDB relationships |
+| **Pattern-based** | 10-20% | Pattern library development |
+| **Rule-based** | 15-25% | Operational knowledge documentation |
+| **Service-based** | 20-30% | Business service definitions in CMDB |
+
+**Implementation sequence:** Start with time-based (foundational), add topology-based (highest impact), then layer in specialized techniques.
+
+</details>
 
 3. What is the target threshold for the Correlation Effectiveness KPI, and how is this metric calculated? Why is this KPI important for measuring Event Management maturity?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Target threshold:** ≥50% correlation effectiveness (mature implementations often achieve 60-80%)
+
+**Calculation:**
+
+```
+Correlation Effectiveness = (Correlated Events / Total Events) × 100%
+```
+
+Where:
+- **Correlated Events** = Events grouped as related/child events
+- **Total Events** = All events before correlation
+
+**Example calculation:**
+- Total events received: 10,000
+- Events correlated as related: 6,000
+- Parent events remaining: 4,000
+- Correlation Effectiveness = 6,000 / 10,000 = **60%**
+
+**Why important for maturity measurement:**
+
+| Maturity Level | Typical Correlation Effectiveness |
+|----------------|----------------------------------|
+| Level 1 (Reactive) | 0-10% (little/no correlation) |
+| Level 2 (Managed) | 20-35% |
+| Level 3 (Defined) | 35-50% |
+| Level 4 (Measured) | 50-70% |
+| Level 5 (Optimized) | 70-90% |
+
+**KPI indicates:**
+- CMDB quality (topology correlation depends on it)
+- Correlation rule sophistication
+- Operational noise reduction achieved
+- Analyst workload manageability
+- Investment in correlation capabilities
+
+</details>
+
 4. Explain the difference between parent events and child events in correlated groups. What happens to child events when the parent event is resolved?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Parent event:**
+- Root cause or primary event in correlation group
+- Requires investigation and action
+- Displayed to analysts on console
+- Has its own incident/closure workflow
+
+**Child events:**
+- Symptoms or secondary effects of parent event
+- Linked to parent; no separate investigation
+- Suppressed from console display (or shown as related)
+- Closed automatically when parent resolved
+
+| Attribute | Parent Event | Child Event |
+|-----------|--------------|-------------|
+| **Visibility** | Prominent on console | Suppressed or linked |
+| **Action required** | Yes—investigate, resolve | No—wait for parent resolution |
+| **Closure** | Manual or automated resolution | Automatic when parent closes |
+| **Closure code** | Incident, Problem, Change, Auto Action | `Related` |
+| **Count in KPIs** | Yes—counted as actionable | Yes—counted as correlated |
+
+**What happens when parent resolved:**
+
+1. Parent event closed with appropriate closure code
+2. System identifies all linked child events
+3. Child events automatically closed with `Related` code
+4. Closure timestamp = parent closure timestamp
+5. No manual action required for children
+
+**Example:**
+- Parent: "Switch SW-01 failure" → closed with `Incident` after replacement
+- Children: 50 "Server connection lost" events → auto-closed with `Related`
+
+</details>
+
 5. Why is CMDB quality critical for topology-based and service-based correlation? What are the consequences of implementing correlation with an inaccurate or incomplete CMDB?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why CMDB quality is critical:**
+
+| Correlation Type | CMDB Dependency |
+|------------------|-----------------|
+| **Topology-based** | Requires accurate parent-child relationships between CIs |
+| **Service-based** | Requires CI-to-service mappings and service dependency chains |
+
+**How correlation uses CMDB:**
+1. Event occurs on CI-A
+2. Correlation engine queries CMDB: "What depends on CI-A?"
+3. CMDB returns: "CI-B, CI-C, CI-D are children of CI-A"
+4. Events on CI-B, CI-C, CI-D correlated as children
+
+**Consequences of inaccurate CMDB:**
+
+| Problem | Consequence |
+|---------|-------------|
+| **Missing relationships** | Related events not grouped; noise not reduced |
+| **Wrong relationships** | Unrelated events incorrectly grouped; false correlation |
+| **Stale data** | Decommissioned CIs still in relationships; incorrect parent identification |
+| **Missing CIs** | Events from unknown CIs can't be correlated |
+| **Incorrect service mapping** | Wrong business impact assessment |
+
+**Specific failure scenarios:**
+
+| CMDB Issue | Correlation Failure |
+|------------|---------------------|
+| Server not linked to switch | Server alerts not correlated to switch failure |
+| Old dependency still recorded | Events grouped to wrong parent |
+| Service mapping outdated | Impact incorrectly calculated |
+
+**Recommendation:** Achieve ≥95% CMDB accuracy before implementing topology/service correlation. Otherwise, correlation may cause more confusion than it solves.
+
+</details>
 
 ---
 

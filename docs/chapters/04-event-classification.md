@@ -815,17 +815,234 @@ Chapter 5 builds on these classifications by introducing the Priority Matrix and
 
 1. **What is the primary difference between a Warning event and an Exception event, and how does this difference impact handling approach?**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Aspect | Warning Event | Exception Event |
+|--------|---------------|-----------------|
+| **Definition** | Approaching threshold; unusual activity | Service disruption or abnormal operation |
+| **Status** | Service still functioning | Service impacted or failed |
+| **Time Available** | Time for preventive action | Immediate response required |
+| **Response Time** | 2-4 hours | 15 minutes – 4 hours (priority-dependent) |
+| **Typical Action** | Monitor, schedule preventive maintenance | Investigate immediately, restore service |
+| **Escalation** | Rarely | Frequently |
+| **Closure Codes** | `Auto Action`, `Incident` | `Incident`, `Problem`, `Change` |
+
+**Impact on handling:**
+- **Warning:** Allows proactive intervention—schedule capacity expansion, plan maintenance window, prepare resources
+- **Exception:** Requires reactive response—immediate investigation, service restoration focus, potential escalation to Incident Management
+
+The distinction enables appropriate resource allocation and prevents over-reaction to warnings while ensuring exceptions receive immediate attention.
+
+</details>
+
 2. **Describe a scenario where an event might be initially classified as Exception but later closed with a `Related` closure code. What process would identify this correlation?**
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Scenario:** A network switch fails, generating these events:
+1. Switch failure alert (Exception) — 10:00:00
+2. Server A "connection lost" (Exception) — 10:00:15
+3. Server B "connection lost" (Exception) — 10:00:18
+4. Application X "database unavailable" (Exception) — 10:00:25
+
+**Initial classification:** All four events are initially classified as Exception because each indicates service disruption.
+
+**Correlation process:**
+1. **Time-based correlation** detects events occurring within a short window (30 seconds)
+2. **Topology-based correlation** queries CMDB, finds Server A and B are connected to the failed switch
+3. **Service-based correlation** identifies Application X depends on Server A's database
+4. **Correlation engine** designates switch failure as **parent event**; others become **child events**
+
+**Result:**
+- Switch failure: Remains Exception, closed with `Incident` after resolution
+- Server A, B, Application X: Closed with `Related` — no separate action required
+
+**Value:** Instead of 4 separate investigations, one root cause is addressed. When switch is restored, all related events auto-close.
+
+</details>
 
 3. **Why is the Hardware – Server category typically the largest category by event volume in most organizations? What does it indicate if Software – Custom becomes the largest category?**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why Hardware – Server is typically largest (30-40% of events):**
+- Servers have multiple monitored components (CPU, memory, disk, network)
+- Each server generates multiple event types (performance, availability, capacity)
+- Server infrastructure is foundational—most organizations have many servers
+- Server monitoring is mature with well-established agents and thresholds
+
+**If Software – Custom becomes largest category:**
+
+| Indication | Implication |
+|------------|-------------|
+| **Poor coding practices** | Custom applications generating excessive errors or warnings |
+| **Inadequate error handling** | Applications not gracefully handling exceptions |
+| **Inappropriate thresholds** | Monitoring too aggressively for application characteristics |
+| **Missing application tuning** | Performance issues not addressed at application level |
+| **Technical debt** | Legacy applications with unresolved issues |
+
+**Recommended actions:**
+1. Analyze top event-generating applications
+2. Review and adjust thresholds for custom applications
+3. Work with development teams on error handling improvements
+4. Prioritize application remediation based on event volume
+5. Consider if events represent real issues or noise
+
+</details>
+
 4. **Explain why accurate CMDB data is essential for effective event categorization and correlation. What specific CMDB information is required?**
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why CMDB accuracy is essential:**
+
+| Function | CMDB Dependency |
+|----------|-----------------|
+| **Categorization** | CI type determines event category (Hardware vs. Software) |
+| **Correlation** | Relationship data enables topology-based and service-based correlation |
+| **Impact Assessment** | Service mapping determines business impact level |
+| **Routing** | CI ownership determines which team receives escalations |
+| **Automation** | CI attributes determine which automation scripts apply |
+
+**Specific CMDB information required:**
+
+| Data Element | Purpose |
+|--------------|---------|
+| **CI Type** | Categorize as Hardware-Server, Software-Commercial, etc. |
+| **CI Relationships** | Parent-child relationships for topology correlation |
+| **Service Mapping** | Which business services depend on this CI |
+| **Environment** | Production, Test, Development (affects impact level) |
+| **Criticality** | Business criticality rating |
+| **Owner/Support Group** | Routing destination for escalations |
+| **Location** | Geographic or logical location |
+| **Dependencies** | Upstream and downstream CIs |
+
+**Consequences of inaccurate CMDB:**
+- Events miscategorized (wrong metrics, wrong thresholds)
+- Failed correlation (related events not grouped)
+- Incorrect impact assessment (wrong priority assignment)
+- Misrouted escalations (wrong teams notified)
+
+</details>
 
 5. **A production database server failure is detected at 3 AM. Walk through the determination of Impact level, Urgency level, and expected Priority. How would the assessment change if the same failure occurred at 2 PM on the last day of the fiscal quarter?**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Scenario 1: 3 AM failure**
+
+| Factor | Assessment | Reasoning |
+|--------|------------|-----------|
+| **Impact** | Level 3 (Medium-High) | Production environment, department-wide scope likely |
+| **Urgency** | Level 2 (Medium) | Outside business hours, limited user impact currently |
+| **Urgency Modifiers** | None apply | Not business-critical time |
+| **Priority** | P3 (Medium) | Impact 3 × Urgency 2 = P3 |
+| **Response Target** | 4 hours | Standard P3 response window |
+
+**Scenario 2: 2 PM on fiscal quarter end**
+
+| Factor | Assessment | Reasoning |
+|--------|------------|-----------|
+| **Impact** | Level 4 (Critical) | Production + financial close = enterprise-wide business impact |
+| **Urgency** | Level 4 (Critical) | Peak business hours, financial deadline imminent |
+| **Urgency Modifiers** | +2 levels | Business-critical period, regulatory deadline |
+| **Priority** | P1 (Critical) | Impact 4 × Urgency 4 = P1 |
+| **Response Target** | 15 minutes | Immediate response required |
+
+**Key differences:**
+- Same technical failure → dramatically different business impact
+- Urgency modifiers (time of day, business period) increase urgency by 2 levels
+- Priority jumps from P3 to P1
+- Response time changes from 4 hours to 15 minutes
+
+</details>
+
 6. **What is the purpose of the False Positive closure code, and what action should the Event Manager take when false positive rates exceed the 5% target threshold?**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Purpose of False Positive closure code:**
+- Identifies events that were incorrectly generated
+- Tracks monitoring accuracy for KPI measurement
+- Provides data for threshold and rule optimization
+- Distinguishes real issues from monitoring configuration problems
+
+**Examples of false positives:**
+- Threshold too aggressive (CPU alert at 60% when normal is 70%)
+- Stale monitoring configuration (alerting on decommissioned service)
+- Transient conditions (brief spike that self-resolved)
+- Misconfigured monitoring (wrong metric being measured)
+
+**Actions when false positive rate exceeds 5%:**
+
+| Action | Purpose |
+|--------|---------|
+| **Analyze false positive sources** | Identify which CIs, thresholds, or rules generate most false positives |
+| **Review threshold configurations** | Adjust thresholds that are too aggressive |
+| **Implement dampening** | Require condition to persist before alerting |
+| **Update correlation rules** | Filter transient or self-resolving conditions |
+| **Audit monitoring configuration** | Remove monitoring for decommissioned CIs |
+| **Work with CI owners** | Understand normal behavior patterns |
+| **Implement baseline monitoring** | Use dynamic thresholds based on historical norms |
+| **Report to Process Owner** | Escalate if systemic issues require broader action |
+
+</details>
+
 7. **Describe three scenarios where an event would appropriately be closed with the `Change` closure code rather than the `Incident` closure code. What process integration is required to handle these scenarios effectively?**
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Scenario 1: Capacity Threshold Warning**
+- **Event:** Disk space at 80% on database server
+- **Why Change:** No service disruption yet; requires planned capacity expansion
+- **Action:** Create RFC for disk expansion during next maintenance window
+- **Closure:** `Change` with RFC number referenced
+
+**Scenario 2: Performance Degradation Pattern**
+- **Event:** Application response time consistently elevated (Warning level)
+- **Why Change:** Service functioning but optimization needed; requires configuration change
+- **Action:** Create RFC for application tuning or infrastructure upgrade
+- **Closure:** `Change` with RFC number referenced
+
+**Scenario 3: End-of-Life Component Alert**
+- **Event:** Certificate expiring in 30 days
+- **Why Change:** Proactive notification; requires planned certificate renewal
+- **Action:** Create RFC for certificate replacement before expiration
+- **Closure:** `Change` with RFC number referenced
+
+**Required process integration:**
+
+| Integration Element | Purpose |
+|--------------------|---------|
+| **Event-to-RFC workflow** | Automated or manual RFC creation from event data |
+| **Bidirectional linking** | Event references RFC; RFC references triggering event |
+| **Status synchronization** | Event updated when RFC completes |
+| **Data transfer** | Event details, affected CI, recommended action passed to Change |
+| **Feedback loop** | Change completion triggers event closure |
+| **Reporting integration** | Track events resolved via Change for CSI metrics |
+
+</details>
 
 ---
 

@@ -629,13 +629,202 @@ As we move to Chapter 11, we will explore how Event Management integrates with o
 
 1. **Identify three benefits of automation and explain how each contributes to Event Management effectiveness.** Consider operational efficiency, consistency, speed, cost reduction, and scalability. How do these benefits support the goal to Maximize Automation?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Benefit | How It Contributes | Support for "Maximize Automation" Goal |
+|---------|-------------------|---------------------------------------|
+| **Speed** | Events resolved in seconds vs. minutes/hours | Reduces MTTD and MTTR; prevents escalation |
+| **Consistency** | Same response every time; no human variability | Predictable outcomes; reliable KPI measurement |
+| **Scalability** | Handles 1,000 events same as 100 | Manages growing infrastructure without proportional staff increase |
+
+**Additional benefits:**
+
+| Benefit | Contribution |
+|---------|-------------|
+| **Cost reduction** | Less staff time per event; lower operational expense |
+| **24×7 coverage** | Automation doesn't sleep; immediate response any time |
+| **Reduced human error** | Eliminates typos, forgotten steps, fatigue mistakes |
+| **Analyst focus** | Staff freed for complex problems, not routine tasks |
+
+**How benefits support CSF 8 (Balanced Automation):**
+- Speed + Consistency → Reliable automated response
+- Scalability → Sustainable growth without alert fatigue
+- Cost reduction → ROI justification for automation investment
+- Together → Foundation for achieving ≥70% auto-operations target
+
+</details>
+
 2. **What criteria should be used to evaluate whether an event is a good automation candidate?** Apply the evaluation framework from Table 10.1 to a specific example such as service restarts, disk space management, or connection pool resets. Which criteria are most important and why?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Evaluation criteria:**
+
+| Criterion | Description | Weight |
+|-----------|-------------|--------|
+| **Frequency** | How often does this event occur? | High |
+| **Predictability** | Is the resolution well-understood and consistent? | High |
+| **Risk** | What could go wrong if automation fails? | High |
+| **Complexity** | How many steps? How much judgment required? | Medium |
+| **Time savings** | Manual resolution time vs. automation effort | Medium |
+| **Dependencies** | Does resolution depend on other systems/data? | Medium |
+
+**Example: Service restart automation**
+
+| Criterion | Assessment | Score |
+|-----------|------------|-------|
+| **Frequency** | 10+ times per week | ✅ High |
+| **Predictability** | Same steps every time; clear success criteria | ✅ High |
+| **Risk** | Low—service already down; restart is standard recovery | ✅ Low risk |
+| **Complexity** | 3 steps: stop, wait, start, verify | ✅ Low |
+| **Time savings** | 15 min manual → 30 sec automated | ✅ High |
+| **Dependencies** | None—self-contained | ✅ Low |
+
+**Verdict:** Excellent automation candidate (scores well on all criteria)
+
+**Most important criteria:**
+1. **Predictability** — If resolution varies, automation will fail
+2. **Risk** — Low-risk scenarios should be automated first
+3. **Frequency** — High-frequency events provide greatest ROI
+
+</details>
 
 3. **Describe the six phases of the Automation Development Lifecycle and explain why each phase is essential.** What risks might arise from skipping phases or rushing through the lifecycle? How does the lifecycle ensure automation quality and safety?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Phase | Activities | Why Essential |
+|-------|------------|---------------|
+| **1. Identify** | Find automation candidates; assess criteria | Focus on right targets; avoid wasted effort |
+| **2. Design** | Define logic, safety controls, success criteria | Blueprint prevents ad-hoc development |
+| **3. Develop** | Build automation scripts/workflows | Implement the design |
+| **4. Test** | Validate in non-production; verify safety controls | Catch issues before production impact |
+| **5. Deploy** | Staged rollout; monitor closely | Controlled introduction minimizes risk |
+| **6. Optimize** | Monitor performance; refine based on data | Continuous improvement; adapt to changes |
+
+**Risks of skipping phases:**
+
+| Skipped Phase | Risk |
+|---------------|------|
+| **Identify** | Automate wrong things; low ROI |
+| **Design** | Missing safety controls; incomplete logic |
+| **Develop** | Code quality issues; maintainability problems |
+| **Test** | Production failures; service disruption |
+| **Deploy** | Wide-scale failure instead of contained issue |
+| **Optimize** | Automation degrades over time; false positives increase |
+
+**How lifecycle ensures quality and safety:**
+- **Phase gates** — Must complete each phase before proceeding
+- **Documentation** — Design records enable maintenance and audit
+- **Testing requirement** — Validates before production exposure
+- **Staged deployment** — Limits blast radius of failures
+- **Continuous optimization** — Adapts to changing environment
+
+</details>
+
 4. **Explain three different types of safety controls and provide examples of each.** How do throttling, blackout periods, pre-execution validation, rollback capabilities, and emergency shutdown work together to create defense-in-depth protection?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Three types of safety controls:**
+
+| Control Type | Purpose | Examples |
+|--------------|---------|----------|
+| **Preventive** | Stop automation from running inappropriately | Blackout periods, pre-execution validation |
+| **Detective** | Identify when automation has failed | Post-execution verification, success criteria |
+| **Corrective** | Recover from automation failure | Rollback capabilities, emergency shutdown |
+
+**Detailed examples:**
+
+| Control | How It Works |
+|---------|--------------|
+| **Throttling** | Max 3 automation runs per CI per hour; prevents runaway loops |
+| **Blackout periods** | No automation during business-critical hours (e.g., market open) |
+| **Pre-execution validation** | Check CI state before acting (e.g., verify service not in maintenance) |
+| **Rollback capability** | Automated undo if post-execution check fails |
+| **Emergency shutdown** | Global kill switch to disable all automation immediately |
+
+**Defense-in-depth:**
+
+```
+Layer 1: Preventive
+  Blackout period? → BLOCK
+  Throttle exceeded? → BLOCK
+  Pre-validation fails? → BLOCK
+
+Layer 2: Execution
+  Run automation script
+
+Layer 3: Detective
+  Post-execution check
+  Success criteria met?
+
+Layer 4: Corrective
+  If failed → Rollback
+  If critical → Emergency shutdown
+```
+
+**Value:** No single control failure causes catastrophic outcome; multiple layers provide redundancy.
+
+</details>
+
 5. **How is the Auto-operations Success Rate KPI calculated, and what does it measure?** What success rate is typical for organizations at different maturity levels? How should organizations interpret changes in this KPI over time?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Calculation:**
+
+```
+Auto-operations Success Rate = (Successful Automated Resolutions / Total Automation Attempts) × 100%
+```
+
+**What it measures:**
+- Reliability of automated responses
+- Quality of automation design and implementation
+- Accuracy of event classification (events must be correctly identified for automation to apply)
+
+**Typical rates by maturity:**
+
+| Maturity Level | Typical Rate | Characteristics |
+|----------------|--------------|-----------------|
+| Level 1 (Reactive) | <20% | Little automation; mostly manual |
+| Level 2 (Managed) | 20-40% | Basic automation for common scenarios |
+| Level 3 (Defined) | 40-60% | Comprehensive automation portfolio |
+| Level 4 (Measured) | 60-80% | Mature automation with optimization |
+| Level 5 (Optimized) | 80%+ | Self-healing infrastructure |
+
+**Interpreting changes over time:**
+
+| Change | Possible Interpretation |
+|--------|------------------------|
+| **Increasing** | Automation portfolio maturing; quality improving |
+| **Decreasing** | Infrastructure changes breaking automation; new event types not automated |
+| **Sudden drop** | Major infrastructure change; automation scripts outdated |
+| **Fluctuating** | Inconsistent event classification; need threshold tuning |
+
+**Target:** ≥70% for mature organizations (CSF 8 benchmark)
+
+**Action triggers:**
+- Below 70%: Review automation portfolio; identify gaps
+- Declining trend: Audit recent infrastructure changes; update scripts
+- Above 80%: Share best practices; consider advanced automation
+
+</details>
 
 ---
 **Chapter 10 References**

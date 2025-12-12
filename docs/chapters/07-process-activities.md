@@ -664,13 +664,159 @@ Chapter 8 will build on this foundation by examining the technical implementatio
 
 1. What are the five major activities of Event Management, and how do they interconnect to form a complete event lifecycle?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Activity | Name | Purpose |
+|----------|------|---------|
+| **1** | Event Detection | Monitor CIs and capture events from all sources |
+| **2** | Event Logging | Record event details with mandatory attributes |
+| **3** | Event Filtering | Remove noise; suppress duplicates and irrelevant events |
+| **4** | Event Investigation & Response | Classify, correlate, prioritize, and respond/escalate |
+| **5** | Event Closure & Review | Close events, analyze trends, drive improvement |
+
+**How they interconnect:**
+
+```
+Activity 1 (Detection)
+    ↓ Raw events
+Activity 2 (Logging)
+    ↓ Logged events with attributes
+Activity 3 (Filtering)
+    ↓ Filtered events (noise removed)
+Activity 4 (Investigation & Response)
+    ↓ Resolved or escalated events
+Activity 5 (Closure & Review)
+    ↓ Feedback loop
+Activity 2 (Threshold adjustments, rule updates)
+```
+
+**Key interconnections:**
+- Activity 3 feeds back to Activity 2 when false positives identified (adjust thresholds)
+- Activity 5 feeds back to Activities 2-4 with improvement recommendations
+- All activities generate data for KPI measurement
+
+</details>
+
 2. Explain the four correlation techniques used in Activity 4.2 and how they reduce alert noise. Provide an example of when each technique would be most effective.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Technique | How It Works | Noise Reduction | Best Example |
+|-----------|--------------|-----------------|--------------|
+| **Time-based** | Groups events occurring within a time window (e.g., 5 minutes) | Prevents multiple alerts for same condition | Server restart generates 20 alerts in 2 minutes → 1 correlated event |
+| **Topology-based** | Uses CMDB relationships to link parent-child events | Identifies root cause among symptomatic alerts | Switch failure causes 50 server "connection lost" alerts → 1 parent event |
+| **Pattern-based** | Matches known event signatures | Recognizes recurring scenarios | Known application restart sequence always generates same 5 events → 1 pattern match |
+| **Rule-based** | Applies custom business logic | Handles organization-specific scenarios | "Ignore backup server CPU alerts during backup window" → suppresses expected events |
+
+**Noise reduction example:**
+- Without correlation: 100 alerts requiring 100 investigations
+- With correlation: 100 alerts grouped into 5 actionable events
+- Result: 95% noise reduction, focus on root causes
+
+</details>
 
 3. What is the difference between Impact and Urgency in Activity 4.3, and how are they combined to calculate event Priority? What is the purpose of Urgency Modifiers?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Dimension | Definition | Factors Considered |
+|-----------|------------|-------------------|
+| **Impact** | Scope of business effect | Users affected, services impacted, revenue at risk, environment (prod vs. test) |
+| **Urgency** | Time sensitivity | How quickly action needed, current status, time until threshold breach |
+
+**Priority calculation:**
+Priority = f(Impact, Urgency) using a matrix:
+
+| | Urg 1 | Urg 2 | Urg 3 | Urg 4 |
+|---|---|---|---|---|
+| **Imp 4** | P3 | P2 | P1 | P1 |
+| **Imp 3** | P4 | P3 | P2 | P1 |
+| **Imp 2** | P5 | P4 | P3 | P2 |
+| **Imp 1** | P5 | P5 | P4 | P3 |
+
+**Urgency Modifiers purpose:**
+- Adjust base urgency based on current business context
+- Examples: Business-critical period (+2), Off-hours (-1), Regulatory deadline (+2)
+- Ensure priority reflects real-time business situation, not just static event attributes
+- Allow same technical event to have different priorities based on when it occurs
+
+</details>
+
 4. Describe the four potential escalation paths from Activity 4.4 (Incident Management, Problem Management, Change Management, Operations Team) and explain the criteria that determine which path an event follows.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Escalation Path | Criteria | Closure Code |
+|-----------------|----------|--------------|
+| **Incident Management** | Service disruption occurring or imminent; user impact; SLA at risk | `Incident` |
+| **Problem Management** | Recurring events (3+ in 30 days); unknown root cause; pattern suggesting design flaw | `Problem` |
+| **Change Management** | Capacity expansion needed; configuration optimization required; proactive maintenance | `Change` |
+| **Operations Team** | Requires specialized technical action; within Event Management scope but needs expert intervention | `Auto Action` or `Incident` |
+
+**Decision logic:**
+
+```
+Is service disrupted or users impacted?
+  YES → Incident Management
+  NO ↓
+Is this a recurring event or unknown root cause?
+  YES → Problem Management
+  NO ↓
+Does this require infrastructure change?
+  YES → Change Management
+  NO ↓
+Can operations team resolve directly?
+  YES → Operations Team
+  NO → Re-evaluate classification
+```
+
+</details>
+
 5. How does Activity 5 serve a dual purpose of completing individual event lifecycles while also driving continuous improvement? Provide specific examples of feedback loops from Activity 5 to Activity 2.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Dual purpose:**
+
+| Purpose | Activities |
+|---------|------------|
+| **Event lifecycle completion** | Verify resolution, assign closure code, document actions, close event record |
+| **Continuous improvement** | Analyze trends, identify patterns, recommend threshold/rule changes, update procedures |
+
+**Feedback loops from Activity 5 to Activity 2:**
+
+| Observation in Activity 5 | Feedback to Activity 2 |
+|---------------------------|----------------------|
+| High false positive rate for specific CI | Adjust threshold (e.g., CPU from 70% to 80%) |
+| Recurring events not being correlated | Create new correlation rule |
+| Events consistently auto-resolved | Lower severity or suppress event type |
+| Missing events discovered post-incident | Add new monitoring for gap |
+| Events categorized incorrectly | Update event catalog specifications |
+
+**Example feedback loop:**
+1. Activity 5 analysis shows 40% of "disk space warning" events are false positives
+2. Investigation reveals threshold (70%) too aggressive for database servers with variable temp space
+3. Feedback to Activity 2: Adjust threshold to 80% for database server category
+4. Result: False positive rate drops from 40% to 5% for this event type
+
+This loop ensures Event Management continuously improves rather than operating with static, potentially outdated configurations.
+
+</details>
 
 ---
 **Chapter 7 References**

@@ -846,17 +846,201 @@ As Event Management maturity increases from reactive monitoring to proactive ope
 
 1. What are the four primary escalation paths from Event Management, and what criteria determine which path an event should follow?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Escalation Path | Criteria | Closure Code |
+|-----------------|----------|--------------|
+| **Incident Management** | Service disruption occurring; user impact; SLA at risk | `Incident` |
+| **Problem Management** | Recurring events (3+ in 30 days); unknown root cause; pattern indicating design flaw | `Problem` |
+| **Change Management** | Capacity expansion needed; configuration change required; proactive maintenance | `Change` |
+| **Operations Team** | Requires specialized intervention; manual action needed beyond automation | `Auto Action` |
+
+**Decision criteria:**
+- Is service disrupted NOW? → Incident
+- Is this recurring without known cause? → Problem
+- Does this require planned infrastructure change? → Change
+- Can ops team resolve without creating incident? → Operations
+
+</details>
+
 2. Explain the difference between Events-to-Incidents Ratio and Efficiency of Detection metrics. What does each metric measure, and why are both important?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Metric | Formula | What It Measures |
+|--------|---------|------------------|
+| **Events-to-Incidents Ratio** | Total Events / Events Escalated to Incidents | Filtering effectiveness—how much noise is removed |
+| **Efficiency of Detection** | Event-detected Incidents / Total Incidents × 100% | Detection coverage—% of incidents caught by monitoring vs. user reports |
+
+**Example:**
+- 10,000 events; 500 escalated to Incident → Ratio = 20:1 (good filtering)
+- 500 incidents total; 300 detected by events → Efficiency = 60% (target)
+
+**Why both important:**
+- High ratio + low efficiency = filtering too much (missing real issues)
+- Low ratio + high efficiency = not filtering enough (noise still high)
+- Target: High ratio AND high efficiency (≥60%)
+
+</details>
 
 3. Describe the data elements that must be transferred when escalating an event to Incident Management. Why is complete context transfer critical?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Data Element | Purpose |
+|--------------|---------|
+| **Event ID** | Link incident back to triggering event |
+| **Timestamp** | When issue started |
+| **Affected CI(s)** | What's impacted |
+| **Event type/severity** | Initial priority guidance |
+| **Diagnostic data** | Metric values, thresholds, error messages |
+| **Related events** | Correlation group information |
+| **Preliminary investigation** | Steps already taken |
+| **Impact assessment** | Users/services affected |
+
+**Why complete context is critical:**
+- **Reduces MTTR** — Analyst doesn't restart investigation from zero
+- **Prevents duplicate work** — Shows what's already been tried
+- **Enables accurate prioritization** — Impact data drives priority
+- **Supports audit** — Complete trail from detection to resolution
+- **Improves correlation** — Related events context prevents duplicate incidents
+
+</details>
+
 4. When should an event be escalated to Problem Management rather than Incident Management? Provide specific examples of triggers for problem escalation.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Escalate to Problem Management when:**
+
+| Trigger | Example |
+|---------|---------|
+| **Recurring events** (3+ in 30 days) | Same server memory warning every Tuesday |
+| **Unknown root cause** | Application crashes randomly; no pattern identified |
+| **Design/architecture flaw suspected** | All servers of same model have thermal warnings |
+| **Cluster of related events** | Multiple applications failing on same infrastructure |
+| **Workaround in use repeatedly** | Analysts restart service 5x/week; permanent fix needed |
+
+**NOT for Problem Management:**
+- Single occurrence events → Incident
+- Events with known resolution → Auto Action or Incident
+- Capacity issues requiring change → Change Management
+
+**Key distinction:** Problem Management seeks permanent resolution; Incident Management seeks immediate service restoration.
+
+</details>
 
 5. How does the CMDB support event correlation and impact assessment? What would be the consequences of inaccurate or incomplete CMDB data?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**CMDB support for correlation:**
+
+| CMDB Data | How It Enables Correlation |
+|-----------|---------------------------|
+| **CI relationships** | Topology-based correlation (parent-child) |
+| **Service mappings** | Service-based correlation (business impact) |
+| **Dependencies** | Identify downstream affected systems |
+
+**CMDB support for impact assessment:**
+
+| CMDB Data | How It Enables Assessment |
+|-----------|--------------------------|
+| **CI criticality** | High-criticality CIs = higher priority |
+| **Business service links** | Determine business impact scope |
+| **User population** | Calculate number of users affected |
+
+**Consequences of inaccurate CMDB:**
+
+| Problem | Consequence |
+|---------|-------------|
+| Missing relationships | Related events not grouped; root cause missed |
+| Wrong dependencies | Events incorrectly correlated; wrong conclusions |
+| Outdated service maps | Impact miscalculated; wrong priority assigned |
+| Missing CIs | Events from unknown sources can't be assessed |
+
+</details>
+
 6. Explain the bidirectional nature of Event Management integration. Why is resolution confirmation from downstream processes important, and what happens if this communication breaks down?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Bidirectional integration:**
+
+| Direction | Flow | Purpose |
+|-----------|------|---------|
+| **Outbound** | Event → Incident/Problem/Change | Escalation with context |
+| **Inbound** | Incident/Problem/Change → Event | Resolution confirmation |
+
+**Why resolution confirmation matters:**
+- Confirms root cause addressed (not just symptom)
+- Enables event closure with correct code
+- Completes audit trail
+- Validates monitoring accuracy
+- Feeds trend analysis data
+
+**Breakdown consequences:**
+
+| Failure | Impact |
+|---------|--------|
+| No confirmation received | Events remain open indefinitely |
+| Manual closure required | Extra work; potential errors |
+| Incomplete records | Audit trail gaps |
+| KPI inaccuracy | Can't measure escalation effectiveness |
+| Lost learning | Trend analysis misses patterns |
+
+</details>
+
 7. What role does Event Management play in Service Level Management, and how does SLA data influence event prioritization?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Event Management role in SLM:**
+
+| Function | How EM Supports SLM |
+|----------|---------------------|
+| **SLA breach detection** | Monitor metrics approaching thresholds |
+| **Proactive warning** | Alert before breach occurs |
+| **Data provision** | Provide availability/performance data for SLA reporting |
+| **Impact assessment** | Link events to SLA-covered services |
+
+**SLA influence on prioritization:**
+
+| SLA Factor | Prioritization Effect |
+|------------|----------------------|
+| **Service tier** | Gold service → higher base priority |
+| **SLA proximity** | 90% of SLA consumed → urgency increase |
+| **Penalty risk** | Financial penalties → priority elevation |
+| **Customer criticality** | Key customer services → priority boost |
+
+**Example:** Same event on two servers:
+- Server A: Bronze SLA, no penalties → Priority 3
+- Server B: Gold SLA, $10K/hour penalty → Priority 1
+
+SLA data transforms technical events into business-prioritized decisions.
+
+</details>
 
 ---
 **Chapter 11 References**

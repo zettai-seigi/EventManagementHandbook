@@ -675,23 +675,323 @@ Chapter 7 will examine the Event Management Process Activities in detail, walkin
 
 1. What are the five core roles in the Event Management team structure, and what is the primary focus area for each role?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Role | Primary Focus Area |
+|------|-------------------|
+| **Event Management Process Owner** | Strategic governance—owns process, approves policies, manages budget, reports to executives |
+| **Event Manager** | Tactical operations—leads daily operations, manages team, monitors KPIs, handles escalations |
+| **Event Management Architect** | Technical design—platform architecture, integration strategy, technology roadmap |
+| **Event Designer** | Technical implementation—threshold configuration, correlation rules, automation scripts |
+| **Event Analyst** | Operational execution—console monitoring, event investigation, initial response, documentation |
+
+The structure provides separation between strategic (Process Owner), tactical (Manager), technical (Architect/Designer), and operational (Analyst) responsibilities.
+
+</details>
+
 2. Explain the difference in responsibilities between the Event Management Process Owner and the Event Manager. Why is this separation important?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Aspect | Process Owner | Event Manager |
+|--------|---------------|---------------|
+| **Focus** | Strategic, long-term | Tactical, day-to-day |
+| **Scope** | Process design and governance | Process execution |
+| **Accountability** | Process effectiveness overall | Team performance |
+| **Key Activities** | Policy approval, budget, executive reporting | Staff scheduling, escalations, KPI monitoring |
+| **Stakeholders** | IT leadership, executives | Operations team, peer managers |
+| **Time Horizon** | Quarterly/annual goals | Daily/weekly operations |
+
+**Why separation is important:**
+1. **Prevents role overload** — One person can't do both strategic and daily operational work effectively
+2. **Ensures strategic focus** — Process Owner not consumed by daily firefighting
+3. **Enables career progression** — Event Manager can grow into Process Owner role
+4. **Maintains governance integrity** — Process Owner can objectively assess operational performance
+5. **Scales with organization** — Large organizations need distinct strategic and tactical leadership
+
+</details>
 
 3. Describe the key responsibilities of the Event Management Architect. How does this role differ from the Event Designer?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Event Management Architect responsibilities:**
+- Design overall monitoring and event management platform architecture
+- Define integration patterns with ITSM tools and data sources
+- Establish correlation strategy and framework
+- Create technology roadmap and standards
+- Evaluate and recommend tooling solutions
+- Ensure scalability and performance of event platform
+
+**Event Designer responsibilities:**
+- Configure specific monitoring thresholds for CIs
+- Develop correlation rules for event grouping
+- Create automation scripts for event response
+- Maintain event catalog and specifications
+- Test and deploy monitoring configurations
+- Document technical implementations
+
+| Aspect | Architect | Designer |
+|--------|-----------|----------|
+| **Level** | Enterprise-wide | Component-specific |
+| **Focus** | How systems integrate | How individual rules work |
+| **Output** | Architecture documents, standards | Configuration files, scripts |
+| **Scope** | Platform design | Implementation details |
+| **Analogy** | Building architect (overall design) | Interior designer (specific rooms) |
+
+</details>
+
 4. What is the purpose of the RACI matrix in Event Management? Explain the difference between Responsible, Accountable, Consulted, and Informed.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Purpose of RACI matrix:**
+- Clarifies who does what for each activity
+- Prevents gaps (no one assigned) and overlaps (multiple people thinking they're in charge)
+- Supports handoffs between roles
+- Enables audit and compliance verification
+- Facilitates onboarding of new team members
+
+**RACI definitions:**
+
+| Letter | Meaning | Description |
+|--------|---------|-------------|
+| **R** | Responsible | Does the work; executes the activity |
+| **A** | Accountable | Ultimately answerable; approves/signs off (only ONE per activity) |
+| **C** | Consulted | Provides input before decision/action (two-way communication) |
+| **I** | Informed | Notified after decision/action (one-way communication) |
+
+**Example for "Implement new correlation rule":**
+- **R:** Event Designer (writes and tests the rule)
+- **A:** Event Manager (approves deployment)
+- **C:** Event Architect (consulted on design approach)
+- **I:** Event Analysts (informed of new rule behavior)
+
+</details>
 
 5. An organization processes 8,000 events per day. Based on the team sizing guidelines, how many Event Analysts would be recommended for 24x7 coverage, and why?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Calculation:**
+
+| Factor | Value |
+|--------|-------|
+| Events per day | 8,000 |
+| Category | High volume (>5,000/day) |
+| Analysts per shift (guideline) | 2-3 for high volume |
+| Shifts for 24x7 | 3 shifts × 7 days |
+| Analysts needed per shift | 2 (minimum for high volume) |
+| Coverage factor | 1.5x (for vacation, sick, training) |
+
+**Minimum calculation:**
+- 2 analysts × 3 shifts = 6 analyst positions
+- 6 × 1.5 coverage factor = **9 Event Analysts**
+
+**Why this number:**
+1. **No single point of failure** — 2 analysts per shift ensures coverage if one is occupied
+2. **High volume requires vigilance** — 8,000 events = ~330/hour = ~5-6/minute
+3. **24x7 requires rotation** — Can't work analysts 24 hours; need shift coverage
+4. **Coverage factor accounts for:**
+   - Vacation time (2-4 weeks/year)
+   - Sick leave
+   - Training requirements
+   - Meeting attendance
+
+**Note:** Actual staffing may vary based on automation level (higher automation = fewer analysts needed) and event complexity.
+
+</details>
+
 6. Describe the typical activities in a day-in-the-life for an Event Analyst. What skills and competencies are most critical for success in this role?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Day-in-the-life activities:**
+
+| Time | Activity |
+|------|----------|
+| Shift start | Handoff from previous shift; review open events |
+| Ongoing | Monitor console for new events |
+| Per event | Acknowledge, investigate, classify, respond |
+| As needed | Execute escalations to Incident/Problem/Change |
+| As needed | Run automation scripts, verify success |
+| Ongoing | Document actions and findings |
+| Periodic | Participate in team meetings, training |
+| Shift end | Handoff to next shift; summarize status |
+
+**Critical competencies:**
+
+| Competency | Why Critical |
+|------------|--------------|
+| **Technical troubleshooting** | Must quickly diagnose event root causes |
+| **ITSM process knowledge** | Knows when/how to escalate to Incident, Problem, Change |
+| **Tool proficiency** | Efficient use of monitoring platform, ITSM tools |
+| **Communication skills** | Clear documentation; effective handoffs |
+| **Attention to detail** | Catches subtle patterns; accurate classification |
+| **Stress management** | Handles high-volume periods and critical events |
+| **Time management** | Prioritizes effectively among competing events |
+
+</details>
 
 7. Why does the Event Manager need Expert proficiency in Team Leadership but only Intermediate proficiency in technical tools? What does this tell you about the nature of the role?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why Expert in Team Leadership:**
+- Primary responsibility is leading people, not doing technical work
+- Must motivate, develop, and retain skilled analysts
+- Handles performance management, scheduling, conflict resolution
+- Represents team to management and stakeholders
+- Creates effective team culture and collaboration
+
+**Why only Intermediate in Technical Tools:**
+- Doesn't configure tools daily (that's Designer's role)
+- Needs to understand capabilities, not execute configurations
+- Must evaluate team's technical work, not do it themselves
+- Sufficient to troubleshoot escalated issues and make decisions
+
+**What this tells us about the role:**
+
+| Characteristic | Implication |
+|---------------|-------------|
+| **People-focused** | Success measured by team performance, not personal technical output |
+| **Leverage multiplier** | Enables 10 analysts to be effective rather than doing work of 1 analyst |
+| **Strategic translator** | Bridges technical team and business stakeholders |
+| **Not a super-analyst** | Promoted for leadership ability, not just technical skills |
+
+**Key insight:** The Event Manager's value comes from making others effective, not from being the best technician. Over-indexing on technical skills often indicates a manager who hasn't transitioned from individual contributor mindset.
+
+</details>
+
 8. Explain how the competency framework uses four proficiency levels (Fundamental, Intermediate, Advanced, Expert) to define role requirements. Give an example of why different roles require different proficiency levels for the same competency.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Four proficiency levels:**
+
+| Level | Definition |
+|-------|------------|
+| **Fundamental** | Basic awareness; can follow documented procedures |
+| **Intermediate** | Working knowledge; can apply skills independently |
+| **Advanced** | Deep expertise; can handle complex scenarios, train others |
+| **Expert** | Mastery; can design approaches, set standards, innovate |
+
+**Example: ITSM Process Knowledge competency**
+
+| Role | Required Level | Why |
+|------|---------------|-----|
+| **Event Analyst** | Intermediate | Must correctly escalate to Incident/Problem/Change; follows established procedures |
+| **Event Designer** | Advanced | Designs event-to-process integrations; must understand nuances |
+| **Event Manager** | Advanced | Manages cross-process relationships; negotiates handoff agreements |
+| **Event Architect** | Expert | Designs enterprise integration strategy; sets standards for all integrations |
+
+**Why levels differ:**
+- Analyst needs to **execute** processes correctly
+- Designer needs to **implement** process integrations
+- Manager needs to **optimize** cross-process collaboration
+- Architect needs to **design** the integration framework
+
+Same competency, different depth requirements based on role scope.
+
+</details>
 
 9. What types of ongoing development activities support Event Management team capability? Why is initial training alone insufficient?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Ongoing development activities:**
+
+| Activity | Frequency | Purpose |
+|----------|-----------|---------|
+| **Continuing education** | 40 hours/year | Maintain and advance skills |
+| **Vendor certifications** | As released | Stay current with tool capabilities |
+| **ITIL/ITSM certifications** | Every 2-3 years | Refresh process knowledge |
+| **Cross-training** | Quarterly | Build team versatility |
+| **Knowledge sharing sessions** | Monthly | Share lessons learned |
+| **Mentoring programs** | Ongoing | Develop junior staff |
+| **Conference attendance** | Annual | Industry exposure |
+| **Post-incident reviews** | Per major incident | Learn from experience |
+
+**Why initial training is insufficient:**
+
+| Reason | Explanation |
+|--------|-------------|
+| **Technology evolves** | Tools update; new features released |
+| **Infrastructure changes** | New CIs, applications, architectures added |
+| **Process matures** | Procedures refined based on experience |
+| **Skills decay** | Unused skills fade without practice |
+| **Career progression** | Staff need new skills to advance |
+| **Best practices evolve** | Industry learns; approaches improve |
+| **Threats change** | New failure modes, attack vectors emerge |
+
+**Key insight:** Event Management effectiveness depends on current knowledge. A team trained once 3 years ago operates with outdated skills in a changed environment.
+
+</details>
+
 10. How does the Event Management team structure support Critical Success Factor 4 (Skilled and Trained Personnel)?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**CSF 4 requirements:**
+- Clearly defined and staffed roles
+- Established training programs
+- Maintained knowledge bases
+- Regular skill assessments
+
+**How team structure supports each:**
+
+| CSF 4 Element | How Structure Supports It |
+|---------------|--------------------------|
+| **Defined roles** | Five distinct roles with clear responsibilities and RACI assignments |
+| **Staffed roles** | Sizing guidelines ensure adequate coverage (analysts per shift, coverage factor) |
+| **Training programs** | Role-specific training tracks (Analyst track, Designer track, etc.) |
+| **Knowledge bases** | Event catalog, runbooks, documentation maintained by Designers |
+| **Skill assessments** | Competency framework with proficiency levels enables measurement |
+
+**Structural elements that enable CSF 4:**
+
+| Element | Contribution |
+|---------|--------------|
+| **Competency framework** | Defines what skills each role needs |
+| **Proficiency levels** | Creates measurable skill targets |
+| **Career progression paths** | Motivates development (Analyst → Designer → Architect) |
+| **Specialized roles** | Allows deep expertise development |
+| **RACI matrix** | Clarifies who needs which competencies |
+| **Training requirements** | 40 hours/year ensures ongoing development |
+
+Without defined roles and competency expectations, organizations cannot systematically build and maintain skilled teams—making CSF 4 achievement impossible.
+
+</details>
 
 ---
 

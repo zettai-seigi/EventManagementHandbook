@@ -766,13 +766,172 @@ The next chapter examines the operational execution of Event Management, explori
 
 1. **What are the three layers of monitoring coverage, and what is the purpose of each layer?** Describe how these layers complement each other to provide comprehensive visibility.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Layer | Purpose | What It Monitors |
+|-------|---------|-----------------|
+| **Infrastructure** | Foundation health | Servers, network, storage, databases—underlying platform |
+| **Application** | Service delivery | Application performance, transactions, user experience |
+| **Business** | Value delivery | Business metrics, SLA compliance, customer impact |
+
+**How layers complement each other:**
+
+```
+Business Layer (Why it matters)
+     ↑ Depends on
+Application Layer (Service delivery)
+     ↑ Depends on
+Infrastructure Layer (Foundation)
+```
+
+**Example:** E-commerce site
+- **Infrastructure:** Server CPU, memory, network latency
+- **Application:** Page load time, checkout process, API response
+- **Business:** Orders per hour, cart abandonment rate, revenue
+
+**Value of layered approach:**
+- Infrastructure events can predict application impact
+- Application events can explain business metric changes
+- Business context prioritizes infrastructure/application events
+- Complete visibility from hardware to business outcomes
+
+</details>
+
 2. **Explain the single agent per CI rule (Policy 6) and describe three problems that occur when multiple monitoring agents are deployed on the same CI.** How does this policy support automation and data reliability?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Policy 6 (Single Agent per CI):** Only one monitoring agent should be deployed per Configuration Item. Consolidate monitoring requirements into a single standardized agent.
+
+**Problems with multiple agents:**
+
+| Problem | Description | Consequence |
+|---------|-------------|-------------|
+| **Resource consumption** | Each agent consumes CPU, memory, disk I/O | Monitored system degraded by monitoring overhead |
+| **Conflicting data** | Different agents may report different values for same metric | Confusion about actual state; unreliable automation decisions |
+| **Duplicate alerts** | Same condition generates multiple alerts from different agents | Increased noise; false sense of severity |
+| **Maintenance burden** | Multiple agents to update, configure, troubleshoot | Higher operational cost; inconsistent configurations |
+| **Correlation difficulty** | Events from different agents harder to correlate | Reduced correlation effectiveness |
+
+**How policy supports automation:**
+- Single source of truth for each metric → reliable automation triggers
+- Consistent event format → standardized automation scripts
+- No duplicate events → accurate automation counts and thresholds
+
+**How policy supports data reliability:**
+- One authoritative value per metric
+- Consistent collection methodology
+- Simplified troubleshooting when issues arise
+
+</details>
 
 3. **What are the five types of thresholds used in event detection?** For each type, provide an example scenario where that threshold type would be most appropriate.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Threshold Type | Definition | Best Example Scenario |
+|----------------|------------|----------------------|
+| **Static** | Fixed value that doesn't change | Disk space (alert at 85%)—physical limit doesn't vary |
+| **Dynamic/Baseline** | Adjusts based on historical patterns | CPU utilization—varies by time of day, day of week |
+| **Rate of Change** | Monitors velocity of metric change | Memory leak detection—rapid consumption vs. normal growth |
+| **Predictive** | Projects when threshold will be breached | Storage capacity—will reach 100% in 14 days at current growth |
+| **Compound** | Multiple conditions must be true | Alert only if CPU >80% AND memory >90% AND response time >5s |
+
+**Detailed examples:**
+
+| Type | Scenario | Configuration |
+|------|----------|---------------|
+| **Static** | Database connection pool | Alert if available connections < 10 |
+| **Dynamic** | Web server requests/second | Alert if > 2 standard deviations from same hour last 4 weeks |
+| **Rate of Change** | Log file growth | Alert if growing > 100MB/hour (indicates logging storm) |
+| **Predictive** | Disk space trending | Alert 7 days before projected full based on 30-day trend |
+| **Compound** | Application health | Alert only if health check fails AND backup server unavailable |
+
+</details>
+
 4. **Policy 2 mandates comprehensive alert logging. What are the mandatory event attributes that must be logged, and what are the three data retention tiers with their retention periods?** Explain the purpose of each tier.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Mandatory event attributes:**
+
+| Attribute | Purpose |
+|-----------|---------|
+| **Timestamp** | When event occurred (for correlation, trending) |
+| **Source CI** | What generated the event (for routing, impact assessment) |
+| **Event Type** | Classification (Informational, Warning, Exception) |
+| **Severity** | Criticality level |
+| **Message** | Description of condition |
+| **Category** | Hardware/Software classification |
+| **Metric Value** | Actual measured value that triggered event |
+| **Threshold** | Value that was breached |
+
+**Three data retention tiers:**
+
+| Tier | Retention Period | Content | Purpose |
+|------|-----------------|---------|---------|
+| **Hot** | 30 days | Full event detail, all attributes | Active investigation, real-time correlation, operational dashboards |
+| **Warm** | 90 days | Summary data, key metrics | Trend analysis, monthly reporting, recent history lookup |
+| **Cold** | 1-7 years | Aggregated data, audit records | Compliance, audit, long-term trending, legal requirements |
+
+**Purpose explanation:**
+- **Hot tier:** Immediate operational needs—fast access, full detail
+- **Warm tier:** Short-term analysis—balance between detail and storage cost
+- **Cold tier:** Compliance and long-term insight—compressed, archive storage
+
+</details>
+
 5. **How does Policy 1 (24×7 console monitoring) support Event Management objectives?** Describe the staffing guidelines for moderate event volumes and explain why backup coverage is required.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**How 24×7 monitoring supports objectives:**
+
+| Objective | How 24×7 Monitoring Supports It |
+|-----------|--------------------------------|
+| **Early detection** | Events detected immediately, any time of day |
+| **Reduced MTTD** | No delay waiting for business hours |
+| **Proactive response** | Issues addressed before users arrive |
+| **SLA compliance** | Response time targets met regardless of when event occurs |
+| **Business continuity** | Critical systems protected around the clock |
+
+**Staffing guidelines for moderate volume (1,000-5,000 events/day):**
+
+| Shift | Staffing | Rationale |
+|-------|----------|-----------|
+| Day (8 AM - 4 PM) | 2 analysts | Peak business activity, highest event volume |
+| Evening (4 PM - 12 AM) | 1-2 analysts | Reduced but still significant activity |
+| Night (12 AM - 8 AM) | 1 analyst | Lower volume but still requires coverage |
+| **Total FTE needed** | 5-7 analysts | Accounts for shifts + coverage factor |
+
+**Why backup coverage is required:**
+
+| Reason | Explanation |
+|--------|-------------|
+| **Vacation/PTO** | Analysts take time off; shifts must still be covered |
+| **Sick leave** | Unplanned absences occur |
+| **Training** | Ongoing education removes analysts from console |
+| **Meetings** | Operational reviews, team meetings |
+| **Single point of failure** | One analyst per shift means any absence = gap |
+
+**Coverage factor:** Multiply base staffing by 1.3-1.5x to ensure no coverage gaps.
+
+</details>
 
 ---
 

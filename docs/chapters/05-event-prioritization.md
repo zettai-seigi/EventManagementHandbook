@@ -454,13 +454,184 @@ In the next chapter, we will explore Event Correlation and Automation, examining
 
 1. **What are the two dimensions that combine to determine event priority, and why is each dimension important?** Consider how Impact and Urgency contribute different perspectives to prioritization decisions.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:** The two dimensions are **Impact** and **Urgency**.
+
+| Dimension | What It Measures | Why Important |
+|-----------|------------------|---------------|
+| **Impact** | Scope of business effect (users, services, revenue affected) | Determines the magnitude of business consequence |
+| **Urgency** | Time sensitivity (how quickly action is needed) | Determines when action must be taken |
+
+**Why both are needed:**
+- High Impact + Low Urgency = Important but can be scheduled (e.g., batch system failure on weekend)
+- Low Impact + High Urgency = Limited scope but time-sensitive (e.g., executive laptop issue before presentation)
+- High Impact + High Urgency = Critical priority requiring immediate response
+
+**Priority Matrix:**
+
+| | Urgency 1 (Low) | Urgency 2 | Urgency 3 | Urgency 4 (Critical) |
+|---|---|---|---|---|
+| **Impact 4** | P3 | P2 | P1 | P1 |
+| **Impact 3** | P4 | P3 | P2 | P1 |
+| **Impact 2** | P5 | P4 | P3 | P2 |
+| **Impact 1** | P5 | P5 | P4 | P3 |
+
+Without both dimensions, prioritization would be one-dimensional and miss critical business context.
+
+</details>
+
 2. **A production database server supporting a building-wide application experiences a disk space warning (75% used). Walk through the priority determination process:** What is the Impact level and why? What factors determine the Urgency level? How do urgency modifiers affect the assessment? What is the final Priority and response time target?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Impact Assessment:**
+- **Environment:** Production (not test/dev) → base impact consideration
+- **Scope:** Building-wide application → Department level (multiple teams in one building)
+- **Impact Level:** **3 (Medium-High)** — Production system affecting department-level users
+
+**Urgency Assessment:**
+- **Event Type:** Warning (not Exception) → service still functional
+- **Current Status:** 75% disk used → time available before failure
+- **Growth Rate:** Determines time until critical threshold
+- **Base Urgency:** **2 (Medium)** — action needed but not immediately critical
+
+**Urgency Modifiers (examples):**
+- If month-end close period: +1 → Urgency 3
+- If weekend with minimal activity: -1 → Urgency 1
+- If disk growth rate suggests 24 hours until full: +1 → Urgency 3
+
+**Final Priority (assuming no modifiers):**
+- Impact 3 × Urgency 2 = **Priority 3 (Medium)**
+- **Response Time Target:** 4 hours
+
+**With month-end modifier:**
+- Impact 3 × Urgency 3 = **Priority 2 (High)**
+- **Response Time Target:** 1 hour
+
+</details>
 
 3. **Explain why a test environment failure consistently receives Impact Level 1 (Low) regardless of organizational scope, while a production environment failure affecting multiple departments receives Impact Level 4 (Critical).** What principle does this illustrate about the impact assessment framework?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Test environment always Level 1:**
+- No business users affected
+- No revenue impact
+- No SLA obligations
+- Purpose is testing, not production delivery
+- Workarounds typically available (use another test instance)
+
+**Production multi-department failure = Level 4:**
+- Real business users impacted
+- Potential revenue loss
+- SLA violations likely
+- Business processes interrupted
+- Customer experience affected
+
+**Principle illustrated: Business Impact Over Technical Scope**
+
+The framework prioritizes **actual business consequence** over technical characteristics:
+
+| Factor | Test Environment | Production Environment |
+|--------|------------------|----------------------|
+| Technical complexity | May be identical | May be identical |
+| Number of servers | Could be many | Could be one |
+| Business impact | Zero | Potentially millions |
+| Priority | Always low | Based on scope |
+
+**Key insight:** A "minor" production issue affecting customers is always more important than a "major" test environment outage. The framework ensures resources focus on business value delivery, not technical severity in isolation.
+
+</details>
+
 4. **Describe three urgency modifiers and provide a specific example of how each modifier would change the urgency assessment for a particular event type.** How do these modifiers ensure that priority reflects current business context rather than just static event attributes?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Urgency Modifier 1: Business-Critical Period**
+- **Definition:** Time periods with heightened business sensitivity
+- **Example:** E-commerce site performance warning during Black Friday
+  - Base urgency: 2 (Warning event, service functional)
+  - With modifier: +2 → Urgency 4 (peak revenue period)
+- **Effect:** Response time changes from 4 hours to 15 minutes
+
+**Urgency Modifier 2: Time of Day**
+- **Definition:** Business hours vs. off-hours consideration
+- **Example:** Email server degradation detected at 3 AM Sunday
+  - Base urgency: 3 (service degraded)
+  - With modifier: -1 → Urgency 2 (minimal users affected)
+- **Effect:** Response time changes from 1 hour to 4 hours
+
+**Urgency Modifier 3: Regulatory/Compliance Deadline**
+- **Definition:** Events during regulatory reporting periods
+- **Example:** Financial system warning during audit period
+  - Base urgency: 2 (Warning level)
+  - With modifier: +2 → Urgency 4 (compliance risk)
+- **Effect:** Response time changes from 4 hours to 15 minutes
+
+**Why modifiers matter:**
+Static event attributes (CPU %, disk space) don't capture business context. The same 80% CPU utilization has different urgency during:
+- Normal business day
+- Year-end financial close
+- Weekend maintenance window
+
+Modifiers ensure priority reflects **current business reality**, not just technical measurements.
+
+</details>
+
 5. **Control Objective EM-C05 mandates automated priority assignment, yet also requires that Event Analysts have the authority to adjust priority. Explain why both automated calculation and human override capability are essential.** When should an analyst adjust priority, and what must they document?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why automated calculation is essential:**
+- Consistency across thousands of daily events
+- Speed—priority assigned in seconds, not minutes
+- Removes subjective bias
+- Enables immediate routing to correct teams
+- Scales without additional staffing
+
+**Why human override is essential:**
+- Automation can't know all business context
+- Edge cases require judgment
+- Unusual circumstances not captured in rules
+- Analyst has additional information (verbal reports, related issues)
+- Prevents automation from making incorrect critical decisions
+
+**When analyst should adjust priority:**
+
+| Scenario | Adjustment |
+|----------|------------|
+| VIP user affected (CEO, board member) | Increase |
+| Known workaround available | Decrease |
+| Related major incident in progress | Increase to align |
+| Scheduled maintenance occurring | Decrease |
+| Event during unannounced critical activity | Increase |
+| False positive suspected | Decrease pending validation |
+
+**Documentation requirements:**
+1. **Original priority** — system-assigned value
+2. **Adjusted priority** — new value
+3. **Justification** — specific reason for override
+4. **Authorizer** — analyst name/ID
+5. **Timestamp** — when override occurred
+
+**Audit trail example:**
+> "Priority adjusted from P3 to P1. Reason: CFO reports this system is critical for board presentation in 2 hours—not captured in standard business calendar. Override by J.Smith at 14:32."
+
+</details>
 
 ---
 
