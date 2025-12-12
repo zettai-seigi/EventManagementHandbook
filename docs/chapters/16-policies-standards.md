@@ -1253,19 +1253,182 @@ Chapter 17 will explore implementation planning, providing detailed guidance on 
 
 1. **Policy Justification:** Explain why Policy 3 (Centralized Event Management Platform) is mandatory rather than optional. What specific problems does centralization solve that decentralized approaches cannot address?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Problems centralization solves:**
+
+| Problem | How Centralization Addresses It |
+|---------|--------------------------------|
+| Fragmented visibility | Single console shows all events |
+| Inconsistent handling | One process for all events |
+| Correlation gaps | All events available for correlation |
+| Reporting silos | Unified metrics and dashboards |
+| Duplicated effort | Single team, single platform |
+
+**Why mandatory:** Decentralized approaches cannot achieve enterprise-wide correlation, consistent KPI measurement, or unified response procedures. Without centralization, Event Management remains a collection of disconnected tools rather than an integrated process.
+
+</details>
+
 2. **Policy Integration:** Describe how Policy 6 (Single Monitoring Agent per CI) relates to Policy 4 (Enterprise Standard Monitoring Agents). How do these two policies work together to achieve standardization?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Policy | Focus | Requirement |
+|--------|-------|-------------|
+| **Policy 4** | What agents to use | Standard agent catalog |
+| **Policy 6** | How many agents per CI | One agent per CI |
+
+**How they work together:**
+1. Policy 4 defines approved agents (e.g., standard APM, infrastructure monitoring)
+2. Policy 6 ensures only one of those agents is deployed per CI
+3. Together: One standard agent per CI
+
+**Result:** Consistent data, no conflicts, simplified management.
+
+</details>
 
 3. **Governance Structure:** Your organization has identified 15 CIs currently monitored by non-standard agents. Describe the process for requesting exceptions vs. planning migration to standard agents. When is an exception justified vs. when should immediate remediation be required?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Exception justified when:**
+- Unique technical requirement (standard agent cannot monitor this CI type)
+- Vendor support requirement (documented)
+- Decommissioning planned within 6 months
+
+**Immediate remediation required when:**
+- Standard agent can fulfill requirement
+- Security risk from non-standard agent
+- Compliance violation
+
+**Process:**
+1. Assess each CI: Can standard agent work?
+2. If yes → Plan migration (30-90 days)
+3. If no → Document exception with expiration date
+4. Track all exceptions in register
+
+</details>
+
 4. **Policy Compliance Measurement:** Calculate the Integration Coverage metric for Policy 3 if your organization has 50 monitoring tools, 47 of which are integrated to the central platform, and 2 are scheduled for decommissioning. Does this meet the ≥95% target? What actions should be taken?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Calculation:**
+```
+Active tools = 50 - 2 (decommissioning) = 48
+Integrated = 47
+Integration Coverage = 47 / 48 × 100% = 97.9%
+```
+
+**Assessment:** Yes, meets ≥95% target (97.9%)
+
+**Actions:**
+- Track the 1 non-integrated tool
+- Plan integration or justify exception
+- Verify decommissioning tools actually removed
+- Document in compliance report
+
+</details>
 
 5. **Standards Development:** You are tasked with creating an Event Correlation Standard (EM-STD-006). Describe the five most critical elements this standard must specify and explain why each is necessary for consistent correlation implementation.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Element | Why Necessary |
+|---------|---------------|
+| **Time windows** | Defines how long events remain eligible for correlation |
+| **Correlation techniques** | Which methods to use (time, topology, pattern, rule) |
+| **Parent selection criteria** | How to determine which event is root cause |
+| **CMDB requirements** | What relationship data must exist |
+| **Success metrics** | How to measure correlation effectiveness |
+
+Each element ensures consistent implementation across teams and enables meaningful KPI measurement.
+
+</details>
+
 6. **Exception Management:** An application team requests a 12-month exception to Policy 4 (Enterprise Standard Agents) to use a vendor-specific monitoring tool for a new mission-critical application. The vendor claims their tool is required for support, but your organization's standard APM tool claims it can monitor this application type. As Policy Owner, how would you evaluate this request? What information would you require? What alternatives might you propose?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Information required:**
+- Written vendor statement that their tool is mandatory for support
+- Documentation of what standard tool cannot do
+- Cost comparison (vendor tool vs. standard)
+- Integration plan (vendor tool → central platform)
+
+**Evaluation:**
+- Verify vendor claim—is tool truly required or merely preferred?
+- Test standard tool against application
+- Assess integration feasibility
+
+**Alternatives:**
+- Use standard tool with vendor tool as secondary
+- Negotiate vendor support without tool requirement
+- Grant 6-month exception with reevaluation
+
+</details>
 
 7. **Policy Lifecycle:** Policy 7 (Trend Monitoring) was implemented 18 months ago. Compliance data shows only 60% of months had completed trend analysis, and only 2 CSI initiatives have been launched from findings. As Event Management Process Owner, what steps would you take to improve compliance and effectiveness? Should the policy be updated, or is this an implementation problem?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Diagnosis:** This is an implementation problem, not a policy problem.
+
+**Steps to improve:**
+1. Investigate why 40% of months missed analysis (resource issue? unclear responsibility?)
+2. Assign clear ownership for trend analysis
+3. Schedule recurring analysis in calendar
+4. Create template for trend reports
+5. Establish link between findings and CSI register
+6. Report compliance monthly to management
+
+**Policy update needed:** No—policy is sound; execution is the issue.
+
+</details>
+
 8. **Control Objective Linkage:** Explain the relationship between Policy 2 (Alert Logging Requirements) and Control Objectives EM-C07 (Root Cause Analysis) and EM-C08 (Trend Analysis). How does this policy enable compliance with these control objectives?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Relationship:**
+
+| Control | Requires | Policy 2 Provides |
+|---------|----------|-------------------|
+| **EM-C07 (RCA)** | Historical event data | Comprehensive logging |
+| **EM-C08 (Trends)** | Time-series data | Data retention tiers |
+
+**How Policy 2 enables compliance:**
+- Mandatory attributes enable consistent analysis
+- Retention periods ensure data available for trending
+- Complete logging provides foundation for RCA
+
+Without Policy 2, EM-C07 and EM-C08 cannot be achieved—no data to analyze.
+
+</details>
 
 ---
 

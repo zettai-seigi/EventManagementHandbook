@@ -537,13 +537,108 @@ Your Event Management journey begins now. Take the first step today.
 
 1. **Describe the three core capabilities that define Event Management and explain why each is essential for operational excellence.**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Capability | Definition | Why Essential |
+|------------|------------|---------------|
+| **Detection** | Monitor CIs and identify meaningful state changes | Foundation—can't manage what you can't see |
+| **Correlation** | Group related events to identify root causes | Reduces noise; enables effective response |
+| **Response** | Take appropriate action (automate, escalate, close) | Converts detection into business value |
+
+**Why all three are essential:**
+- Detection without correlation = overwhelming noise
+- Correlation without response = analysis paralysis
+- Response without detection = reactive firefighting
+
+Together they form the Event Management value chain: See → Understand → Act.
+
+</details>
+
 2. **Explain the First 90 Days Action Plan. What are the three phases, what are the primary objectives of each phase, and what deliverables should be completed in each phase?**
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Phase | Days | Objectives | Key Deliverables |
+|-------|------|------------|------------------|
+| **1: Assess** | 1-30 | Understand current state | Current state assessment, gap analysis, stakeholder interviews |
+| **2: Plan** | 31-60 | Design target state | Implementation roadmap, resource plan, quick win identification |
+| **3: Launch** | 61-90 | Begin execution | Platform deployment, initial monitoring, first quick wins delivered |
+
+**Success criteria:**
+- Day 30: Assessment complete, gaps documented
+- Day 60: Plan approved, resources allocated
+- Day 90: Platform operational, critical CIs monitored, team trained
+
+</details>
 
 3. **What are the five essential KPIs for Event Management, and what does each measure? Identify the target benchmark for each.**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| KPI | What It Measures | Target |
+|-----|------------------|--------|
+| **Auto-operations Success Rate** | % of events resolved automatically | ≥70% |
+| **Efficiency of Detection** | % of incidents detected by monitoring (vs. user reports) | ≥60% |
+| **False Positive Rate** | % of events that were incorrectly generated | ≤5% |
+| **Correlation Effectiveness** | % of events grouped with related events | ≥50% |
+| **Mean Time to Detect (MTTD)** | Average time from occurrence to detection | Context-dependent |
+
+</details>
+
 4. **Describe three high-impact quick win opportunities that deliver value rapidly in early Event Management implementation. Explain why each delivers significant value.**
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Quick Win | Implementation | Value Delivered |
+|-----------|----------------|-----------------|
+| **De-duplication** | Suppress repeat alerts for same condition | 30-50% noise reduction immediately |
+| **Critical CI coverage** | Monitor top 20 business-critical CIs | Prevent highest-impact incidents |
+| **Service restart automation** | Auto-restart known-recoverable services | Reduce MTTR; free analyst time |
+
+**Why high-value:**
+- **De-duplication:** Immediate analyst relief; visible improvement
+- **Critical CI coverage:** Protects highest-value assets; demonstrates business alignment
+- **Service restart:** Tangible automation ROI; reduces after-hours callouts
+
+All three can be implemented within 30-60 days with moderate effort.
+
+</details>
+
 5. **What is AIOps, and how does it transform Event Management capabilities? Describe three specific AIOps capabilities and their benefits over traditional rule-based approaches.**
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**AIOps:** Artificial Intelligence for IT Operations—applying machine learning and analytics to automate and enhance IT operations.
+
+| Capability | Traditional Approach | AIOps Approach | Benefit |
+|------------|---------------------|----------------|---------|
+| **Anomaly detection** | Static thresholds | Dynamic baselines learned from patterns | Detects subtle issues; adapts to changes |
+| **Event correlation** | Predefined rules | ML-discovered patterns | Finds correlations humans miss; scales automatically |
+| **Predictive analytics** | None | Forecast issues before occurrence | Prevents incidents; proactive operations |
+
+**Transformation:**
+- **From reactive to predictive:** Detect issues before impact
+- **From manual rules to learning:** System improves automatically
+- **From noise to insight:** ML filters noise better than static rules
+
+**Note:** AIOps augments, not replaces, traditional Event Management. Foundation must be solid before adding AI capabilities.
+
+</details>
 
 ---
 

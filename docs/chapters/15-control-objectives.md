@@ -981,13 +981,133 @@ The next chapter examines the policy framework that provides strategic direction
 
 1. **Control Scope and Coverage:** Explain why Control Objective EM-C01 requires organizations to specify the percentage of IT infrastructure under monitoring rather than simply stating "all infrastructure will be monitored." What governance benefits does this specificity provide?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why percentage specification matters:**
+
+| Benefit | Explanation |
+|---------|-------------|
+| **Measurability** | "95% coverage" can be verified; "all" cannot be objectively assessed |
+| **Accountability** | Clear target enables tracking and responsibility assignment |
+| **Gap identification** | Knowing current % reveals what's missing |
+| **Progressive improvement** | Can set targets (85%→90%→95%) with clear milestones |
+| **Audit compliance** | Auditors can verify specific percentage claims |
+
+**Governance benefits:**
+- Creates accountability for coverage decisions
+- Enables budget justification (cost of closing gap)
+- Supports risk-based prioritization (which 5% is excluded?)
+- Provides audit trail for exceptions
+
+</details>
+
 2. **Prioritization Implementation:** Describe how Control Objective EM-C05 ensures that event prioritization is based on business impact and urgency rather than subjective judgment. What are the key implementation components required to achieve this control?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**How EM-C05 ensures objective prioritization:**
+
+| Mechanism | How It Removes Subjectivity |
+|-----------|---------------------------|
+| **Impact matrix** | Predefined levels based on scope (users, services) |
+| **Urgency criteria** | Time-based factors with clear definitions |
+| **Priority calculation** | Formula: Priority = f(Impact, Urgency) |
+| **Automated assignment** | System calculates; human doesn't choose |
+| **Override documentation** | Any manual changes require justification |
+
+**Implementation components:**
+- Impact levels defined (1-4 scale with clear criteria)
+- Urgency levels defined (1-4 scale with time factors)
+- Priority matrix mapping Impact × Urgency → Priority
+- CMDB integration for CI criticality
+- Automated calculation with audit trail
+
+</details>
 
 3. **Evidence Requirements:** For Control Objective EM-C04 (Formal Event Data Review Sessions), what specific audit evidence would you collect to demonstrate compliance? How would this evidence prove that reviews are occurring, management is participating, and improvement actions result?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Evidence to collect:**
+
+| Evidence Type | What It Demonstrates |
+|---------------|---------------------|
+| **Meeting minutes** | Reviews occurred; topics discussed |
+| **Attendance records** | Management participated |
+| **Action item logs** | Improvements identified |
+| **Completed actions** | Improvements implemented |
+| **KPI dashboards** | Data was reviewed |
+| **Change records** | Actions resulted in changes |
+
+**Compliance checklist:**
+- Weekly reviews: 52 sets of minutes per year
+- Monthly strategic reviews: 12 sets with leadership attendance
+- Action items tracked to completion
+- Trend reports distributed post-meeting
+
+</details>
+
 4. **Control Integration:** Explain how Control Objectives EM-C07 (Root Cause Analysis) and EM-C08 (Trend Analysis Reports) work together to drive continuous improvement. How do these controls complement each other?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Control | Focus | Output |
+|---------|-------|--------|
+| **EM-C07** | Root Cause Analysis | Why specific events occurred |
+| **EM-C08** | Trend Analysis Reports | Patterns over time |
+
+**How they work together:**
+1. EM-C08 identifies patterns ("same event recurring weekly")
+2. EM-C07 investigates why (root cause analysis)
+3. Improvement implemented
+4. EM-C08 validates improvement in next report
+
+**Without both:** Trends identified but not explained (missing RCA), or individual issues fixed but patterns missed (no trends).
+
+</details>
+
 5. **Measurement and Accountability:** Control Objective EM-C06 defines routing accuracy as a measurement criterion for escalation effectiveness. How would you calculate this metric, what target would you set, and what actions would you take if routing accuracy fell below the target threshold?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Calculation:**
+```
+Routing Accuracy = (Correctly Routed Events / Total Routed Events) × 100%
+```
+
+**Target:** ≥95% routing accuracy
+
+**Actions if below target:**
+
+| Gap Size | Actions |
+|----------|---------|
+| 90-95% | Minor tuning—review misrouted events, adjust rules |
+| 80-90% | Moderate intervention—audit routing logic, retrain staff |
+| <80% | Significant remediation—redesign routing, CMDB audit |
+
+**Investigation steps:**
+1. Identify misrouted event categories
+2. Analyze why routing failed
+3. Determine root cause (stale rules? CMDB inaccurate?)
+4. Implement fix
+5. Monitor for improvement
+
+</details>
 
 ---
 

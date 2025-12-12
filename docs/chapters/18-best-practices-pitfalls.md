@@ -1730,13 +1730,129 @@ Chapter 19 completes Part VI by examining Event Management optimization and matu
 
 1. **Best Practice Application:** Your organization generates 25,000 events per day across production infrastructure. Event Analysts report spending most of their time acknowledging duplicate alerts. Which best practice should be your highest priority, and what specific implementation steps would you take in the first 30 days?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Highest priority:** Implement effective correlation to eliminate duplicate handling.
+
+**30-day implementation:**
+
+| Week | Action |
+|------|--------|
+| 1 | Analyze top 10 event sources generating duplicates |
+| 2 | Implement time-based correlation (5-minute windows) |
+| 3 | Add de-duplication rules for identified patterns |
+| 4 | Measure reduction; tune as needed |
+
+**Expected outcome:** 50%+ reduction in analyst workload from duplicate elimination alone.
+
+</details>
+
 2. **Pitfall Recognition:** Monitoring data shows Warning Events were generated 18 hours before a critical capacity failure caused production outage, but no preventive action was taken. The Warning Events were acknowledged by operations team but not investigated. Which common pitfall does this scenario represent? What are the root causes, and what mitigation strategies would you implement?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Pitfall:** Warning event neglect—treating warnings as informational.
+
+**Root causes:**
+- No clear procedure for warning response
+- High volume of warnings causing fatigue
+- No escalation path for unaddressed warnings
+- Training gap—staff don't understand warning significance
+
+**Mitigations:**
+
+| Strategy | Implementation |
+|----------|----------------|
+| **Define warning procedures** | Each warning type has documented response |
+| **Auto-escalate aged warnings** | Warning open >4 hours → escalate |
+| **Reduce false positive warnings** | Tune thresholds to reduce noise |
+| **Train on warning importance** | "Warnings prevent incidents" messaging |
+
+</details>
 
 3. **CSF Implementation:** Your Event Management implementation plan assumes current CMDB accuracy of 68%. The implementation includes advanced topology-based correlation as a Month 2 deliverable. Based on Critical Success Factor guidance in this chapter, what concerns would you raise about this plan, and how would you revise the implementation sequence?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Concern:** CSF 4 (Accurate CMDB) requires >95% accuracy for effective topology correlation. At 68%, correlation will fail.
+
+**Problems at 68% accuracy:**
+- 32% of relationships wrong → false correlations
+- Missing dependencies → related events not grouped
+- Wrong parents identified → incorrect root cause
+
+**Revised sequence:**
+
+| Month | Original | Revised |
+|-------|----------|---------|
+| 1 | Platform setup | Platform setup |
+| 2 | Topology correlation | CMDB improvement project |
+| 3 | Coverage expansion | Continue CMDB to 90%+ |
+| 4 | — | Begin time-based correlation (no CMDB dependency) |
+| 5 | — | Implement topology correlation (when CMDB ready) |
+
+**Key change:** Time-based correlation first (no CMDB requirement), topology correlation only when CMDB >90% accurate.
+
+</details>
+
 4. **Safety Controls Design:** You are designing automation to restart failed application services. The automation will trigger when health check monitoring detects service stopped. What specific safety controls would you implement, and how would each control prevent potential automation-caused issues?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Control | Implementation | Prevents |
+|---------|----------------|----------|
+| **Throttling** | Max 2 restarts per CI per hour | Infinite restart loops |
+| **Pre-validation** | Check CI not in maintenance window | Acting during planned work |
+| **Verification** | Wait 30 seconds, confirm service running | Reporting false success |
+| **Dependency check** | Verify dependencies available | Restarting when DB is down |
+| **Blackout** | No restarts during batch processing hours | Disrupting critical jobs |
+| **Rollback** | If 2nd restart fails, stop and escalate | Repeated failing restarts |
+| **Logging** | Record all actions with timestamps | Audit trail for investigation |
+
+</details>
+
 5. **Threshold Configuration:** A database server supporting business-critical transactions has these configured thresholds: CPU warning at 80%, CPU critical at 85%. Post-incident analysis shows recent outage occurred when CPU reached 90% for sustained period causing transaction timeouts, but no alerts were generated until critical threshold breached leaving insufficient time to prevent impact. What threshold configuration changes would you recommend, and what is your rationale considering SLA requirements and preventive action windows?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Problem analysis:**
+- Gap between warning (80%) and critical (85%) is only 5%
+- CPU spike can exceed thresholds faster than response possible
+- No predictive alerting for trending
+
+**Recommended changes:**
+
+| Threshold | Old | New | Rationale |
+|-----------|-----|-----|-----------|
+| **Warning** | 80% | 70% | More lead time for response |
+| **Critical** | 85% | 80% | Earlier escalation |
+| **Add: Rate of change** | — | >10%/5min | Detect rapid increases |
+| **Add: Sustained high** | — | >75% for 15min | Catch sustained elevation |
+
+**Configuration:**
+```
+Warning: CPU >70% OR rate >10%/5min
+Critical: CPU >80% OR sustained >75% for 15min
+```
+
+This provides multiple detection paths and sufficient response window.
+
+</details>
 
 ---
 

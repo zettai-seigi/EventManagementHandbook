@@ -790,13 +790,156 @@ Chapter 15 will explore Implementation Roadmap in detail, providing specific gui
 
 1. Describe the five levels of the Event Management maturity model and the key characteristics that distinguish each level from the others.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Level | Name | Key Characteristics |
+|-------|------|---------------------|
+| **1** | Reactive (Initial) | Ad-hoc monitoring; manual handling; inconsistent procedures; no formal metrics |
+| **2** | Managed (Repeatable) | Standard monitoring for critical systems; basic correlation; centralized platform; 30-50% automation |
+| **3** | Defined (Standardized) | Comprehensive coverage; effective correlation (>50%); documented processes; 50-70% automation |
+| **4** | Measured (Managed) | Proactive operations; predictive analysis; 70%+ automation; mature dashboards; business alignment |
+| **5** | Optimized | Self-healing infrastructure; AI-driven management; continuous innovation; industry leadership |
+
+**Key distinguishing characteristics:**
+
+| Transition | Critical Capability Added |
+|------------|--------------------------|
+| 1→2 | Centralized platform, basic automation |
+| 2→3 | Comprehensive coverage, documented procedures |
+| 3→4 | Predictive capabilities, business service mapping |
+| 4→5 | AI/ML-driven operations, autonomous remediation |
+
+</details>
+
 2. An organization has achieved 45% auto-operations success rate, 55% efficiency of detection, 12% false positive rate, and 92% categorization accuracy. What maturity level is this organization most likely operating at, and what should be the focus areas for advancement to the next level?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Assessment:**
+
+| KPI | Value | Level 2 Target | Level 3 Target | Assessment |
+|-----|-------|----------------|----------------|------------|
+| Auto-operations | 45% | 30-50% | 50-70% | Between L2-L3 |
+| Efficiency of Detection | 55% | 40-50% | 50-60% | Meets L3 |
+| False Positive Rate | 12% | ≤15% | ≤10% | Below L3 target |
+| Categorization Accuracy | 92% | ≥90% | ≥95% | Below L3 target |
+
+**Diagnosis:** Organization is operating at **Level 2 (Managed)** with some Level 3 characteristics.
+
+**Focus areas for Level 3 advancement:**
+
+| Priority | Focus Area | Action |
+|----------|-----------|--------|
+| 1 | **Reduce false positives** | Threshold tuning, dampening rules, baseline monitoring |
+| 2 | **Improve categorization** | Update event catalog, refine classification rules |
+| 3 | **Increase automation** | Identify automation candidates, develop scripts |
+| 4 | **Document processes** | Formalize procedures for consistency |
+
+</details>
 
 3. Why is it important that organizations cannot skip maturity levels? Provide a specific example of how attempting Level 4 capabilities without Level 3 foundations would lead to failure.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Why levels can't be skipped:**
+- Each level builds on previous capabilities
+- Prerequisites must exist for advanced features to function
+- Cultural and procedural foundations take time to establish
+- Skills and competencies develop progressively
+
+**Example: Predictive Analytics (Level 4) without Level 3 Foundations**
+
+| Level 3 Foundation Missing | Level 4 Failure Result |
+|---------------------------|------------------------|
+| Incomplete monitoring coverage | Predictions based on partial data; major gaps |
+| Poor data quality (high false positives) | ML models trained on bad data; inaccurate predictions |
+| Inconsistent categorization | Predictions can't be grouped meaningfully |
+| Undocumented processes | No baseline to improve upon; can't measure prediction accuracy |
+
+**Specific scenario:**
+Organization implements ML-based predictive analytics to forecast disk failures. However:
+- Only 60% of servers monitored (Level 3 requires comprehensive coverage)
+- 15% false positive rate pollutes training data
+- No documented procedure for acting on predictions
+
+**Result:** ML model makes predictions, but:
+- Misses 40% of potential failures (unmonitored servers)
+- Generates unreliable predictions (trained on noisy data)
+- No one knows how to respond to predictions (no procedures)
+
+**ROI:** Negative—investment wasted, no improvement, possible degradation.
+
+</details>
+
 4. Describe the four dimensions that should be assessed during a comprehensive maturity assessment. For each dimension, provide two specific examples of what would be evaluated.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Dimension | What It Covers | Example Evaluations |
+|-----------|---------------|---------------------|
+| **Process** | Procedures, workflows, documentation | 1. Are escalation procedures documented? 2. Is there a formal event lifecycle? |
+| **Technology** | Tools, platforms, integrations | 1. Is there a centralized event platform? 2. Are correlation rules implemented? |
+| **People** | Skills, roles, training | 1. Are Event Management roles defined? 2. Is there ongoing training program? |
+| **Governance** | Policies, metrics, reviews | 1. Are KPIs tracked and reviewed? 2. Are formal review sessions conducted? |
+
+**Assessment approach:**
+
+| Dimension | Level 3 Checklist Example |
+|-----------|--------------------------|
+| **Process** | □ Event catalog documented □ Procedures standardized |
+| **Technology** | □ >50% correlation achieved □ Automation scripts tested |
+| **People** | □ All roles staffed □ Training completed |
+| **Governance** | □ Weekly reviews occurring □ KPI targets defined |
+
+</details>
+
 5. Explain how KPI targets are linked to maturity levels. How do targets for auto-operations success rate and efficiency of detection progress as organizations advance from Level 1 to Level 5?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**KPI targets by maturity level:**
+
+| Level | Auto-operations Success Rate | Efficiency of Detection |
+|-------|------------------------------|------------------------|
+| **1 (Reactive)** | <30% | <40% |
+| **2 (Managed)** | 30-50% | 40-50% |
+| **3 (Defined)** | 50-70% | 50-60% |
+| **4 (Measured)** | 70-85% | 60-70% |
+| **5 (Optimized)** | >85% | >70% |
+
+**Why targets progress:**
+
+| KPI | Why It Increases with Maturity |
+|-----|-------------------------------|
+| **Auto-operations** | More automation developed; wider coverage; better reliability |
+| **Efficiency of Detection** | Comprehensive monitoring; fewer gaps; predictive capabilities |
+
+**Progression drivers:**
+
+| Level | What Enables Target Achievement |
+|-------|--------------------------------|
+| 2→3 | Expanded automation portfolio; improved coverage |
+| 3→4 | Predictive detection; self-healing for common scenarios |
+| 4→5 | AI-driven detection; autonomous remediation |
+
+**Note:** Targets are guidelines, not absolute requirements. Organizations should set specific targets based on their context and baseline.
+
+</details>
 
 ---
 

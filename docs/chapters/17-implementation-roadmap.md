@@ -554,13 +554,118 @@ Chapter 18 will detail the specific activities, deliverables, and techniques req
 
 1. **Phase Progression:** What are the primary objectives of each implementation phase, and why is it important to achieve success criteria before proceeding to the next phase?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Phase | Duration | Primary Objectives |
+|-------|----------|-------------------|
+| **1: Foundation** | Months 1-3 | Platform selection, core team, critical CI monitoring |
+| **2: Expansion** | Months 4-6 | Correlation implementation, coverage expansion, ITSM integration |
+| **3: Optimization** | Months 7-12 | Automation, advanced analytics, continuous improvement |
+
+**Why success criteria matter:**
+- Each phase builds on previous capabilities
+- Without foundation (Phase 1), expansion fails (Phase 2)
+- Without correlation (Phase 2), expanded coverage creates unmanageable noise
+- Premature advancement wastes investment and causes rework
+
+</details>
+
 2. **Critical Path Analysis:** Identify the critical path activities in the 12-month implementation roadmap. Why do these activities determine the minimum project duration?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Critical path activities:**
+1. Platform selection and deployment (Phase 1)
+2. CMDB integration (Phase 1—enables correlation)
+3. Correlation rule development (Phase 2—depends on CMDB)
+4. Automation development (Phase 3—depends on stable correlation)
+
+**Why they determine duration:**
+- Sequential dependencies—cannot parallelize
+- Each enables the next capability
+- Quality at each step affects success of subsequent steps
+
+Minimum duration is sum of critical path activities, regardless of parallel work.
+
+</details>
 
 3. **Correlation Value:** In Phase 2, correlation is introduced with a target of >50% reduction in alert volume. Explain how correlation achieves this reduction and why it is essential before expanding monitoring coverage.
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**How correlation achieves reduction:**
+- Groups related events (child events suppressed)
+- Identifies duplicates (single alert per condition)
+- Links symptoms to root cause (one investigation, not many)
+
+**Example:** Switch failure → 100 alerts → 1 correlated event (99% reduction)
+
+**Why essential before expansion:**
+- Without correlation: 1,000 CIs × 10 events = 10,000 alerts (unmanageable)
+- With correlation: Same events → 2,000 actionable alerts (manageable)
+
+Expanding coverage without correlation multiplies noise, not value.
+
+</details>
+
 4. **Automation Safety:** What safety controls should be included in automated responses, and why are these controls essential to prevent automation-induced failures?
 
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+| Control | Purpose | Example |
+|---------|---------|---------|
+| **Throttling** | Prevent runaway loops | Max 3 restarts per hour |
+| **Blackout periods** | Protect critical times | No automation during trading hours |
+| **Pre-validation** | Verify state before action | Check CI not in maintenance |
+| **Post-verification** | Confirm success | Validate service running after restart |
+| **Rollback** | Recover from failure | Undo configuration change |
+| **Emergency stop** | Global disable | Kill switch for all automation |
+
+**Why essential:** Without controls, automation can cause more damage than the original issue (cascade failures, repeated actions, inappropriate timing).
+
+</details>
+
 5. **Resource Planning:** An organization with 5,000 Configuration Items is planning Event Management implementation. Estimate the staffing requirements for each phase and explain how automation in Phase 3 prevents Event Analyst staffing from increasing despite expanded coverage.
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:**
+
+**Staffing by phase (5,000 CIs):**
+
+| Phase | Role | Count | Rationale |
+|-------|------|-------|-----------|
+| **Phase 1** | Analysts | 4-6 | Cover critical CIs (30-40%) |
+| **Phase 2** | Analysts | 6-8 | Expanded coverage offset by correlation |
+| **Phase 3** | Analysts | 6-8 | Same—automation absorbs growth |
+
+**How automation prevents staffing increase:**
+- Phase 2 correlation reduces events by 50%+ → same analysts handle more CIs
+- Phase 3 automation resolves 70%+ events automatically → analysts focus on exceptions
+
+**Without automation:**
+- 5,000 CIs × 10 events/day = 50,000 events
+- Manual handling: 50,000 / 200 per analyst = 250 analysts needed
+
+**With automation (70%):**
+- 50,000 × 30% manual = 15,000 events
+- 15,000 / 200 = 75 analysts... but correlation further reduces by 50%
+- Actual need: ~6-8 analysts
+
+</details>
 
 ---
 **Chapter 17 References**
