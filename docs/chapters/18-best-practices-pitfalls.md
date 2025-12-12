@@ -13,7 +13,9 @@ permalink: /chapters/18-best-practices-pitfalls/
 
 Event Management implementation success hinges on following proven best practices while avoiding common pitfalls that have derailed countless implementations. This chapter distills lessons learned from successful Event Management deployments across diverse organizations, providing practical guidance for implementing and sustaining an effective Event Management process.
 
-The best practices presented in this chapter align directly with the Critical Success Factors (CSFs) introduced in Chapter 3, offering concrete implementation strategies for each factor. These practices are not theoretical ideals but actionable approaches proven to deliver measurable improvements in operational efficiency, service availability, and team productivity.
+The best practices presented in this chapter align directly with the Critical Success Factors (CSFs) introduced in Chapter 3, offering concrete implementation strategies for each factor. These practices are not theoretical ideals but actionable approaches that have been reported to deliver measurable improvements in operational efficiency, service availability, and team productivity.[^1]
+
+[^1]: Performance targets, improvement percentages, and statistics throughout this chapter (such as "≥70% auto-operations success rate," "50% correlation reduction," "30-40% incident reduction") are based on ITSM industry guidelines, ITIL best practices, and practitioner reports from mature implementations. These figures should be treated as reference benchmarks rather than guaranteed outcomes. Actual results vary significantly based on organizational context, infrastructure complexity, implementation quality, and baseline maturity. Organizations should establish their own baselines and set realistic improvement targets appropriate to their specific circumstances. Implementation timelines are also indicative and depend on organizational size, resource availability, and change management capability.
 
 Equally important is understanding the common pitfalls that organizations encounter during Event Management implementation. This chapter examines six high-impact pitfalls, analyzing their root causes, symptoms, and most importantly, proven mitigation strategies. By understanding what can go wrong and why, implementation teams can proactively design their Event Management solution to avoid these expensive mistakes.
 
@@ -1130,7 +1132,7 @@ Configure comprehensive Warning Event thresholds for all capacity and performanc
 
 Organizations implementing this approach report 30-40% reduction in user-reported incidents as issues addressed before impact occurs. The operational cost savings from avoiding emergency response more than offset the cost of proactive capacity expansion and maintenance.
 
-**Key Takeaway:** Every dollar invested in proactive event management and incident prevention saves two to three dollars in incident response costs while improving service availability and user satisfaction.
+**Key Takeaway:** Investment in proactive event management and incident prevention typically yields positive returns through reduced incident response costs, improved service availability, and enhanced user satisfaction. *Note: The specific ROI ratio (often cited as 2:1 to 3:1 in industry literature) varies significantly based on organizational context, baseline costs, and measurement methodology. Organizations should develop their own cost-benefit analysis using actual incident costs and projected prevention rates specific to their environment.*
 
 ### Lesson 2: Correlation is Essential for Alert Storm Prevention
 

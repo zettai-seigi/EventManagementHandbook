@@ -364,7 +364,7 @@ Organizations should plan for 40-60 hours of training per Event Analyst during P
 
 ### Budget Considerations
 
-**Table 17.2:** Resource Requirements by Phase
+**Table 17.2:** Resource Requirements by Phase (Illustrative Example)
 
 | Resource Category | Phase 1 (M1-3) | Phase 2 (M4-6) | Phase 3 (M7-12) | Total |
 |-------------------|----------------|----------------|-----------------|-------|
@@ -375,7 +375,15 @@ Organizations should plan for 40-60 hours of training per Event Analyst during P
 | Infrastructure | $100K | $50K | $50K | $200K |
 | **Phase Total** | **$450K + FTE** | **$220K + FTE** | **$310K + FTE** | **$980K + FTE** |
 
-Budget estimates assume mid-size enterprise implementation monitoring 3,000-5,000 Configuration Items. Larger or smaller organizations should scale estimates accordingly. Staffing costs are excluded from totals as they vary significantly by geography and employment model.
+*Note: The figures in Table 17.2 are illustrative examples intended to demonstrate budget planning methodology. These are hypothetical estimates for a mid-size enterprise (3,000-5,000 Configuration Items) and should not be used as actual budget targets.* Actual costs vary significantly based on:
+
+- **Geographic location:** Labor and consulting rates differ substantially by region
+- **Existing infrastructure:** Organizations with mature monitoring tools may have lower tooling costs
+- **Vendor selection:** Platform licensing costs vary widely between vendors and licensing models
+- **Internal capability:** Organizations with skilled staff may require less consulting support
+- **Scope complexity:** Highly complex or regulated environments may require additional investment
+
+Organizations should develop their own detailed budget estimates based on vendor quotes, internal cost rates, and specific implementation requirements. Staffing costs are excluded from totals as they vary significantly by geography and employment model.
 
 ## Risk Management and Mitigation
 
@@ -527,7 +535,7 @@ Quick wins only deliver value if they are communicated effectively:
 - Phase 2 (Expansion, Months 4-6) extends coverage to 50% of CIs, implements correlation reducing alert volume by >50%, and introduces low-risk automation achieving 30% Auto-operations Success Rate
 - Phase 3 (Optimization, Months 7-12) achieves enterprise maturity with 90%+ CI coverage, 70%+ automation success rate, and full ITSM process integration
 - Success criteria for each phase provide clear milestones that organizations must achieve before proceeding to the next phase
-- Resource requirements peak in Phase 3 at 17-20 FTE with substantial investments in tooling ($300K), training ($180K), and consulting ($300K) for mid-size enterprises
+- Resource requirements peak in Phase 3 at approximately 17-20 FTE; budget estimates (tooling, training, consulting, infrastructure) vary significantly by organization and should be developed based on specific vendor quotes and internal cost structures—the figures in Table 17.2 are illustrative examples only
 - Implementation risks span technical, process, and organizational categories; mitigation strategies include POC testing, CMDB remediation, conservative staffing, and strong governance
 - The critical path includes tool deployment, 24x7 staffing, correlation implementation, and automation expansion; these activities determine minimum project duration
 - Quick wins delivered early in each phase demonstrate value, build momentum, and sustain organizational commitment through the long implementation timeline

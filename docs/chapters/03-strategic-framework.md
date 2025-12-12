@@ -845,27 +845,35 @@ Implementing Event Management according to the strategic framework delivers meas
 ### Operational Benefits
 
 **Reduced Incident Volume:**
-Proactive event detection and automated resolution prevent events from escalating to incidents. Organizations typically achieve 20-40% reduction in incident volume after implementing mature Event Management.
+Proactive event detection and automated resolution prevent events from escalating to incidents. Organizations implementing mature Event Management often report significant reductions in incident volume, with industry studies and ITSM practitioners commonly citing improvements in the range of 20-40%.[^1]
 
 **Faster Mean Time to Resolve:**
-Events that do escalate to incidents arrive with comprehensive context, diagnostic data, and preliminary investigation completed, enabling faster incident resolution. Organizations typically see 25-35% improvement in MTTR.
+Events that do escalate to incidents arrive with comprehensive context, diagnostic data, and preliminary investigation completed, enabling faster incident resolution. Improvements of 25-35% in MTTR are frequently reported in ITSM implementation case studies, though results vary based on baseline maturity and implementation scope.[^2]
 
 **Improved Service Availability:**
-Proactive detection and resolution of Warning events prevent service disruptions before they impact users, directly improving service availability metrics. Many organizations achieve 99.9% or higher availability for critical services supported by mature Event Management.
+Proactive detection and resolution of Warning events prevent service disruptions before they impact users, directly improving service availability metrics. Organizations with mature Event Management practices commonly target and achieve 99.9% or higher availability for critical services, though this depends on multiple factors beyond Event Management alone.
 
 **Reduced Alert Fatigue:**
-Correlation and filtering reduce alert noise by 60-80%, allowing operations teams to focus on events that matter rather than being overwhelmed by redundant alerts.
+Correlation and filtering can significantly reduce alert noise, with mature implementations frequently achieving 60-80% reduction in redundant alerts. This allows operations teams to focus on events that matter rather than being overwhelmed by duplicative notifications.[^3]
+
+[^1]: Improvement ranges are based on industry benchmarks and practitioner reports. Actual results vary significantly based on organizational maturity, implementation quality, and baseline incident volumes. Organizations should establish their own baselines and track improvements specific to their context.
+
+[^2]: MTTR improvements depend on factors including process maturity, tool integration quality, and team skill levels. These figures represent commonly reported outcomes rather than guaranteed results.
+
+[^3]: Alert reduction effectiveness depends on correlation rule quality, CMDB accuracy, and event source characteristics. Organizations should measure their specific correlation effectiveness rather than assuming industry averages apply to their environment.
 
 ### Financial Benefits
 
 **Reduced Operational Costs:**
-Automation reduces the manual effort required to handle events, improving operational efficiency. Organizations typically see 30-50% reduction in operational effort for event handling after automation maturity is achieved.
+Automation reduces the manual effort required to handle events, improving operational efficiency. Industry reports suggest that mature automation implementations can achieve 30-50% reduction in operational effort for event handling, though actual results depend on automation scope, event complexity, and baseline manual effort levels.[^4]
 
 **Avoided Business Impact:**
-Preventing incidents avoids the business cost of service disruptions. For organizations where service availability directly impacts revenue (for example, e-commerce, SaaS providers), this benefit can be substantial.
+Preventing incidents avoids the business cost of service disruptions. For organizations where service availability directly impacts revenue (for example, e-commerce, SaaS providers), this benefit can be substantial. The specific value depends on the organization's revenue model, customer base, and the criticality of affected services.
 
 **Improved Resource Utilization:**
 Proactive capacity management driven by event trending prevents over-provisioning while avoiding capacity-related incidents, optimizing infrastructure investment.
+
+[^4]: Operational efficiency improvements vary widely based on starting maturity, automation sophistication, and organizational factors. Organizations should track their own efficiency metrics to measure actual improvement rather than relying on industry averages.
 
 ### Strategic Benefits
 
@@ -895,12 +903,15 @@ Organizations should calculate Event Management ROI by comparing implementation 
 - Operational efficiency gains (hours saved through automation × labor cost)
 - Improved productivity (reduced end-user disruption)
 
-**For example:** An organization might calculate:
+**Illustrative Example:** The following scenario demonstrates how an organization might calculate ROI. *Note: These figures are hypothetical and intended to illustrate the calculation methodology. Actual costs and benefits will vary significantly based on organization size, industry, existing infrastructure, and implementation scope. Organizations should develop their own calculations using their specific cost data and realistic benefit estimates.*
+
 - **Investment:** $500,000 initial implementation + $200,000 annual operational cost
 - **Returns Year 1:** $300,000 (40% incident reduction × $750,000 annual incident costs) + $150,000 (avoided downtime) + $180,000 (operational efficiency) = $630,000
 - **Net Benefit Year 1:** $630,000 - $700,000 = -$70,000 (net cost during implementation year)
 - **Returns Year 2+:** $600,000 annual returns - $200,000 operational cost = $400,000 annual net benefit
 - **ROI:** Payback achieved in approximately 18 months with substantial ongoing returns
+
+*The 18-24 month payback period is consistent with industry observations for well-executed ITSM implementations, though actual results depend heavily on implementation quality, organizational readiness, and benefit realization practices.*
 
 ## Success Metrics Overview
 

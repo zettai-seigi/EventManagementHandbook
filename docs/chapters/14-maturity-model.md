@@ -722,7 +722,9 @@ Implementation phases should correspond to maturity levels, with each phase buil
 
 ### KPI Targets by Maturity Level
 
-The following table summarizes KPI targets for each maturity level, providing clear performance benchmarks for assessment and goal-setting.
+The following table summarizes KPI targets for each maturity level, providing clear performance benchmarks for assessment and goal-setting.[^1]
+
+[^1]: The KPI targets and maturity level characteristics throughout this chapter are based on ITIL best practices, industry guidelines, and benchmarks from mature ITSM implementations. These figures represent commonly accepted targets and should be treated as reference points rather than absolute standards. Actual appropriate targets vary based on organizational context, industry, infrastructure complexity, and business requirements. Organizations should establish their own baseline measurements and calibrate targets based on their specific circumstances. Progression timelines are also indicative; actual implementation durations depend heavily on organizational size, complexity, resource availability, and change management capability.
 
 **Table 14.1: Maturity Characteristics Matrix**
 

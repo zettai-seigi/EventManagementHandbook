@@ -47,7 +47,9 @@ Informational events provide confidence that systems are functioning as designed
 - Scheduled report generated
 - System health check normal
 
-**Handling Approach:** Informational events are typically closed immediately by automated rules with a closure code of `Auto Action`. Organizations with mature Event Management processes configure filters to suppress display of informational events on the console, though they remain logged for audit purposes. The Key Performance Indicator (KPI) "Volume of Events Detected" includes informational events, but these should represent no more than 30-40% of total event volume in a well-tuned monitoring environment.
+**Handling Approach:** Informational events are typically closed immediately by automated rules with a closure code of `Auto Action`. Organizations with mature Event Management processes configure filters to suppress display of informational events on the console, though they remain logged for audit purposes. The Key Performance Indicator (KPI) "Volume of Events Detected" includes informational events. Industry guidelines suggest informational events should typically represent no more than 30-40% of total event volume in a well-tuned monitoring environment, though actual distributions vary based on organizational monitoring strategies and infrastructure characteristics.[^1]
+
+[^1]: Event type and category distribution percentages throughout this chapter are based on ITSM best practices and industry guidelines. These figures should be treated as reference points rather than absolute standards. Organizations should establish their own baseline measurements and calibrate targets based on their specific environment, monitoring strategy, and business requirements.
 
 ### Warning Events
 
@@ -109,12 +111,14 @@ Event correlation is essential for managing "alert storms"—situations where a 
 
 **Table 4.2: Event Types Comparison Matrix**
 
-| Event Type | Definition | Action Required | Response Time | Escalation | Typical Closure Code | % of Total Volume (Typical) |
+| Event Type | Definition | Action Required | Response Time | Escalation | Typical Closure Code | % of Total Volume (Typical)* |
 |---|---|---|---|---|---|---|
 | **Informational** | Notification of normal operation | None – log for audit | N/A | Never | `Auto Action` | 30-40% |
 | **Warning** | Approaching threshold or unusual activity | Monitor closely; may require preventive action | 2-4 hours | Rarely | `Auto Action`, `Incident` | 30-35% |
 | **Exception** | Service disruption or abnormal operation | Immediate investigation and resolution | 15 min – 4 hours (priority-dependent) | Frequently | `Incident`, `Problem`, `Change` | 25-30% |
 | **Related** | Duplicate or sympathy event | Correlate to primary event; no separate action | N/A | Never | `Related` | 5-10% |
+
+*\*Volume percentages are indicative ranges based on ITSM industry guidelines and should be calibrated to each organization's specific monitoring environment and business context.*
 
 ## Event Categories
 
@@ -277,14 +281,16 @@ Events are assigned to categories during **Activity 3.4: Categorize Event** with
 
 Accurate categorization enables effective routing to specialized support teams. For example, Hardware – Network events may route to the Network Operations team, while Software – Custom events route to the Application Support team. Categories also support reporting that identifies which infrastructure areas generate the most events, helping prioritize tuning and improvement efforts.
 
-The **KPI: Volume per Category** tracks the distribution of events across categories. Expected distribution varies by organization but typically shows:
+The **KPI: Volume per Category** tracks the distribution of events across categories. Expected distribution varies significantly by organization based on infrastructure composition, monitoring strategy, and business model. The following ranges represent general industry guidelines rather than prescriptive targets:
 - Hardware – Network: 20-30%
 - Hardware – Server: 30-40%
 - Software – Commercial: 15-25%
 - Software – Custom: 10-20%
 - Related: 5-10%
 
-Significant deviations from expected distribution warrant investigation. For example, if Software – Custom represents 45% of events, this suggests custom applications may need better coding practices, improved error handling, or threshold tuning.
+*Organizations should establish their own baseline distributions and monitor for meaningful changes over time rather than attempting to match these general guidelines.*
+
+Significant deviations from an organization's established baseline warrant investigation. For example, if Software – Custom suddenly increases from 15% to 45% of events, this suggests custom applications may need better coding practices, improved error handling, or threshold tuning.
 
 ## Event Attributes and Metadata
 
@@ -686,7 +692,7 @@ Ideally, approved changes in the change calendar should automatically suppress m
 
 **Table 4.6: Event Closure Codes with KPI Impact**
 
-| Closure Code | Definition | Usage Scenario | Primary KPI Impact | Target/Typical Range |
+| Closure Code | Definition | Usage Scenario | Primary KPI Impact | Target/Typical Range* |
 |---|---|---|---|---|
 | **Auto Action** | Automatically resolved or informational only | Script execution successful, informational event | Auto-operations Success Rate | ≥70% |
 | **Incident** | Escalated to Incident Management | Service disruption requiring restoration | Efficiency of Detection, Escalation Rate | 15-25% of events |
@@ -695,6 +701,8 @@ Ideally, approved changes in the change calendar should automatically suppress m
 | **Related** | Correlated to existing primary event | Duplicate/sympathy event | Correlation Effectiveness | 5-10% of events |
 | **False Positive** | Incorrectly generated event | Threshold misconfigured or condition doesn't exist | False Positive Rate | ≤5% (target) |
 | **Maintenance** | Generated during planned activity | Occurred during scheduled maintenance window | Maintenance Event Rate | 2-5% of events |
+
+*\*Target and typical ranges are based on ITSM industry guidelines and mature implementation benchmarks. These figures serve as reference points for organizations establishing their Event Management capabilities. Actual targets should be calibrated based on organizational context, infrastructure complexity, and monitoring maturity. Organizations should establish baselines and set improvement goals appropriate to their specific circumstances.*
 
 ## Impact and Urgency Factors
 
